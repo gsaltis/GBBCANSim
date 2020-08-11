@@ -1,0 +1,4558 @@
+DeviceDefs
+    DeviceDef
+        REC
+        Rectifier
+        0
+        0x60
+        4
+        RegDefs
+            RegDef
+                Output Volt
+                OutVolt
+                Output Volt
+                General
+                0x01
+                12.50
+                0x41
+            RegDefEnd
+            RegDef     
+                Output Amp
+                OutAmpReal
+                Output Amp
+                General
+                0x02
+                100.00
+                0x41
+            RegDefEnd
+            RegDef
+                Current Limit
+                CurrLim
+                Current Limit
+                General
+                0x03
+                1.070
+                0x41
+            RegDefEnd
+            RegDef
+                M1 Temp
+                Temp
+                M1 Temp
+                General
+                0x04
+                21.00
+                0x41
+            RegDefEnd
+            RegDef
+                AC Voltage
+                ACVolt
+                AC Voltage
+                General
+                0x05
+                230.0
+                0x41
+            RegDefEnd
+            RegDef
+                HVSD Volt
+                HVSDVolt
+                HVSD Volt
+                Special
+                0x06
+                390.00
+                0x41
+            RegDefEnd
+            RegDef
+                Output Amps
+                OutAmp
+                Output Amps
+                General
+                0x07
+                100.00
+                0x41
+            RegDefEnd
+            RegDef
+                PFCO Voltage
+                PFC0Volt
+                PFCO Voltage
+                Special
+                0x08
+                50.00
+                0x41
+            RegDefEnd
+            RegDef
+                Overtemp set
+                OverTemp
+                Overtemp set
+                Special
+                0x09
+                65.00
+                0x41
+            RegDefEnd
+            RegDef
+                PFC1 Voltage
+                PFC1Volt
+                PFC1 Voltage
+                Special
+                0x0A
+                100.00
+                0x41
+            RegDefEnd
+            RegDef
+                U1 Temp
+                U1
+                U1 Temp
+                Temp
+                0x0B
+                25.00
+                0x41
+            RegDefEnd
+            RegDef
+                AC-A Voltage
+                ACVoltA
+                AC-A Voltage
+                Voltage
+                0x0C
+                230.00
+                0x41
+            RegDefEnd
+            RegDef
+                AC-B Voltage
+                ACVoltB
+                AC-B Voltage
+                Voltage
+                0x0D
+                231.00
+                0x41
+            RegDefEnd
+            RegDef
+                AC-C Voltage
+                ACVoltC
+                AC-C Voltage
+                Voltage
+                0x0E
+                232.00
+                0x41
+            RegDefEnd
+            RegDef
+                Default Volt
+                DefVolt
+                Default Volt
+                General
+                0x0F
+                12.50
+                0x41
+            RegDefEnd
+            RegDef
+                PFC Temp
+                PFC
+                PFC Temp
+                Temp
+                0x10
+                25.00
+                0x41
+            RegDefEnd
+            RegDef
+                Output Power
+                OutPower
+                Output Power
+                General
+                0x11
+                1250.00
+                0x41
+            RegDefEnd
+            RegDef
+                Default Amps
+                DefAmps
+                Default Amps
+                Special
+                0x12
+                250.00
+                0x41
+            RegDefEnd
+            RegDef
+                Def Input V
+                DefInVolts
+                Def Input V
+                Special
+                0x13
+                12.00
+                0x41
+            RegDefEnd
+            RegDef
+                ESTOP
+                estop
+                ESTOP
+                Special
+                0x16
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                Def Power Lim
+                DefPowerLim
+                Def Power Lim
+                Setting
+                0x18
+                42.00
+                0x41
+            RegDefEnd
+            RegDef
+                Def Curr Lim
+                DefCurrLim
+                Def Curr Lim
+                Setting
+                0x19
+                1350.00
+                0x41
+            RegDefEnd
+            RegDef
+                Def AC Input
+                DefACIn
+                Def AC Input
+                Setting
+                0x1A
+                30.00
+                0x41
+            RegDefEnd
+            RegDef
+                Power Limit
+                PowerLim
+                Power Limit
+                Setting
+                0x20
+                3300.00
+                0x41
+            RegDefEnd
+            RegDef
+                Voltage
+                Voltage
+                Voltage
+                Setting
+                0x21
+                12.510
+                0x41
+            RegDefEnd
+            RegDef
+                Current Limit
+                CurrLim
+                Current Limit
+                Setting
+                0x22
+                121.00
+                0x41
+            RegDefEnd
+            RegDef
+                HV Limit
+                HVLim
+                HV Limit
+                Setting
+                0x23
+                13.50
+                0x41
+            RegDefEnd
+            RegDef
+                Def Voltage
+                DefVolt
+                Def Voltage
+                Setting
+                0x24
+                12.50
+                0x41
+            RegDefEnd
+            RegDef
+                OverTemp
+                OverTemp
+                OverTemp
+                Setting
+                0x25
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                Curr Share V
+                CurrShareVolt
+                Curr Share V
+                Setting
+                0x26
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                PFC Out Volt
+                PFCOutVolt
+                PFC Out Volt
+                Setting
+                0x27
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                Restart Time
+                RestartTime
+                Restart Time
+                Setting
+                0x28
+                12.00
+                0x41
+            RegDefEnd
+            RegDef
+                Walk-in Time
+                WalkTime
+                Walk-in Time
+                Setting
+                0x29
+                8.00
+                0x41
+            RegDefEnd
+            RegDef
+                Start Intervl
+                StartInt
+                Start Intervl
+                Setting
+                0x2A
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                CAN baud rate
+                CANBaud
+                CAN baud rate
+                Setting
+                0x2B
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                On/Off
+                On
+                On/Off
+                Setting
+                0x30
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                OverVlt Reset
+                OverVoltReset
+                OverVlt Reset
+                Setting
+                0x31
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                Walk-in
+                Walk
+                Walk-in
+                Setting
+                0x32
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                Fan Speed
+                FanSpeed
+                Fan Speed
+                Setting
+                0x33
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                Green LED
+                GreenLED
+                Green LED
+                Setting
+                0x34
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                OverVolt Rely
+                OverVoltRelay
+                OverVolt Rely
+                Setting
+                0x35
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                Version
+                Version
+                Version
+                General
+                0x38
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                Read Analog Alarm
+                Alarm
+                Read Analog Alarm
+                General
+                0x41
+                0
+                0x42
+            RegDefEnd
+            RegDef
+                Read Status
+                Alarm
+                Read Status
+                General
+                0x40
+                0
+                0x42
+            RegDefEnd
+            RegDef
+                Character Data
+                CharData
+                Character Data
+                General
+                0x51
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                SN Low
+                SNLow
+                SN Low
+                General
+                0x54
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                SN High
+                SNHigh
+                SN High
+                General
+                0x55
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                Version
+                Version
+                Version
+                General
+                0x56
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                Runtime
+                RunTime
+                Runtime
+                General
+                0x58
+                100.00
+                0x41
+            RegDefEnd
+            RegDef
+                Repair Time
+                RepairTime
+                Repair Time
+                General
+                0x59
+                142.00
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 1
+                Bar1
+                BarCode 1
+                General
+                0x5A
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 2
+                Bar2
+                BarCode 2
+                General
+                0x5B
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 3
+                Bar3
+                BarCode 3
+                General
+                0x5C
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 4
+                Bar4
+                BarCode 4
+                General
+                0x5D
+                0
+                0x41
+            RegDefEnd
+        RegDefsEnd
+        MessagesDef
+            MessageDef
+                0x00
+                Setup Request Data 0 
+                0x01
+                0x02
+                0x03
+                0x04
+                0x05
+                0x07
+                0x40
+                0x54
+                0x58
+            MessageDefEnd
+            MessageDef
+                0x01
+                Request data
+                0x41
+            MessageDefEnd
+            MessageDef
+                0x10
+                Setup Request Data 1
+                0x0C
+                0x0D
+                0x0E
+                0x40
+            MessageDefEnd
+            MessageDef
+                0x20
+                Setup Request Data 2
+                0x51
+                0x55
+                0x56
+                0x5a
+                0x5b
+                0x5c
+                0x5d
+            MessageDefEnd
+        MessagesDefEnd
+    DeviceDefEnd
+    DeviceDef
+        REC12
+        Rectifier 12 Volt
+        0
+        0x60
+        4
+        RegDefs
+            RegDef
+                Output Volt
+                OutVolt
+                Output Volt
+                General
+                0x01
+                12.50
+                0x41
+            RegDefEnd
+            RegDef     
+                Output Amp
+                OutAmpReal
+                Output Amp
+                General
+                0x02
+                100.00
+                0x41
+            RegDefEnd
+            RegDef
+                Current Limit
+                CurrLim
+                Current Limit
+                General
+                0x03
+                1.070
+                0x41
+            RegDefEnd
+            RegDef
+                M1 Temp
+                Temp
+                M1 Temp
+                General
+                0x04
+                21.00
+                0x41
+            RegDefEnd
+            RegDef
+                AC Voltage
+                ACVolt
+                AC Voltage
+                General
+                0x05
+                230.0
+                0x41
+            RegDefEnd
+            RegDef
+                HVSD Volt
+                HVSDVolt
+                HVSD Volt
+                Special
+                0x06
+                390.00
+                0x41
+            RegDefEnd
+            RegDef
+                Output Amps
+                OutAmp
+                Output Amps
+                General
+                0x07
+                100.00
+                0x41
+            RegDefEnd
+            RegDef
+                PFCO Voltage
+                PFC0Volt
+                PFCO Voltage
+                Special
+                0x08
+                50.00
+                0x41
+            RegDefEnd
+            RegDef
+                Overtemp set
+                OverTemp
+                Overtemp set
+                Special
+                0x09
+                65.00
+                0x41
+            RegDefEnd
+            RegDef
+                PFC1 Voltage
+                PFC1Volt
+                PFC1 Voltage
+                Special
+                0x0A
+                100.00
+                0x41
+            RegDefEnd
+            RegDef
+                U1 Temp
+                U1
+                U1 Temp
+                Temp
+                0x0B
+                25.00
+                0x41
+            RegDefEnd
+            RegDef
+                AC-A Voltage
+                ACVoltA
+                AC-A Voltage
+                Voltage
+                0x0C
+                230.00
+                0x41
+            RegDefEnd
+            RegDef
+                AC-B Voltage
+                ACVoltB
+                AC-B Voltage
+                Voltage
+                0x0D
+                231.00
+                0x41
+            RegDefEnd
+            RegDef
+                AC-C Voltage
+                ACVoltC
+                AC-C Voltage
+                Voltage
+                0x0E
+                232.00
+                0x41
+            RegDefEnd
+            RegDef
+                Default Volt
+                DefVolt
+                Default Volt
+                General
+                0x0F
+                12.50
+                0x41
+            RegDefEnd
+            RegDef
+                PFC Temp
+                PFC
+                PFC Temp
+                Temp
+                0x10
+                25.00
+                0x41
+            RegDefEnd
+            RegDef
+                Output Power
+                OutPower
+                Output Power
+                General
+                0x11
+                1250.00
+                0x41
+            RegDefEnd
+            RegDef
+                Default Amps
+                DefAmps
+                Default Amps
+                Special
+                0x12
+                250.00
+                0x41
+            RegDefEnd
+            RegDef
+                Def Input V
+                DefInVolts
+                Def Input V
+                Special
+                0x13
+                12.00
+                0x41
+            RegDefEnd
+            RegDef
+                ESTOP
+                estop
+                ESTOP
+                Special
+                0x16
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                Def Power Lim
+                DefPowerLim
+                Def Power Lim
+                Setting
+                0x18
+                42.00
+                0x41
+            RegDefEnd
+            RegDef
+                Def Curr Lim
+                DefCurrLim
+                Def Curr Lim
+                Setting
+                0x19
+                1350.00
+                0x41
+            RegDefEnd
+            RegDef
+                Def AC Input
+                DefACIn
+                Def AC Input
+                Setting
+                0x1A
+                30.00
+                0x41
+            RegDefEnd
+            RegDef
+                Power Limit
+                PowerLim
+                Power Limit
+                Setting
+                0x20
+                3300.00
+                0x41
+            RegDefEnd
+            RegDef
+                Voltage
+                Voltage
+                Voltage
+                Setting
+                0x21
+                12.510
+                0x41
+            RegDefEnd
+            RegDef
+                Current Limit
+                CurrLim
+                Current Limit
+                Setting
+                0x22
+                121.00
+                0x41
+            RegDefEnd
+            RegDef
+                HV Limit
+                HVLim
+                HV Limit
+                Setting
+                0x23
+                13.50
+                0x41
+            RegDefEnd
+            RegDef
+                Def Voltage
+                DefVolt
+                Def Voltage
+                Setting
+                0x24
+                12.50
+                0x41
+            RegDefEnd
+            RegDef
+                OverTemp
+                OverTemp
+                OverTemp
+                Setting
+                0x25
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                Curr Share V
+                CurrShareVolt
+                Curr Share V
+                Setting
+                0x26
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                PFC Out Volt
+                PFCOutVolt
+                PFC Out Volt
+                Setting
+                0x27
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                Restart Time
+                RestartTime
+                Restart Time
+                Setting
+                0x28
+                12.00
+                0x41
+            RegDefEnd
+            RegDef
+                Walk-in Time
+                WalkTime
+                Walk-in Time
+                Setting
+                0x29
+                8.00
+                0x41
+            RegDefEnd
+            RegDef
+                Start Intervl
+                StartInt
+                Start Intervl
+                Setting
+                0x2A
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                CAN baud rate
+                CANBaud
+                CAN baud rate
+                Setting
+                0x2B
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                On/Off
+                On
+                On/Off
+                Setting
+                0x30
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                OverVlt Reset
+                OverVoltReset
+                OverVlt Reset
+                Setting
+                0x31
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                Walk-in
+                Walk
+                Walk-in
+                Setting
+                0x32
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                Fan Speed
+                FanSpeed
+                Fan Speed
+                Setting
+                0x33
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                Green LED
+                GreenLED
+                Green LED
+                Setting
+                0x34
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                OverVolt Rely
+                OverVoltRelay
+                OverVolt Rely
+                Setting
+                0x35
+                0.00
+                0x41
+            RegDefEnd
+            RegDef
+                Version
+                Version
+                Version
+                General
+                0x38
+                1.00
+                0x41
+            RegDefEnd
+            RegDef
+                Read Status
+                Alarm
+                Read Status
+                General
+                0x40
+                0
+                0x42
+            RegDefEnd
+            RegDef
+                Character Data
+                CharData
+                Character Data
+                General
+                0x51
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                SN Low
+                SNLow
+                SN Low
+                General
+                0x54
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                SN High
+                SNHigh
+                SN High
+                General
+                0x55
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                Version
+                Version
+                Version
+                General
+                0x56
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                Runtime
+                RunTime
+                Runtime
+                General
+                0x58
+                100.00
+                0x41
+            RegDefEnd
+            RegDef
+                Repair Time
+                RepairTime
+                Repair Time
+                General
+                0x59
+                142.00
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 1
+                Bar1
+                BarCode 1
+                General
+                0x5A
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 2
+                Bar2
+                BarCode 2
+                General
+                0x5B
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 3
+                Bar3
+                BarCode 3
+                General
+                0x5C
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 4
+                Bar4
+                BarCode 4
+                General
+                0x5D
+                0
+                0x41
+            RegDefEnd
+        RegDefsEnd
+        MessagesDef
+            MessageDef
+                0x00
+                Setup Request Data 0
+                0x01
+                0x02
+                0x03
+                0x04
+                0x05
+                0x07
+                0x40
+                0x54
+                0x58
+            MessageDefEnd
+            MessageDef
+                0x01
+                Request Data
+                0x41
+            MessageDefEnd
+            MessageDef
+                0x10
+                Setup Request Data 1
+                0x0C
+                0x0D
+                0x0E
+                0x40
+            MessageDefEnd
+            MessageDef
+                0x20
+                Setup Request Data 2
+                0x51
+                0x55
+                0x56
+                0x5a
+                0x5b
+                0x5c
+                0x5d
+            MessageDefEnd
+        MessagesDefEnd
+    DeviceDefEnd
+    DeviceDef
+        Bay
+        Bay
+        0xDB
+        0xA6
+        3
+        RegDefs
+            RegDef
+                Get the bus voltdata
+                Bus voltage
+                Get the bus voltdata
+                General
+                0x0001
+                48.0F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 1.
+                1
+                Cabinet 1.
+                Voltage
+                0x0002
+                48.1F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 2.
+                2
+                Cabinet 2.
+                Voltage
+                0x0003
+                49.2F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 3.
+                3
+                Cabinet 3.
+                Voltage
+                0x0004
+                48.3F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 4.
+                4
+                Cabinet 4.
+                Voltage
+                0x0005
+                49.4F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 5.
+                5
+                Cabinet 5.
+                Voltage
+                0x0006
+                48.5F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 6.
+                6    
+                Cabinet 6.
+                Voltage
+                0x0007
+                49.6F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 7.
+                7
+                Cabinet 7.
+                Voltage
+                0x0008
+                48.7F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 8.
+                8
+                Cabinet 8.
+                Voltage
+                0x0009
+                48.8F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 9.
+                9
+                Cabinet 9.
+                Voltage
+                0x000A
+                48.9F
+                0x41
+            RegDefEnd
+            RegDef
+                Get the volt data of cabinet 10.
+                10
+                Cabinet 10.
+                Voltage
+                0x000B
+                49.1F
+                0x41
+            RegDefEnd
+            RegDef
+                Read active alarm / status
+                Alarm
+                Alarm
+                General
+                0x000C
+                0x0
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode starter
+                Bar0
+                BarCode starter
+                General
+                0x0044
+                0xD00700DD
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 0 - 3
+                Bar1    
+                BarCode 0 - 3
+                General
+                0x0045
+                0x31323334
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 4 - 7
+                Bar2
+                BarCode 4 - 7
+                General
+                0x0046
+                0x3FF00065
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 8 - 11
+                Bar3
+                BarCode 8 - 11
+                General
+                0x0047
+                0x31323336
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 12 - 15
+                Bar4
+                BarCode 12 - 15
+                General
+                0x0048
+                0x31323337
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 16 - 19
+                Bar5
+                BarCode 16 - 19
+                General
+                0x0049
+                0x31323338
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 20 - 23
+                Bar6
+                BarCode 20 - 23
+                General
+                0x004A
+                0x30333153
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 24 - 27
+                Bar7
+                BarCode 24 - 27
+                General
+                0x004B
+                0x4D445545
+                0x41
+            RegDefEnd
+            RegDef
+                Software Version
+                Version    
+                Software Version
+                General
+                0x004C
+                0x41303100
+                0x41
+            RegDefEnd
+            RegDef
+                Unknown
+                Unknown
+                Unknown
+                General
+                0x004D
+                0x00000000
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read chan 1 def
+                Def
+                Set / read chan 1 def
+                General
+                0x0050
+                0.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 1
+                1
+                Current shunt 1
+                Current
+                0x0051
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 2
+                2
+                Current shunt 2
+                Current
+                0x0052
+                110.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 3
+                3
+                Current shunt 3
+                Current
+                0x0053
+                120.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 4
+                4
+                Current shunt 4
+                Current
+                0x0054
+                130.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 5
+                5    
+                Current shunt 5
+                Current
+                0x0055
+                140.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 6
+                6
+                Current shunt 6
+                Current
+                0x0056
+                150.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 7
+                7
+                Current shunt 7
+                Current
+                0x0057
+                160.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 8
+                8
+                Current shunt 8
+                Current
+                0x0058
+                170.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 9
+                9
+                Current shunt 9
+                Current
+                0x0059
+                180.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of shunt 10
+                10
+                Current shunt 10
+                Current
+                0x005A
+                190.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 1
+                1
+                Signal Hall 1
+                HallSig
+                0x0061
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 2
+                2    
+                Signal Hall 2
+                HallSig
+                0x0062
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 3
+                3
+                Signal Hall 3
+                HallSig
+                0x0063
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 4
+                4
+                Signal Hall 4
+                HallSig
+                0x0064
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 5
+                5
+                Signal Hall 5
+                HallSig
+                0x0065
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 6
+                6
+                Signal Hall 6
+                HallSig
+                0x0066
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 7
+                7
+                Signal Hall 7
+                HallSig
+                0x0067
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 8
+                8    
+                Signal Hall 8
+                HallSig
+                0x0068
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 9
+                9
+                Signal Hall 9
+                HallSig
+                0x0069
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the current signal of hall sensor 10
+                10
+                Signal Hall 10
+                HallSig
+                0x006A
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 1
+                1
+                Voltage Signal 1
+                VoltageSig
+                0x0071
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 2
+                2
+                Voltage Signal 2
+                VoltageSig
+                0x0072
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 3
+                3
+                Voltage Signal 3
+                VoltageSig
+                0x0073
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 4
+                4
+                Voltage Signal 4
+                VoltageSig
+                0x0074
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 5
+                5    
+                Voltage Signal 5
+                VoltageSig
+                0x0075
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 6
+                6
+                Voltage Signal 6
+                VoltageSig
+                0x0076
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 7
+                7
+                Voltage Signal 7
+                VoltageSig
+                0x0077
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 8
+                8
+                Voltage Signal 8
+                VoltageSig
+                0x0078
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 9
+                9
+                Voltage Signal 9
+                VoltageSig
+                0x0079
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the voltage signal 10
+                10
+                Voltage Signal 10
+                VoltageSig
+                0x007A
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 1
+                1
+                Temp Signal 1
+                TempSig
+                0x0081
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 2
+                2
+                Temp Signal 2
+                TempSig
+                0x0082
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 3
+                3
+                Temp Signal 3
+                TempSig
+                0x0083
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 4
+                4
+                Temp Signal 4
+                TempSig
+                0x0084
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 5
+                5    
+                Temp Signal 5
+                TempSig
+                0x0085
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 6
+                6
+                Temp Signal 6
+                TempSig
+                0x0086
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 7
+                7
+                Temp Signal 7
+                TempSig
+                0x0087
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 8
+                8
+                Temp Signal 8
+                TempSig
+                0x0088
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 9
+                9
+                Temp Signal 9
+                TempSig
+                0x0089
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Get the temperature signal 10
+                10
+                Temp Signal 10
+                TempSig
+                0x008A
+                1.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read the voltage Coeff of shunt 1 (mV)
+                1
+                Voltage Coeff 1
+                VCoeff
+                0x0100
+                301.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read the current Coeff of shunt 1 (A)
+                1    
+                Current Coeff 1
+                CCoeff
+                0x0101
+                101.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage Coeff 2(mV)
+                2
+                Voltage Coeff 2
+                VCoeff
+                0x0102
+                302.0
+                0x41
+            RegDefEnd
+            RegDef
+                current Coeff 2 (A)
+                2
+                Current Coeff 2
+                CCoeff
+                0x0103
+                102.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage Coeff 3 (mV)
+                3
+                Voltage Coeff 3
+                VCoeff
+                0x0104
+                303.0
+                0x41
+            RegDefEnd
+            RegDef
+                current Coeff 3 (A)
+                3
+                Current Coeff 3
+                CCoeff
+                0x0105
+                103.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage Coeff 4(mV)
+                4
+                Voltage Coeff 4
+                VCoeff
+                0x0106
+                304.0
+                0x41
+            RegDefEnd
+            RegDef
+                current Coeff 4 (A)
+                4
+                Current Coeff 4
+                CCoeff
+                0x0107
+                104.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage Coeff 5 (mV)
+                5    
+                Voltage Coeff 5
+                VCoeff
+                0x0108
+                305.0
+                0x41
+            RegDefEnd
+            RegDef
+                current Coeff 5 (A)
+                5
+                Current Coeff 5
+                CCoeff
+                0x0109
+                105.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage Coeff 6(mV)
+                6
+                Voltage Coeff 6
+                VCoeff
+                0x010A
+                306.0
+                0x41
+            RegDefEnd
+            RegDef
+                current Coeff 6 (A)
+                6
+                Current Coeff 6
+                CCoeff
+                0x010B
+                106.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage Coeff 7(mV)
+                7
+                Voltage Coeff 7
+                VCoeff
+                0x010C
+                307.0
+                0x41
+            RegDefEnd
+            RegDef
+                current Coeff 7(A)
+                7
+                Current Coeff 7
+                CCoeff
+                0x010D
+                107.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage Coeff 8(mV)
+                8
+                Voltage Coeff 8
+                VCoeff
+                0x010E
+                308.0
+                0x41
+            RegDefEnd
+            RegDef
+                current Coeff 8 (A)
+                8
+                Current Coeff 8
+                CCoeff
+                0x010F
+                108.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage Coeff 9(mV)
+                9
+                Voltage Coeff 9
+                VCoeff
+                0x0110
+                309.0
+                0x41
+            RegDefEnd
+            RegDef
+                current Coeff 9(A)
+                9
+                Current Coeff 9
+                CCoeff
+                0x0111
+                109.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage Coeff 10(mV)
+                10    
+                Voltage Coeff 10
+                VCoeff
+                0x0112
+                310.0
+                0x41
+            RegDefEnd
+            RegDef
+                current Coeff 10 (A)
+                10
+                Current Coeff 10
+                CCoeff
+                0x0113
+                110.0
+                0x41
+            RegDefEnd
+            RegDef
+                Unknown2
+                Unknown2
+                Unknown2
+                General
+                0x0120
+                0x00249249
+                0x41
+            RegDefEnd
+        RegDefsEnd
+        MessagesDef
+            MessageDef
+                0x00
+                Message 0x00
+                0x01
+                0x02
+                0x03
+                0x04
+                0x05
+                0x06
+                0x07
+                0x08
+                0x09
+                0x0A
+                0x0b
+                0x0c
+            MessageDefEnd
+            MessageDef
+                0x20
+                Message 0x20
+                0x45
+                0x46
+                0x47
+                0x48
+                0x49
+                0x4A
+                0x4B
+                0x4C
+            MessageDefEnd
+            MessageDef
+                0x30
+                Message 0x30
+                0x50
+                0x51
+                0x52
+                0x53
+                0x54
+                0x55
+                0x56
+                0x57
+                0x58
+                0x59
+                0x5a
+            MessageDefEnd
+            MessageDef
+                0x31
+                Message 0x31
+                0x100
+                0x101
+            MessageDefEnd
+        MessagesDefEnd
+    DeviceDefEnd
+    DeviceDef
+        Panel
+        Panel
+        0xD3
+        0xA5
+        2
+        RegDefs
+            RegDef
+                bus volt
+                Volt
+                bus volt
+                General
+                0x0005
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Read active alarm / status
+                Alarm
+                Read active alarm / status
+                General
+                0x0040
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Read current status
+                Status1
+                Read current status
+                General
+                0x0041
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Read current status
+                Status2
+                Read current status
+                General
+                0x0042
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set the characteristic data of this type
+                Status
+                Set the characteristic data of this type
+                General
+                0x0051
+                0x00000000
+                0x41
+            RegDefEnd
+            RegDef
+                Read the lower bits of Serial No of node (ID number)
+                SNL
+                Read the lower bits of Serial No of node (ID number)
+                General
+                0x0054
+                0xD00700C7
+                0x41
+            RegDefEnd
+            RegDef
+                Read the higher bits of Searial No of node
+                SNH
+                Read the higher bits of Searial No of node
+                General
+                0x0055
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Read version number
+                Version
+                Read version number
+                General
+                0x0056
+                0x05020064
+                0x41
+            RegDefEnd
+            RegDef
+                Read barcode content 1
+                Bar1
+                Read barcode content 1
+                General
+                0x005A
+                0x30333153
+                0x41
+            RegDefEnd
+            RegDef
+                Read barcode content 2
+                Bar2
+                Read barcode content 2
+                General
+                0x005B
+                0x4D445548
+                0x41
+            RegDefEnd
+            RegDef
+                Read barcode content 3
+                Bar3
+                Read barcode content 3
+                General
+                0x005C
+                0x32413031
+                0x41
+            RegDefEnd
+            RegDef
+                Read barcode content 4
+                Bar4
+                Read barcode content 4
+                General
+                0x005D
+                0x20202046
+                0x41
+            RegDefEnd
+            RegDef
+                Set version number
+                Version
+                Set version number
+                General
+                0x00A2
+                0x05020064
+                0x41
+            RegDefEnd
+            RegDef
+                Set the characteristic data of this type
+                Type
+                Set the characteristic data of this type
+                General
+                0x00AA
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 1
+                1
+                the current signal of channel 1
+                Current
+                0x0100
+                75.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 2
+                2
+                the current signal of channel 2
+                Current
+                0x0101
+                76.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 3
+                3
+                the current signal of channel 3
+                Current
+                0x0102
+                77.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 4
+                4
+                the current signal of channel 4
+                Current
+                0x0103
+                78.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 5
+                5
+                the current signal of channel 5
+                Current
+                0x0104
+                79.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 6
+                6
+                the current signal of channel 6
+                Current
+                0x0105
+                80.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 7
+                7
+                the current signal of channel 7
+                Current
+                0x0106
+                81.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 8
+                8
+                the current signal of channel 8
+                Current
+                0x0107
+                82.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 9
+                9
+                the current signal of channel 9
+                Current
+                0x0108
+                81.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 10
+                10
+                the current signal of channel 10
+                Current
+                0x0109
+                80.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 11
+                11
+                the current signal of channel 11
+                Current
+                0x010A
+                79.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 12
+                12
+                the current signal of channel 12
+                Current
+                0x010B
+                78.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 13
+                13
+                the current signal of channel 13
+                Current
+                0x010C
+                76.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 14
+                14
+                the current signal of channel 14
+                Current
+                0x010D
+                75.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 15
+                15
+                the current signal of channel 15
+                Current
+                0x010E
+                74.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 16
+                16
+                the current signal of channel 16
+                Current
+                0x010F
+                73.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 17
+                17
+                the current signal of channel 17
+                Current
+                0x0110
+                72.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 18
+                18
+                the current signal of channel 18
+                Current
+                0x0111
+                71.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 19
+                19
+                the current signal of channel 19
+                Current
+                0x0112
+                72.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 20
+                20
+                the current signal of channel 20
+                Current
+                0x0113
+                73.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 21
+                21
+                the current signal of channel 21
+                Current
+                0x0114
+                74.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 22
+                22
+                the current signal of channel 22
+                Current
+                0x0115
+                75.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 23
+                23
+                the current signal of channel 23
+                Current
+                0x0116
+                75.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 24
+                24
+                the current signal of channel 24
+                Current
+                0x0117
+                75.0
+                0x41
+            RegDefEnd
+            RegDef
+                the current signal of channel 25
+                25
+                the current signal of channel 25
+                Current
+                0x0118
+                75.0
+                0x41
+            RegDefEnd
+            RegDef
+                voltage 1
+                Voltage1
+                voltage 1
+                General
+                0x0119
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Fuse status and status of bit 1 and bit 3 of DIP switch
+                Fuses
+                Fuse status and status of bit 1 and bit 3 of DIP switch
+                General
+                0x0132
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 1
+                1
+                Set / read parameters of shunt 1
+                Parameter
+                0x0133
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 2
+                2
+                Set / read parameters of shunt 2
+                Parameter
+                0x0134
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 3
+                3
+                Set / read parameters of shunt 3
+                Parameter
+                0x0135
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 4
+                4
+                Set / read parameters of shunt 4
+                Parameter
+                0x0136
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 5
+                5
+                Set / read parameters of shunt 5
+                Parameter
+                0x0137
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 6
+                6
+                Set / read parameters of shunt 6
+                Parameter
+                0x0138
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 7
+                7
+                Set / read parameters of shunt 7
+                Parameter
+                0x0139
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 8
+                8
+                Set / read parameters of shunt 8
+                Parameter
+                0x013A
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 9
+                9
+                Set / read parameters of shunt 9
+                Parameter
+                0x013B
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 10
+                10
+                Set / read parameters of shunt 10
+                Parameter
+                0x013C
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 11
+                11
+                Set / read parameters of shunt 11
+                Parameter
+                0x013D
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 12
+                12
+                Set / read parameters of shunt 12
+                Parameter
+                0x013E
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 13
+                13
+                Set / read parameters of shunt 13
+                Parameter
+                0x013F
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 14
+                14
+                Set / read parameters of shunt 14
+                Parameter
+                0x0140
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 15
+                15
+                Set / read parameters of shunt 15
+                Parameter
+                0x0141
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 16
+                16
+                Set / read parameters of shunt 16
+                Parameter
+                0x0142
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 17
+                17
+                Set / read parameters of shunt 17
+                Parameter
+                0x0143
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 18
+                18
+                Set / read parameters of shunt 18
+                Parameter
+                0x0144
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 19
+                19
+                Set / read parameters of shunt 19
+                Parameter
+                0x0145
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 20
+                20
+                Set / read parameters of shunt 20
+                Parameter
+                0x0146
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 21
+                21
+                Set / read parameters of shunt 21
+                Parameter
+                0x0147
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 22
+                22
+                Set / read parameters of shunt 22
+                Parameter
+                0x0148
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 23
+                23
+                Set / read parameters of shunt 23
+                Parameter
+                0x0149
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 24
+                24
+                Set / read parameters of shunt 24
+                Parameter
+                0x014A
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                Set / read parameters of shunt 25
+                25
+                Set / read parameters of shunt 25
+                Parameter
+                0x014B
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 1
+                1
+                power of channel 1
+                Power
+                0x014C
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 2
+                2
+                power of channel 2
+                Power
+                0x014D
+                100.0
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 3
+                3
+                power of channel 3
+                Power
+                0x014E
+                300.3
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 4
+                4
+                power of channel 4
+                Power
+                0x014F
+                300.4
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 5
+                5
+                power of channel 5
+                Power
+                0x0150
+                300.5
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 6
+                6
+                power of channel 6
+                Power
+                0x0151
+                300.6
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 7
+                7
+                power of channel 7
+                Power
+                0x0152
+                300.7
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 8
+                8
+                power of channel 8
+                Power
+                0x0153
+                300.8
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 9
+                9
+                power of channel 9
+                Power
+                0x0154
+                300.9
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 10
+                10
+                power of channel 10
+                Power
+                0x0155
+                301.0
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 11
+                11
+                power of channel 11
+                Power
+                0x0156
+                301.1
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 12
+                12
+                power of channel 12
+                Power
+                0x0157
+                301.2
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 13
+                13
+                power of channel 13
+                Power
+                0x0158
+                301.3
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 14
+                14
+                power of channel 14
+                Power
+                0x0159
+                301.4
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 15
+                15
+                power of channel 15
+                Power
+                0x015A
+                301.5
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 16
+                16
+                power of channel 16
+                Power
+                0x015B
+                301.6
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 17
+                17
+                power of channel 17
+                Power
+                0x015C
+                301.7
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 18
+                18
+                power of channel 18
+                Power
+                0x015D
+                301.8
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 19
+                19
+                power of channel 19
+                Power
+                0x015E
+                301.9
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 20
+                20
+                power of channel 20
+                Power
+                0x015F
+                302.0
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 21
+                21
+                power of channel 21
+                Power
+                0x0160
+                302.1
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 22
+                22
+                power of channel 22
+                Power
+                0x0161
+                302.2
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 23
+                23
+                power of channel 23
+                Power
+                0x0162
+                302.3
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 24
+                24
+                power of channel 24
+                Power
+                0x0163
+                302.4
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 25
+                25
+                power of channel 25
+                Power
+                0x0164
+                302.5
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 1
+                1
+                total power consumption of Day X of channel 1
+                DayPower
+                0x0165
+                500.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 2
+                2
+                total power consumption of Day X of channel 2
+                DayPower
+                0x0166
+                500.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 3
+                3
+                total power consumption of Day X of channel 3
+                DayPower
+                0x0167
+                500.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 4
+                4
+                total power consumption of Day X of channel 4
+                DayPower
+                0x0168
+                500.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 5
+                5
+                total power consumption of Day X of channel 5
+                DayPower
+                0x0169
+                500.5
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 6
+                6
+                total power consumption of Day X of channel 6
+                DayPower
+                0x016A
+                500.6
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 7
+                7
+                total power consumption of Day X of channel 7
+                DayPower
+                0x016B
+                500.7
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 8
+                8
+                total power consumption of Day X of channel 8
+                DayPower
+                0x016C
+                500.8
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 9
+                9
+                total power consumption of Day X of channel 9
+                DayPower
+                0x016D
+                500.9
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 10
+                10
+                total power consumption of Day X of channel 10
+                DayPower
+                0x016E
+                501.0
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 11
+                11
+                total power consumption of Day X of channel 11
+                DayPower
+                0x016F
+                501.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 12
+                12
+                total power consumption of Day X of channel 12
+                DayPower
+                0x0170
+                501.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 13
+                13
+                total power consumption of Day X of channel 13
+                DayPower
+                0x0171
+                501.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 14
+                14
+                total power consumption of Day X of channel 14
+                DayPower
+                0x0172
+                501.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 15
+                15
+                total power consumption of Day X of channel 15
+                DayPower
+                0x0173
+                501.5
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 16
+                16
+                total power consumption of Day X of channel 16
+                DayPower
+                0x0174
+                501.6
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 17
+                17
+                total power consumption of Day X of channel 17
+                DayPower
+                0x0175
+                501.7
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 18
+                18
+                total power consumption of Day X of channel 18
+                DayPower
+                0x0176
+                501.8
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 19
+                19
+                total power consumption of Day X of channel 19
+                DayPower
+                0x0177
+                501.9
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 20
+                20
+                total power consumption of Day X of channel 20
+                DayPower
+                0x0178
+                502.0
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 21
+                21
+                total power consumption of Day X of channel 21
+                DayPower
+                0x0179
+                502.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 22
+                22
+                total power consumption of Day X of channel 22
+                DayPower
+                0x017A
+                502.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 23
+                23
+                total power consumption of Day X of channel 23
+                DayPower
+                0x017B
+                502.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 24
+                24
+                total power consumption of Day X of channel 24
+                DayPower
+                0x017C
+                502.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 25
+                25
+                total power consumption of Day X of channel 25
+                DayPower
+                0x017D
+                502.5
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 1
+                1
+                total power consumption of channel 1
+                TotalPower
+                0x017E
+                600.0
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 2
+                2
+                total power consumption of channel 2
+                TotalPower
+                0x017F
+                600.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 3
+                3
+                total power consumption of channel 3
+                TotalPower
+                0x0180
+                600.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 4
+                4
+                total power consumption of channel 4
+                TotalPower
+                0x0181
+                600.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 5
+                5
+                total power consumption of channel 5
+                TotalPower
+                0x0182
+                600.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 6
+                6
+                total power consumption of channel 6
+                TotalPower
+                0x0183
+                600.5
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 7
+                7
+                total power consumption of channel 7
+                TotalPower
+                0x0184
+                600.6
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 8
+                8
+                total power consumption of channel 8
+                TotalPower
+                0x0185
+                600.7
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 9
+                9
+                total power consumption of channel 9
+                TotalPower
+                0x0186
+                600.8
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 10
+                10
+                total power consumption of channel 10
+                TotalPower
+                0x0187
+                600.9
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 11
+                11
+                total power consumption of channel 11
+                TotalPower
+                0x0188
+                601.0
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 12
+                12
+                total power consumption of channel 12
+                TotalPower
+                0x0189
+                601.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 13
+                13
+                total power consumption of channel 13
+                TotalPower
+                0x018A
+                601.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 14
+                14
+                total power consumption of channel 14
+                TotalPower
+                0x018B
+                601.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 15
+                15
+                total power consumption of channel 15
+                TotalPower
+                0x018C
+                601.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 16
+                16
+                total power consumption of channel 16
+                TotalPower
+                0x018D
+                601.5
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 17
+                17
+                total power consumption of channel 17
+                TotalPower
+                0x018E
+                601.6
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 18
+                18
+                total power consumption of channel 18
+                TotalPower
+                0x018F
+                601.7
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 19
+                19
+                total power consumption of channel 19
+                TotalPower
+                0x0190
+                601.8
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 20
+                20
+                total power consumption of channel 20
+                TotalPower
+                0x0191
+                601.9
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 21
+                21
+                total power consumption of channel 21
+                TotalPower
+                0x0192
+                602.0
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 22
+                22
+                total power consumption of channel 22
+                TotalPower
+                0x0193
+                602.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 23
+                23
+                total power consumption of channel 23
+                TotalPower
+                0x0194
+                602.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 24
+                24
+                total power consumption of channel 24
+                TotalPower
+                0x0195
+                602.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 25
+                25
+                total power consumption of channel 25
+                TotalPower
+                0x0196
+                602.4
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 1
+                1
+                the Hall parameter (mA/V) of channel 1
+                HallParam
+                0x0197
+                3200.1
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 2
+                2
+                the Hall parameter (mA/V) of channel 2
+                HallParam
+                0x0198
+                3200.2
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 3
+                3
+                the Hall parameter (mA/V) of channel 3
+                HallParam
+                0x0199
+                3200.3
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 4
+                4
+                the Hall parameter (mA/V) of channel 4
+                HallParam
+                0x019A
+                3200.4
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 5
+                5
+                the Hall parameter (mA/V) of channel 5
+                HallParam
+                0x019B
+                3200.5
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 6
+                6
+                the Hall parameter (mA/V) of channel 6
+                HallParam
+                0x019C
+                3200.6
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 7
+                7
+                the Hall parameter (mA/V) of channel 7
+                HallParam
+                0x019D
+                3200.7
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 8
+                8
+                the Hall parameter (mA/V) of channel 8
+                HallParam
+                0x019E
+                3200.8
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 9
+                9
+                the Hall parameter (mA/V) of channel 9
+                HallParam
+                0x019F
+                3200.9
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 10
+                10
+                the Hall parameter (mA/V) of channel 10
+                HallParam
+                0x01A0
+                3201.0
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 11
+                11
+                the Hall parameter (mA/V) of channel 11
+                HallParam
+                0x01A1
+                3201.1
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 12
+                12
+                the Hall parameter (mA/V) of channel 12
+                HallParam
+                0x01A2
+                3201.2
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 13
+                13
+                the Hall parameter (mA/V) of channel 13
+                HallParam
+                0x01A3
+                3201.3
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 14
+                14
+                the Hall parameter (mA/V) of channel 14
+                HallParam
+                0x01A4
+                3201.4
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 15
+                15
+                the Hall parameter (mA/V) of channel 15
+                HallParam
+                0x01A5
+                3201.5
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 16
+                16
+                the Hall parameter (mA/V) of channel 16
+                HallParam
+                0x01A6
+                3201.6
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 17
+                17
+                the Hall parameter (mA/V) of channel 17
+                HallParam
+                0x01A7
+                3201.7
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 18
+                18
+                the Hall parameter (mA/V) of channel 18
+                HallParam
+                0x01A8
+                3201.8
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 19
+                19
+                the Hall parameter (mA/V) of channel 19
+                HallParam
+                0x01A9
+                3201.9
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 20
+                20
+                the Hall parameter (mA/V) of channel 20
+                HallParam
+                0x01AA
+                3202.0
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 21
+                21
+                the Hall parameter (mA/V) of channel 21
+                HallParam
+                0x01AB
+                3202.1
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 22
+                22
+                the Hall parameter (mA/V) of channel 22
+                HallParam
+                0x01AC
+                3202.2
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 23
+                23
+                the Hall parameter (mA/V) of channel 23
+                HallParam
+                0x01AD
+                3202.3
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 24
+                24
+                the Hall parameter (mA/V) of channel 24
+                HallParam
+                0x01AE
+                3202.4
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 25
+                25
+                the Hall parameter (mA/V) of channel 25
+                HallParam
+                0x01AF
+                3202.5
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 26
+                26
+                current signal of channel 26
+                Current
+                0x01B0
+                110.1
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 27
+                27
+                current signal of channel 27
+                Current
+                0x01B1
+                110.2
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 28
+                28
+                current signal of channel 28
+                Current
+                0x01B2
+                110.3
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 29
+                29
+                current signal of channel 29
+                Current
+                0x01B3
+                110.4
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 30
+                30
+                current signal of channel 30
+                Current
+                0x01B4
+                110.5
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 31
+                31
+                current signal of channel 31
+                Current
+                0x01B5
+                110.6
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 32
+                32
+                current signal of channel 32
+                Current
+                0x01B6
+                110.7
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 33
+                33
+                current signal of channel 33
+                Current
+                0x01B7
+                110.8
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 34
+                34
+                current signal of channel 34
+                Current
+                0x01B8
+                110.9
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 35
+                35
+                current signal of channel 35
+                Current
+                0x01B9
+                111.0
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 36
+                36
+                current signal of channel 36
+                Current
+                0x01BA
+                111.1
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 37
+                37
+                current signal of channel 37
+                Current
+                0x01BB
+                111.2
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 38
+                38
+                current signal of channel 38
+                Current
+                0x01BC
+                111.3
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 39
+                39
+                current signal of channel 39
+                Current
+                0x01BD
+                111.4
+                0x41
+            RegDefEnd
+            RegDef
+                current signal of channel 40
+                40
+                current signal of channel 40
+                Current
+                0x01BE
+                111.5
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 26
+                26
+                power of channel 26
+                Power
+                0x01BF
+                200.0
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 27
+                27
+                power of channel 27
+                Power
+                0x01C0
+                200.1
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 28
+                28
+                power of channel 28
+                Power
+                0x01C1
+                200.2
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 29
+                29
+                power of channel 29
+                Power
+                0x01C2
+                200.3
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 30
+                30
+                power of channel 30
+                Power
+                0x01C3
+                200.4
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 31
+                31
+                power of channel 31
+                Power
+                0x01C4
+                200.5
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 32
+                32
+                power of channel 32
+                Power
+                0x01C5
+                200.6
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 33
+                33
+                power of channel 33
+                Power
+                0x01C6
+                200.7
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 34
+                34
+                power of channel 34
+                Power
+                0x01C7
+                200.8
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 35
+                35
+                power of channel 35
+                Power
+                0x01C8
+                200.9
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 36
+                36
+                power of channel 36
+                Power
+                0x01C9
+                201.0
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 37
+                37
+                power of channel 37
+                Power
+                0x01CA
+                201.1
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 38
+                38
+                power of channel 38
+                Power
+                0x01CB
+                201.2
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 39
+                39
+                power of channel 39
+                Power
+                0x01CC
+                201.3
+                0x41
+            RegDefEnd
+            RegDef
+                power of channel 40
+                40
+                power of channel 40
+                Power
+                0x01CD
+                201.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 26
+                26
+                total power consumption of Day X of channel 26
+                DayPower
+                0x01CE
+                210.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 27
+                27
+                total power consumption of Day X of channel 27
+                DayPower
+                0x01CF
+                210.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 28
+                28
+                total power consumption of Day X of channel 28
+                DayPower
+                0x01D0
+                210.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 29
+                29
+                total power consumption of Day X of channel 29
+                DayPower
+                0x01D1
+                210.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 30
+                30
+                total power consumption of Day X of channel 30
+                DayPower
+                0x01D2
+                210.5
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 31
+                31
+                total power consumption of Day X of channel 31
+                DayPower
+                0x01D3
+                210.6
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 32
+                32
+                total power consumption of Day X of channel 32
+                DayPower
+                0x01D4
+                210.7
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 33
+                33
+                total power consumption of Day X of channel 33
+                DayPower
+                0x01D5
+                210.8
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 34
+                34
+                total power consumption of Day X of channel 34
+                DayPower
+                0x01D6
+                210.9
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 35
+                35
+                total power consumption of Day X of channel 35
+                DayPower
+                0x01D7
+                211.0
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 36
+                36
+                total power consumption of Day X of channel 36
+                DayPower
+                0x01D8
+                211.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 37
+                37
+                total power consumption of Day X of channel 37
+                DayPower
+                0x01D9
+                211.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 38
+                38
+                total power consumption of Day X of channel 38
+                DayPower
+                0x01DA
+                211.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 39
+                39
+                total power consumption of Day X of channel 39
+                DayPower
+                0x01DB
+                211.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of Day X of channel 40
+                40
+                total power consumption of Day X of channel 40
+                DayPower
+                0x01DC
+                211.5
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 26
+                26
+                total power consumption of channel 26
+                TotalPower
+                0x01DD
+                300.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 27
+                27
+                total power consumption of channel 27
+                TotalPower
+                0x01DE
+                300.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 28
+                28
+                total power consumption of channel 28
+                TotalPower
+                0x01DF
+                300.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 29
+                29
+                total power consumption of channel 29
+                TotalPower
+                0x01E0
+                300.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 30
+                30
+                total power consumption of channel 30
+                TotalPower
+                0x01E1
+                300.5
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 31
+                31
+                total power consumption of channel 31
+                TotalPower
+                0x01E2
+                300.6
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 32
+                32
+                total power consumption of channel 32
+                TotalPower
+                0x01E3
+                300.7
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 33
+                33
+                total power consumption of channel 33
+                TotalPower
+                0x01E4
+                300.8
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 34
+                34
+                total power consumption of channel 34
+                TotalPower
+                0x01E5
+                300.9
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 35
+                35
+                total power consumption of channel 35
+                TotalPower
+                0x01E6
+                301.0
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 36
+                36
+                total power consumption of channel 36
+                TotalPower
+                0x01E7
+                301.1
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 37
+                37
+                total power consumption of channel 37
+                TotalPower
+                0x01E8
+                301.2
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 38
+                38
+                total power consumption of channel 38
+                TotalPower
+                0x01E9
+                301.3
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 39
+                39
+                total power consumption of channel 39
+                TotalPower
+                0x01EA
+                301.4
+                0x41
+            RegDefEnd
+            RegDef
+                total power consumption of channel 40
+                40
+                total power consumption of channel 40
+                TotalPower
+                0x01EB
+                301.5
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 26
+                26
+                the Hall parameter (mA/V) of channel 26
+                HallParam
+                0x01EC
+                3210.1
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 27
+                27
+                the Hall parameter (mA/V) of channel 27
+                HallParam
+                0x01ED
+                3210.2
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 28
+                28
+                the Hall parameter (mA/V) of channel 28
+                HallParam
+                0x01EE
+                3210.3
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 29
+                29
+                the Hall parameter (mA/V) of channel 29
+                HallParam
+                0x01EF
+                3210.4
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 30
+                30
+                the Hall parameter (mA/V) of channel 30
+                HallParam
+                0x01F0
+                3210.5
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 31
+                31
+                the Hall parameter (mA/V) of channel 31
+                HallParam
+                0x01F1
+                3210.6
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 32
+                32
+                the Hall parameter (mA/V) of channel 32
+                HallParam
+                0x01F2
+                3210.7
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 33
+                33
+                the Hall parameter (mA/V) of channel 33
+                HallParam
+                0x01F3
+                3210.8
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 34
+                34
+                the Hall parameter (mA/V) of channel 34
+                HallParam
+                0x01F4
+                3210.9
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 35
+                35
+                the Hall parameter (mA/V) of channel 35
+                HallParam
+                0x01F5
+                3211.0
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 36
+                36
+                the Hall parameter (mA/V) of channel 36
+                HallParam
+                0x01F6
+                3211.1
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 37
+                37
+                the Hall parameter (mA/V) of channel 37
+                HallParam
+                0x01F7
+                3211.2
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 38
+                38
+                the Hall parameter (mA/V) of channel 38
+                HallParam
+                0x01F8
+                3211.3
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 39
+                39
+                the Hall parameter (mA/V) of channel 39
+                HallParam
+                0x01F9
+                3211.4
+                0x41
+            RegDefEnd
+            RegDef
+                the Hall parameter (mA/V) of channel 40
+                40
+                the Hall parameter (mA/V) of channel 40
+                HallParam
+                0x01FA
+                3211.5
+                0x41
+            RegDefEnd
+        RegDefsEnd
+        MessagesDef
+            MessageDef
+                0x20
+                Message 0x20
+                0x51
+                0x54
+                0x56
+                0x5A
+                0x5B
+                0x5C
+                0x5D
+            MessageDefEnd
+            MessageDef
+                0x24
+                Message 0x24
+                0x0100
+                0x0101
+                0x0102
+                0x0103
+                0x0104
+                0x0105
+                0x0106
+                0x0107
+                0x0108
+                0x0109
+            MessageDefEnd
+            MessageDef
+                0x25
+                Message 0x25
+                0x010A
+                0x010B
+                0x010C
+                0x010D
+                0x010E
+                0x010F
+                0x0110
+                0x0111
+                0x0112
+                0x0113
+            MessageDefEnd
+            MessageDef
+                0x26
+                Message 0x26
+                0x0114
+                0x0115
+                0x0116
+                0x0117
+                0x0118
+                0x0000
+                0x0000
+                0x0000
+                0x0000
+                0x0000
+            MessageDefEnd
+            MessageDef
+                0x27
+                Message 0x27
+            MessageDefEnd
+            MessageDef
+                0x30
+                Message 0x30
+                0x014C
+                0x014D
+                0x014E
+                0x014F
+                0x0150
+                0x0151
+                0x0152
+                0x0153
+                0x0154
+                0x0155
+            MessageDefEnd
+            MessageDef
+                0x31
+                Message 0x31
+                0x0156
+                0x0157
+                0x0158
+                0x0159
+                0x015A
+                0x015B
+                0x015C
+                0x015D
+                0x015E
+                0x015F
+            MessageDefEnd
+            MessageDef
+                0x32
+                Message 0x32
+                0x0165
+                0x0166
+                0x0167
+                0x0168
+                0x0169
+                0x016A
+                0x016B
+                0x016C
+                0x016D
+                0x016E
+            MessageDefEnd
+            MessageDef
+                0x33
+                Message 0x33
+                0x016F
+                0x0170
+                0x0171
+                0x0172
+                0x0173
+                0x0174
+                0x0175
+                0x0176
+                0x0177
+                0x0178
+            MessageDefEnd
+            MessageDef
+                0x34
+                Message 0x34
+                0x017E
+                0x017F
+                0x0180
+                0x0181
+                0x0182
+                0x0183
+                0x0184
+                0x0185
+                0x0186
+                0x0187
+            MessageDefEnd
+            MessageDef
+                0x35
+                Message 0x35
+                0x0188
+                0x0189
+                0x018A
+                0x018B
+                0x018C
+                0x018D
+                0x018E
+                0x018F
+                0x0190
+                0x0191
+            MessageDefEnd
+            MessageDef
+                0x36
+                Message 0x36
+                0x0197
+                0x0198
+                0x0199
+                0x019A
+                0x019B
+                0x019C
+                0x019D
+                0x019E
+                0x019F
+                0x01A0
+                0x000
+            MessageDefEnd
+            MessageDef
+                0x37
+                Message 0x37
+                0x01A1
+                0x01A2
+                0x01A3
+                0x01A4
+                0x01A5
+                0x01A6
+                0x01A7
+                0x01A8
+                0x01A9
+                0x01AA
+            MessageDefEnd
+            MessageDef
+                0x38
+                Message 0x38
+                0x119
+                0x40
+            MessageDefEnd
+            MessageDef
+                0x39
+                Message 0x39
+            MessageDefEnd
+            MessageDef
+                0x3A
+                Message 0x3A
+            MessageDefEnd
+            MessageDef
+                0x50
+                Message 0x50
+                0x01B0
+                0x01B1
+                0x01B2
+                0x01B3
+                0x01B4
+            MessageDefEnd
+            MessageDef
+                0x51
+                Message 0x51
+                0x01B5
+                0x01B6
+                0x01B7
+                0x01B8
+                0x01B9
+                0x01BA
+                0x01BB
+                0x01BC
+                0x01BD
+                0x01BE
+            MessageDefEnd
+            MessageDef
+                0x52
+                Message 0x52
+                0x0160
+                0x0161
+                0x0162
+                0x0163
+                0x0164
+                0x01BF
+                0x01C0
+                0x01C1
+                0x01C2
+                0x01C3
+            MessageDefEnd
+            MessageDef
+                0x53
+                Message 0x53
+                0x01C4
+                0x01C5
+                0x01C6
+                0x01C7
+                0x01C8
+                0x01C9
+                0x01CA
+                0x01CB
+                0x01CC
+                0x01CD
+            MessageDefEnd
+            MessageDef
+                0x54
+                Message 0x54
+                0x0179
+                0x017A
+                0x017B
+                0x017C
+                0x017D
+                0x01CE
+                0x01CF
+                0x01D0
+                0x01D1
+                0x01D2
+            MessageDefEnd
+            MessageDef
+                0x55
+                Message 0x55
+                0x01D3
+                0x01D4
+                0x01D5
+                0x01D6
+                0x01D7
+                0x01D8
+                0x01D9
+                0x01DA
+                0x01DB
+                0x01DC
+            MessageDefEnd
+            MessageDef
+                0x56
+                Message 0x56
+                0x0192
+                0x0193
+                0x0194
+                0x0195
+                0x0196
+                0x01DD
+                0x01DE
+                0x01DF
+                0x01E0
+                0x01E1
+            MessageDefEnd
+            MessageDef
+                0x57
+                Message 0x57
+                0x01E2
+                0x01E3
+                0x01E4
+                0x01E5
+                0x01E6
+                0x01E7
+                0x01E8
+                0x01E9
+                0x01EA
+                0x01EB
+            MessageDefEnd
+            MessageDef
+                0x58
+                Message 0x58
+                0x01AB
+                0x01AC
+                0x01AD
+                0x01AE
+                0x01AF
+                0x01EC
+                0x01ED
+                0x01EE
+                0x01EF
+                0x01F0
+            MessageDefEnd
+            MessageDef
+                0x59
+                Message 0x59
+                0x01F1
+                0x01F2
+                0x01F3
+                0x01F4
+                0x01F5
+                0x01F6
+                0x01F7
+                0x01F8
+                0x01F9
+                0x01FA
+            MessageDefEnd
+        MessagesDefEnd
+    DeviceDefEnd
+    DeviceDef
+        SMTEMP
+        SMTEMP
+        0x00
+        0x68
+        5
+        RegDefs
+            RegDef
+                Input Temp 1
+                Temp1
+                Input Temp 1
+                Temp
+                0x01
+                20.00
+                0xC1
+            RegDefEnd
+            RegDef
+                Input Temp 1
+                Temp2
+                Input Temp 1
+                Temp
+                0x02
+                20.00
+                0xC1
+            RegDefEnd
+            RegDef
+                Input Temp 1
+                Temp3
+                Input Temp 1
+                Temp
+                0x03
+                20.00
+                0xC1
+            RegDefEnd
+            RegDef
+                Input Temp 1
+                Temp4
+                Input Temp 1
+                Temp
+                0x04
+                20.00
+                0xC1
+            RegDefEnd
+            RegDef
+                Input Temp 1
+                Temp5
+                Input Temp 1
+                Temp
+                0x05
+                20.00
+                0xC1
+            RegDefEnd
+            RegDef
+                Input Temp 1
+                Temp6
+                Input Temp 1
+                Temp
+                0x06
+                20.00
+                0xC1
+            RegDefEnd
+            RegDef
+                Input Temp 1
+                Temp7
+                Input Temp 1
+                Temp
+                0x07
+                20.00
+                0xC1
+            RegDefEnd
+            RegDef
+                Input Temp 1
+                Temp8
+                Input Temp 1
+                Temp
+                0x08
+                20.00
+                0xC1
+            RegDefEnd
+            RegDef
+                Read Status
+                Alarm
+                Read Status
+                General
+                0x40
+                0
+                0x42
+            RegDefEnd
+            RegDef
+                Character Data
+                CharData
+                Character Data
+                Special
+                0x51
+                0x20202020
+                0x41
+            RegDefEnd
+            RegDef
+                SN Low
+                SNLow
+                SN Low
+                General
+                0x54
+                0
+                0x41
+            RegDefEnd
+            RegDef
+                SN High
+                SNHigh
+                SN High
+                General
+                0x55
+                0x00001011
+                0x41
+            RegDefEnd
+            RegDef
+                Version
+                Version
+                Version
+                General
+                0x56
+                0x000100C8
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 1
+                Bar1
+                BarCode 1
+                General
+                0x5A
+                0x30333153
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 2
+                Bar2
+                BarCode 2
+                General
+                0x5B
+                0x4D54454D
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 3
+                Bar3
+                BarCode 3
+                General
+                0x5C
+                0x50202020
+                0x41
+            RegDefEnd
+            RegDef
+                BarCode 4
+                Bar4
+                BarCode 4
+                General
+                0x5D
+                0x20202020
+                0x41
+            RegDefEnd
+        RegDefsEnd
+        MessagesDef
+            MessageDef
+                0x00
+                Message 0x00
+                0x01
+                0x02
+                0x03
+                0x04
+                0x05
+                0x07
+                0x40
+                0x54
+                0x58
+            MessageDefEnd
+            MessageDef
+                0x01
+                Message 0x01
+                0x41
+            MessageDefEnd
+        MessagesDefEnd
+    DeviceDefEnd
+DeviceDefsEnd
