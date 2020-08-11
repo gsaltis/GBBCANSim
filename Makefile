@@ -66,6 +66,7 @@ LIBS			= -ljson -lmongoose -lm -lpthread -lsqlite3 -lrt
 all			: $(TARGET) $(TARGET2)
 
 $(TARGET)		: $(OBJS)
+			  cd lib && make
 			  @echo [LD] $(TARGET)
 			  @$(LINK) $(LINK_FLAGS) -o $(TARGET) $(OBJS) $(LIBS)
 

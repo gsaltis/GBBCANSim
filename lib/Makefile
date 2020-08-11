@@ -1,8 +1,8 @@
 CC			= gcc
 ARCHIVE			= ar
 
-CC_FLAGS		= -g -c -Wall -Iinclude
-ARCHIVE_FLAGS		= ru
+CC_FLAGS		= -g -c -Iinclude
+ARCHIVE_FLAGS		= r
 
 LIBS			 = libmongoose.a libjson.a libsqlite3.a
 
