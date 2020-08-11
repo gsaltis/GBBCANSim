@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Rotate Test</title>
+    <style>
+      body 		{
+	background	: white;
+      }
+      div.Test		{
+	transform	: rotate(45deg);
+ 	position	: absolute;
+	left		: -51px;
+	width		: 100px;
+	height		: 100px;
+	top		: 20px;
+	background	: linear-gradient(225deg, #888, #EEE);
+      }
+      div.Body		{
+	position	: absolute;
+	left		: 100px;
+	top		: 100px;
+	height		: 142.4px;
+	width		: 71.2px;
+        overflow	: hidden;
+        transform	: scale(.702, calc(100 / 141.4));
+      }
+      div.Center	{
+	position	: absolute;
+	width		: 60px;
+	height		: 60px;
+	left		: 20px;
+	top		: 20px;
+	border-radius	: 0px;
+        background	: linear-gradient(45deg, #FFF, #444);
+    </style>
+  </head>
+  <body>
+    <div class="Body">
+      <div class="Test"><div class="Center"></div></div>
+    </div>
+  </body>
+</html>
+

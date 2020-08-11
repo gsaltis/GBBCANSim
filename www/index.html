@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script src="scripts.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="websocketinfo.js"></script>
+  </head>
+
+  <body onload="MainInitialize()" onresize="MainResizeBody(event)">
+    <div class="Main"> 
+      <div id="EquipmentList" class="GeneralPane EquipmentList">
+        <div class="GeneralPaneHeader"> Equipment List </div>
+        <div id="EquipmentListArea" class="GeneralPaneDisplayArea"> </div>	
+      </div>
+
+      <div id="BayArea" class="GeneralPane BayArea BayAreaWithCANMessageLog">
+        <div class="GeneralPaneHeader"> Bays </div>
+        <div id="BayEdit" class="GeneralPane" style="width : 300px; height : 400px; visibility:hidden">
+          <div id="BayEditHeader" class="GeneralPaneHeader"> </div>
+        </div>
+        <div id="BayDisplayArea" class="GeneralPaneDisplayArea" ondrop="CBBayDrop(event)" ondragover="CBBayDragOver(event)"> </div>
+      </div>
+      <div id="CANMessageLog" class="GeneralPane CANMessageLog">
+        <div id="CANMessageLogHeader" class="GeneralPaneHeader">CAN Messages</div>
+        <div id="CANMessageLogArea" class="GeneralPaneDisplayArea"></div> 
+      </div>
+      <div id="MessageLine" class="GeneralPane MessageLine"> </div>
+    </div>
+    <div id="GarbageCan" class="GarbageCanBody" ondragover="CBGarbageCanDragOver(event);" ondrop="CBGarbageCanDrop(event);"> 
+      <div id="GarbageCanLid" class="GarbageCanLid" ondragover="CBGarbageCanDragOver(event);" ondrop="CBGarbageCanDrop(event);"> 
+        <div class="GarbageCanLidHandle"></div>
+      </div>
+      <div class="GarbageCanVerticalLine" ondragover="CBGarbageCanDragOver(event);" ondrop="CBGarbageCanDrop(event);"> </div>
+      <div class="GarbageCanVerticalLine" style="left:24px;" ondragover="CBGarbageCanDragOver(event);" ondrop="CBGarbageCanDrop(event);"> </div>
+      <div class="GarbageCanVerticalLine" style="left:37px;" ondragover="CBGarbageCanDragOver(event);" ondrop="CBGarbageCanDrop(event);"> </div>
+    </div>
+    <div id="MainBlocker" class="GeneralPane BlockerPane"> </div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+unalias c
+unalias m
+unalias r
+unalias mc
+export PS1=" : "

@@ -1,0 +1,68 @@
+[
+  {
+    "name" : "Bay 1",
+    "bayindex" : 1,
+    "canaddress" : 220,
+    "type" : "8 Panel",
+    "panelcount" : 8,
+    "ipaddress" : "127.0.0.1",
+    "portnumber" : 8001,
+    "listnumber" : "List 03",
+    "panels" : [
+       {
+         "panelindex" : 1,
+         "bayindex" : 1,
+         "listnumber" : "List 15A",
+         "canaddress" : 211
+       },
+       {
+         "panelindex" : 2,
+         "bayindex" : 1,
+         "listnumber" : "List 15A",
+         "canaddress" : 212
+       },
+       {
+         "panelindex" : 3,
+         "bayindex" : 1,
+         "listnumber" : "List 15A",
+         "canaddress" : 213
+       },
+       {
+         "panelindex" : 4,
+         "bayindex" : 1,
+         "listnumber" : "List 15A",
+         "canaddress" : 214
+       },
+       {
+         "panelindex" : 5,
+         "bayindex" : 1,
+         "listnumber" : "List 10",
+         "canaddress" : 0
+       },
+       {
+         "panelindex" : 6,
+         "bayindex" : 1,
+         "listnumber" : "List 15",
+         "canaddress" : 0
+       },
+       {
+         "panelindex" : 7,
+         "bayindex" : 1,
+         "listnumber" : "Empty",
+         "canaddress" : 0
+       },
+       {
+         "panelindex" : 8,
+         "bayindex" : 1,
+         "listnumber" : "List 10",
+         "canaddress" : 0
+       }
+    ],
+    "rectifiers" : 
+    [
+   ],
+    "panelconnections" :
+    [
+    ]
+  }
+]

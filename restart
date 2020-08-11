@@ -1,0 +1,3 @@
+source ./slcan_remove
+source ./slcan_add
+./cansimws

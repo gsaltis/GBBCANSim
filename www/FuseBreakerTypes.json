@@ -1,0 +1,686 @@
+[
+  {
+    "name" : "3 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 3,
+    "serialnumber" : 248230900,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : ["List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A"]
+  },
+  {
+    "name" : "5 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 5,
+    "serialnumber" : 248231000,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "6 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 6,
+    "serialnumber" :48231200,   
+    "requiredpositions" :1,
+    "fusebreaker" : "fuse",
+    "usedin" : ["List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "10 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 10,
+    "serialnumber" :248231500,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "15 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 15,
+    "serialnumber" :48231800,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "20 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 20,
+    "serialnumber" :248232100,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "25 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 25,
+    "serialnumber" : 248232400,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "30 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 30,
+    "serialnumber" : 248232700,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  }, 
+  {
+    "name" : "40 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 40,
+    "serialnumber" : 248233300,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "50 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 50,
+    "serialnumber" : 248233900,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  }, 
+  {
+    "name" : "60 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 60,
+    "serialnumber" : 248234200,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "70 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 70,
+    "serialnumber" : 248234500,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "80 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 80,
+    "serialnumber" : 248234500,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20", "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "80 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 80,
+    "serialnumber" : 118413,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "90 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 90,
+    "serialnumber" : 118414,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "100 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 100,
+    "serialnumber" : 118415,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "125 Amp",
+    "type" : "TLS/TPS Fuse",
+    "rating" : 125,
+    "serialnumber" : 139052,
+    "requiredpositions" : 1,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "70 Amp",
+    "type" : "TPL-B Fuse",
+    "rating" : 70,
+    "serialnumber" : 248251500,
+    "requiredpositions" : 2,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20" ]
+  },
+  {
+    "name" : "80 Amp",
+    "type" : "TPL-B Fuse",
+    "rating" : 80,
+    "serialnumber" : 248252000,
+    "requiredpositions" : 2,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20" ]
+  },
+  {
+    "name" : "100 Amp",
+    "type" : "TPL-B Fuse",
+    "rating" : 100,
+    "serialnumber" : 248252600,
+    "requiredpositions" : 2,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20" ]
+  },
+  {
+    "name" : "150 Amp",
+    "type" : "TPL-B Fuse",
+    "rating" : 150,
+    "serialnumber" : 248253300,
+    "fusebreaker" : "fuse",
+    "requiredpositions" : 2,
+    "usedin" : [ "List 10", "List 20" ]
+  },
+  {
+    "name" : "200 Amp",
+    "type" : "TPL-B Fuse",
+    "rating" : 200,
+    "serialnumber" : 248254000,
+    "requiredpositions" : 2,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20" ]
+  },
+  {
+    "name" : "225 Amp",
+    "type" : "TPL-B Fuse",
+    "rating" : 225,
+    "serialnumber" : 248254500,
+    "requiredpositions" : 2,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20" ]
+  },
+  {
+    "name" : "250 Amp",
+    "type" : "TPL-B Fuse",
+    "rating" : 250,
+    "serialnumber" : 248255000,
+    "requiredpositions" : 2,
+    "fusebreaker" : "fuse",
+    "usedin" : [ "List 10", "List 20" ]
+  },
+  {
+    "name" : "1 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 1,
+    "serialnumber" : 102272,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "3 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 3,
+    "serialnumber" : 102273,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "5 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 5,
+    "serialnumber" : 102274,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "10 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 10,
+    "serialnumber" : 102275,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "15 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 15,
+    "serialnumber" : 102276,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "20 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 20,
+    "serialnumber" : 102277,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "25 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 25,
+    "serialnumber" : 102278,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "30 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 30,
+    "serialnumber" : 102279,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "35 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 35,
+    "serialnumber" : 102280,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "40 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 40,
+    "serialnumber" : 102281,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "45 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 45,
+    "serialnumber" : 121998,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "50 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 50,
+    "serialnumber" : 102282,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "60 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 60,
+    "serialnumber" : 102283,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "70 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 70,
+    "serialnumber" : 102284,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "75 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 75,
+    "serialnumber" : 102285,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "80 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 80,
+    "serialnumber" : 121996,
+    "fusebreaker" : "breaker",
+    "requiredpositions" : 1,
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "90 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 90,
+    "serialnumber" : 138887,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "100 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 100,
+    "serialnumber" : 102286,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "125 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 125,
+    "serialnumber" : 0,
+    "requiredpositions" : 1, 
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 5", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "125 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 125,
+    "serialnumber" : 516991,
+    "requiredpositions" : 2,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "150 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 150,
+    "serialnumber" : 516993,
+    "requiredpositions" : 2,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "175 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 175,
+    "serialnumber" : 144883,
+    "requiredpositions" : 2,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "200 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 200,
+    "serialnumber" : 121831,
+    "requiredpositions" : 2,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "225 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 225,
+    "serialnumber" : 144885,
+    "requiredpositions" : 3,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "250 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 250,
+    "serialnumber" : 121835,
+    "requiredpositions" : 3,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "300 Amp",
+    "type" : "Bullet Nose Br - Elec Trip",
+    "rating" : 300,
+    "serialnumber" : 149075,
+    "requiredpositions" : 3,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "1 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 1,
+    "serialnumber" : 101596,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "3 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 3,
+    "serialnumber" : 101597,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "5 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 5,
+    "serialnumber" : 101598,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "10 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 10,
+    "serialnumber" : 101599,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "15 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 15,
+    "serialnumber" : 101600,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "20 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 20,
+    "serialnumber" : 101601,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "25 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 25,
+    "serialnumber" : 101602,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "30 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 30,
+    "serialnumber" : 101603,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "35 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 35,
+    "serialnumber" : 101604,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "40 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 40,
+    "serialnumber" : 101605,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "45 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 45,
+    "serialnumber" : 121997,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "50 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 50,
+    "serialnumber" : 101606,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "60 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 60,
+    "serialnumber" : 101607,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "70 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 70,
+    "serialnumber" : 101608,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "75 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 75,
+    "serialnumber" : 101609,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "80 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 80,
+    "serialnumber" : 121995,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "90 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 90,
+    "serialnumber" : 138888,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "100 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 100,
+    "serialnumber" : 101610,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "125 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 125,
+    "serialnumber" : 150607,
+    "requiredpositions" : 1,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "125 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 125,
+    "serialnumber" : 516838,
+    "requiredpositions" : 2,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "150 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 150,
+    "serialnumber" : 516839,
+    "requiredpositions" : 2,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "175 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 175,
+    "serialnumber" : 144884,
+    "requiredpositions" : 2,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "200 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 200,
+    "serialnumber" : 121832,
+    "requiredpositions" : 2,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "225 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 225,
+    "serialnumber" : 144886,
+    "requiredpositions" : 3,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "250 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 250,
+    "serialnumber" : 121836,
+    "requiredpositions" : 3,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  },
+  {
+    "name" : "300 Amp",
+    "type" : "Bullet Nose Br - Elec/Mech Trip",
+    "rating" : 300,
+    "serialnumber" : 149076,
+    "requiredpositions" : 3,
+    "fusebreaker" : "breaker",
+    "usedin" : [ "List 15", "List 15A", "List 25", "List 25A" ]
+  }
+]

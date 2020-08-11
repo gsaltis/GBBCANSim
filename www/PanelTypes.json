@@ -1,0 +1,44 @@
+[
+  {
+    "name" : "TLS/TPS Fuse & TPL-B Fuse",
+    "listnumber" : "List 10",
+    "usedin" : "List 03",
+    "maxpositions" : 12,
+    "usesSMDUH2"       : false
+  },
+  {
+    "listnumber" : "List 15",
+    "name" : "Bullet Breaker & TLS/TPS Fuse",
+    "usedin" : "List 03",
+    "maxpositions" : 16,
+    "usesSMDUH2"       : false
+  },
+  {
+    "listnumber" : "List 15A",
+    "name" : "Advanced Bullet Breaker & TLS/TPS Fuse", 
+    "usedin" : "List 03",
+    "maxpositions" : 16,
+    "usesSMDUH2"       : true
+  },
+  {
+    "listnumber" : "List 20",
+    "name" : "TLS/TPS Fuse & TPL-B Fuse",
+    "usedin" : "List 01",
+    "maxpositions" : 20,
+    "usesSMDUH2"       : false
+  },
+  {
+    "listnumber" : "List 25",
+    "name" : "Bullet Breaker & TLS/TPS Fuse",
+    "usedin" : "List 01",
+    "maxpositions" : 28,
+    "usesSMDUH2"       : false
+  },
+  {
+    "listnumber" : "List 25A",
+    "name" : "Advanced Bullet Breaker & TLS/TPS Fuse",
+    "usedin" : "List 01",
+    "maxpositions" : 28,
+    "usesSMDUH2"       : true
+  }
+]

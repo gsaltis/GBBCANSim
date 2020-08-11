@@ -1,0 +1,10 @@
+[
+  {
+    "name"                      : "closed",
+    "value"                     : 0
+  },
+  {
+    "name"                      : "open",
+    "value"                     : 1
+  }
+]

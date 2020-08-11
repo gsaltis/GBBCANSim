@@ -1,0 +1,5 @@
+alias c=./cansimws
+alias m=make
+alias mc='make clean'
+alias r=./restart
+
