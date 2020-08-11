@@ -22,6 +22,7 @@
 #include "main.h"
 #include "String.h"
 #include "MemoryManager.h"
+#include "WebSocketIF.h"
 
 /*****************************************************************************!
  * Local Macros
@@ -67,7 +68,7 @@ HTTPServerThread
   struct mg_connection *              nc;
   struct mg_mgr                       mgr;
   if ( MainVerbose ) {
-    printf("Starting server thread on port %s\n", s_http_port);
+    printf("Starting server thread on port %s:%s\n", WebSocketIFAddress, s_http_port);
   }
   mg_mgr_init(&mgr, NULL);
 

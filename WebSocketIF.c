@@ -48,6 +48,9 @@ WebSocketServerThreadID;
 string
 s_websocket_port = NULL;
 
+string
+WebSocketIFAddress = NULL;
+
 /*****************************************************************************!
  * Local Functions
  *****************************************************************************/
@@ -229,7 +232,7 @@ WebSocketServerThread
   struct mg_connection *              nc;
   struct mg_mgr                       mgr;
   if ( MainVerbose ) {
-    printf("Starting websocket server thread on port %s\n", s_websocket_port);
+    printf("Starting websocket server thread on %s:%s\n", WebSocketIFAddress, s_websocket_port);
   }
   mg_mgr_init(&mgr, NULL);
 

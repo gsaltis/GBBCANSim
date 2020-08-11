@@ -51,8 +51,9 @@ WebSocketIFCreateInfoScript
         fprintf(file, "var WebSocketIFAddress = \"%s\";\n", address);
         fprintf(file, "var WebSocketIFPort = \"%s\";\n", s_websocket_port);
         fclose(file);
+		WebSocketIFAddress = StringCopy(address);
         FreeMemory(address);
-	found = true;
+		found = true;
       }
       if ( !found ) {
         //! We don't so sleep and try again

@@ -41,6 +41,9 @@ WebSocketServerThreadID;
 extern string
 s_websocket_port;
 
+extern string
+WebSocketIFAddress;
+
 /*****************************************************************************!
  * Exported Functions
  *****************************************************************************/
