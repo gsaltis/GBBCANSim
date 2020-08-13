@@ -3,13 +3,15 @@ LINK			= gcc
 
 CC_FLAGS		= -g -c -Wall -Ilib/include  -DDEVELOPMENT
 
-LINK_FLAGS		= -g -Llib -ldl -lncurses -lsqlite3
+LINK_FLAGS		= -g -Llib -ldl -lncurses -lsqlite3 
 
 TARGET			= cansimws
 
 TARGET2			= CANDefsToJSON
 
-ALLTARGETS		= $(TARGET) $(TARGET2)
+TARGET3			= cansimwsclient
+
+ALLTARGETS		= $(TARGET) $(TARGET2) $(TARGET3)
 
 OBJS			= $(sort 				\
 			    AllCanDefinitions.o			\
@@ -44,6 +46,7 @@ OBJS			= $(sort 				\
 			    ThreadSafePrint.o			\
 			    UserInputHandling.o			\
 			    WebSocketIF.o			\
+			    ServerUserInput.o			\
 			    WebConnection.o			\
 			    jsoncanif.o				\
 			    main.o				\
@@ -59,11 +62,22 @@ OBJS2			= $(sort				\
 			    AllCanDefinitions.o			\
 			   )
 
+OBJS3			= $(sort				\
+			    cansimwsclient.o			\
+			    String.o				\
+			    MemoryManager.o			\
+			    FileUtils.o				\
+			    ClientUserInput.o			\
+			    ThreadSafePrint.o			\
+			    linenoise.o				\
+			   )
+
 LIBS			= -ljson -lmongoose -lm -lpthread -lsqlite3 -lrt
+LIBS3			= -lpthread -lmongoose
 
 .PHONY			: all clean veryclean
 
-all			: $(TARGET) $(TARGET2)
+all			: $(ALLTARGETS)
 
 $(TARGET)		: $(OBJS)
 			  cd lib && make
@@ -74,6 +88,10 @@ $(TARGET2)		: $(OBJS2)
 			  @echo [LD] $(TARGET2)
 			  @$(LINK) $(LINK_FLAGS) -o $(TARGET2) $(OBJS2) $(LIBS)
 
+$(TARGET3)		: $(OBJS3)
+			  @echo [LD] $(TARGET3)
+			  @$(LINK) $(LINK_FLAGS) -o $(TARGET3) $(OBJS3) $(LIBS3)
+
 %.o			: %.c
 			  @echo [CC] $@
 			  @$(CC) $(CC_FLAGS) $<
@@ -81,7 +99,7 @@ $(TARGET2)		: $(OBJS2)
 include			  depends.mk
 
 junkclean		: 
-			  -rm -rf $(wildcard)
+			  -rm -rf $(wildcard *-bak)
 
 clean			: 
 			  -rm -rf $(wildcard *.o $(ALLTARGETS))

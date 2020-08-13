@@ -25,7 +25,7 @@
  *****************************************************************************/
 #define ColorRed                        "\e[31m"
 #define ColorBoldRed                    "\e[1;31m"
-
+#define ColorBrightRed					"\e[31;1m"
 #define ColorBoldGreen                  "\e[1;32m"
 #define ColorGreen                      "\e[32m"
 #define ColorBrightGreen                "\e[32;1m"

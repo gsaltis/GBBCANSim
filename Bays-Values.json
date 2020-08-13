@@ -373,16 +373,16 @@
          "value" : 0.000      },
       {
         "valuetype" : 90,
-         "value" : "S130"      },
+         "value" : "031S"      },
       {
         "valuetype" : 91,
-         "value" : "HUDM"      },
+         "value" : "MDUH"      },
       {
         "valuetype" : 92,
-         "value" : "10A2"      },
+         "value" : "2A01"      },
       {
         "valuetype" : 93,
-         "value" : "F   "      },
+         "value" : "   F"      },
       {
         "valuetype" : 162,
          "value" : 0.000      },
@@ -1103,16 +1103,16 @@
          "value" : 0.000      },
       {
         "valuetype" : 90,
-         "value" : "S130"      },
+         "value" : "031S"      },
       {
         "valuetype" : 91,
-         "value" : "HUDM"      },
+         "value" : "MDUH"      },
       {
         "valuetype" : 92,
-         "value" : "10A2"      },
+         "value" : "2A01"      },
       {
         "valuetype" : 93,
-         "value" : "F   "      },
+         "value" : "   F"      },
       {
         "valuetype" : 162,
          "value" : 0.000      },
@@ -1833,16 +1833,16 @@
          "value" : 0.000      },
       {
         "valuetype" : 90,
-         "value" : "S130"      },
+         "value" : "031S"      },
       {
         "valuetype" : 91,
-         "value" : "HUDM"      },
+         "value" : "MDUH"      },
       {
         "valuetype" : 92,
-         "value" : "10A2"      },
+         "value" : "2A01"      },
       {
         "valuetype" : 93,
-         "value" : "F   "      },
+         "value" : "   F"      },
       {
         "valuetype" : 162,
          "value" : 0.000      },
@@ -2563,16 +2563,16 @@
          "value" : 0.000      },
       {
         "valuetype" : 90,
-         "value" : "S130"      },
+         "value" : "031S"      },
       {
         "valuetype" : 91,
-         "value" : "HUDM"      },
+         "value" : "MDUH"      },
       {
         "valuetype" : 92,
-         "value" : "10A2"      },
+         "value" : "2A01"      },
       {
         "valuetype" : 93,
-         "value" : "F   "      },
+         "value" : "   F"      },
       {
         "valuetype" : 162,
          "value" : 0.000      },
@@ -2581,7 +2581,7 @@
          "value" : 0.000      },
       {
         "valuetype" : 256,
-         "value" : 100.000      },
+         "value" : 0.000      },
       {
         "valuetype" : 257,
          "value" : 0.000      },

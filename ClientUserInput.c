@@ -15,6 +15,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <mongoose.h>
 
 /*****************************************************************************!
  * Local Headers
@@ -25,6 +26,7 @@
 #include "ascii.h"
 #include "ThreadSafePrint.h"
 #include "ANSIColors.h"
+#include "ServerUserInput.h"
 
 /*****************************************************************************!
  * Local Macros
@@ -33,12 +35,39 @@
 /*****************************************************************************!
  * Local Data
  *****************************************************************************/
+struct mg_mgr
+ClientUserInputConnectionMgr;
+
+pthread_t
+ClientUserInputCommThreadID;
+
+struct mg_connection*
+ClientUserInputConnection;
+
+string
+ClientUserInputPortNumber;
+
+string
+ClientUserInputAddress;
+
 pthread_t
 ClientUserInputThreadID;
 
 /*****************************************************************************!
  * Local Functions
  *****************************************************************************/
+void*
+ClientUserInputCommThread
+(void* InParameter);
+
+void
+ClientUserInputEventHandler
+(struct mg_connection* InConnection, int InEvent, void* InEventData);
+
+void
+ClientUserInputConnectToServer
+();
+
 void
 ClientUserInputHandleShowMessages
 (StringList* InParameters, string InCommandString);
@@ -49,7 +78,7 @@ ClientUserInputHandleShowCAN
 
 void
 ClientUserInputSendMessage
-(string InFormat, ...);
+(string InMessage);
 
 void
 ClientUserInputHandleShowBay
@@ -142,3 +171,10 @@ ClientUserInputHandleHelp
 #include "ClientUserInput/ClientUserInputSendMessage.c"
 #include "ClientUserInput/ClientUserInputHandleShowCAN.c"
 #include "ClientUserInput/ClientUserInputHandleShowMessages.c"
+#include "ClientUserInput/ClientUserInputConnectToServer.c"
+#include "ClientUserInput/ClientUserInputEventHandler.c"
+#include "ClientUserInput/ClientUserInputSetAddress.c"
+#include "ClientUserInput/ClientUserInputSetPort.c"
+#include "ClientUserInput/ClientUserInputStartThread.c"
+#include "ClientUserInput/ClientUserInputCommThread.c"
+#include "ClientUserInput/ClientUserInputSendCommandMessage.c"

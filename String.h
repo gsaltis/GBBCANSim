@@ -140,4 +140,8 @@ StringSizedToInteger
 string
 StringFill(char InChar, int InFillSize);
 
+string
+StringListToJSONArray
+(StringList* InStringList);
+
 #endif /* _string_h_*/

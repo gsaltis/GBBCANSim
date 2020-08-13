@@ -689,3 +689,45 @@ StringMultiConcat
   return returnString;
 } 
 
+/*****************************************************************************!
+ * Function : StringListToJSONArray
+ *****************************************************************************/
+string
+StringListToJSONArray
+(StringList* InStringList)
+{
+  string								returnString;
+  int									i, k, n, m, j;
+  string								s, s2, s3;
+
+  returnString = StringCopy("[ ");
+
+  for ( i = 0 ; i < InStringList->stringCount ; i++ ) {
+    s = InStringList->strings[i];
+    if ( StringContainsChar(s, '"') ) {
+	  k = strlen(s);
+      n = k * 2 + 1;
+ 	  s2 = GetMemory(n);
+  	  for ( m = j = 0 ; j < k ; j++ ) {
+		if ( s[j] == '"' ) {
+		  s2[m++] = '\\';
+		}
+		s2[m++] = s[j];
+	  }
+	  s2[m] = NUL;
+	  s3 = StringMultiConcat("\"", s2, "\"", NULL);
+	  FreeMemory(s2);
+    } else {
+	  s3 = StringMultiConcat("\"", s, "\"", NULL);
+	}
+	returnString = StringConcatTo(returnString, s3);
+	FreeMemory(s3);
+	if ( i + 1 < InStringList->stringCount ) {
+	  returnString = StringConcatTo(returnString, ", ");
+    }
+  }
+  returnString = StringConcatTo(returnString, "]");
+  return returnString;
+
+}
+

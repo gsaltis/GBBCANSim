@@ -1,6 +1,7 @@
 [
   {
-    "name" : "Bay 1",
+    "name" : "220,
+",
     "bayindex" : 1,
     "canaddress" : 220,
     "type" : "8 Panel",
@@ -48,8 +49,8 @@
        {
          "panelindex" : 7,
          "bayindex" : 1,
-         "listnumber" : "Empty",
-         "canaddress" : 0
+         "listnumber" : "List 15A",
+         "canaddress" : 217
        },
        {
          "panelindex" : 8,
@@ -60,7 +61,7 @@
     ],
     "rectifiers" : 
     [
-   ],
+    ],
     "panelconnections" :
     [
     ]

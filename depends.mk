@@ -28,6 +28,49 @@ CANSimMain.o: CANSimMain.c CanMsg.h DeviceDef.h DeviceDefines.h \
  DeviceRegDef.h NumericTypes.h JSONIF.h lib/include/json.h String.h \
  DeviceMessageDef.h Devices.h CANInterface.h ThreadSafePrint.h \
  UserInputHandling.h DirManagement.h
+cansimwsclient.o: cansimwsclient.c linenoise.h String.h FileUtils.h \
+ MemoryManager.h ClientUserInput.h
+ClientUserInput.o: ClientUserInput.c lib/include/mongoose.h \
+ ClientUserInput.h String.h linenoise.h MemoryManager.h ascii.h \
+ ThreadSafePrint.h ANSIColors.h ServerUserInput.h \
+ ClientUserInput/ClientUserInputInit.c \
+ ClientUserInput/ClientUserInputThread.c \
+ ClientUserInput/ClientUserInputHandleExit.c \
+ ClientUserInput/ClientUserInputHandleCommand.c \
+ ClientUserInput/ClientUserInputHandleHelp.c \
+ ClientUserInput/ClientUserInputHandleAdd.c \
+ ClientUserInput/ClientUserInputHandleRemove.c \
+ ClientUserInput/ClientUserInputHandleList.c \
+ ClientUserInput/ClientUserInputHandleClear.c \
+ ClientUserInput/ClientUserInputHandleSet.c \
+ ClientUserInput/ClientUserInputHandleShow.c \
+ ClientUserInput/ClientUserInputHandleBays.c \
+ ClientUserInput/ClientUserInputHandlePanels.c \
+ ClientUserInput/ClientUserInputHandleOption.c \
+ ClientUserInput/ClientUserInputHandleAddDevice.c \
+ ClientUserInput/ClientUserInputHandleAddBay.c \
+ ClientUserInput/ClientUserInputHandleAddPanel.c \
+ ClientUserInput/ClientUserInputHandleRemoveBay.c \
+ ClientUserInput/ClientUserInputHandleRemovePanel.c \
+ ClientUserInput/ClientUserInputHandleListDevices.c \
+ ClientUserInput/ClientUserInputHandleListDeviceTypes.c \
+ ClientUserInput/ClientUserInputHandleListRegisters.c \
+ ClientUserInput/ClientUserInputHandleClearDevices.c \
+ ClientUserInput/ClientUserInputHandleClearDevice.c \
+ ClientUserInput/ClientUserInputHandleShowDevice.c \
+ ClientUserInput/ClientUserInputHandleShowGroup.c \
+ ClientUserInput/ClientUserInputHandleShowAll.c \
+ ClientUserInput/ClientUserInputHandleShowBay.c \
+ ClientUserInput/ClientUserInputSendMessage.c \
+ ClientUserInput/ClientUserInputHandleShowCAN.c \
+ ClientUserInput/ClientUserInputHandleShowMessages.c \
+ ClientUserInput/ClientUserInputConnectToServer.c \
+ ClientUserInput/ClientUserInputEventHandler.c \
+ ClientUserInput/ClientUserInputSetAddress.c \
+ ClientUserInput/ClientUserInputSetPort.c \
+ ClientUserInput/ClientUserInputStartThread.c \
+ ClientUserInput/ClientUserInputCommThread.c \
+ ClientUserInput/ClientUserInputSendCommandMessage.c
 DefFileToken.o: DefFileToken.c DefFileToken.h
 DeviceDef.o: DeviceDef.c DeviceDef.h DeviceDefines.h DeviceRegDef.h \
  NumericTypes.h JSONIF.h lib/include/json.h String.h DeviceMessageDef.h \
@@ -58,7 +101,8 @@ HTTPServerThread.o: HTTPServerThread.c lib/include/mongoose.h \
  HTTPServerThread.h String.h main.h lib/include/sqlite3.h DeviceDef.h \
  DeviceDefines.h DeviceRegDef.h NumericTypes.h JSONIF.h \
  lib/include/json.h DeviceMessageDef.h FuseBreakerType.h PanelType.h \
- BayType.h WebConnection.h MemoryManager.h
+ BayType.h WebConnection.h MemoryManager.h WebSocketIF.h FuseBreaker.h \
+ CanMsg.h Bay.h Panel.h PanelConnection.h Rectifier.h
 jsoncanif.o: jsoncanif.c jsoncanif.h lib/include/json.h CanMsg.h \
  DeviceDef.h DeviceDefines.h DeviceRegDef.h NumericTypes.h JSONIF.h \
  String.h DeviceMessageDef.h AllCanDefinitions.h ThreadSafePrint.h \
@@ -74,7 +118,7 @@ main.o: main.c lib/include/mongoose.h lib/include/sqlite3.h jsoncanif.h \
  DirManagement.h HTTPServerThread.h WebSocketIF.h FuseBreaker.h Bay.h \
  Panel.h PanelType.h BayType.h main.h FuseBreakerType.h WebConnection.h \
  PanelConnection.h Rectifier.h FileUtils.h ascii.h ANSIColors.h \
- MemoryManager.h
+ MemoryManager.h ClientUserInput.h ServerUserInput.h
 MemoryManager.o: MemoryManager.c MemoryManager.h ThreadSafePrint.h
 NumericTypes.o: NumericTypes.c
 Panel.o: Panel.c Panel.h lib/include/sqlite3.h FuseBreaker.h String.h \
@@ -96,6 +140,16 @@ Rectifier.o: Rectifier.c Rectifier.h CanMsg.h DeviceDef.h DeviceDefines.h \
  lib/include/sqlite3.h FuseBreaker.h PanelType.h BayType.h main.h \
  lib/include/mongoose.h FuseBreakerType.h WebConnection.h \
  PanelConnection.h MemoryManager.h
+ServerUserInput.o: ServerUserInput.c lib/include/mongoose.h \
+ ServerUserInput.h String.h main.h lib/include/sqlite3.h DeviceDef.h \
+ DeviceDefines.h DeviceRegDef.h NumericTypes.h JSONIF.h \
+ lib/include/json.h DeviceMessageDef.h FuseBreakerType.h PanelType.h \
+ BayType.h WebConnection.h WebSocketIF.h FuseBreaker.h CanMsg.h Bay.h \
+ Panel.h PanelConnection.h Rectifier.h MemoryManager.h \
+ ServerUserInput/ServerUserInputInit.c \
+ ServerUserInput/ServerUserInputThread.c \
+ ServerUserInput/ServerUserInputEventHandle.c \
+ ServerUserInput/ServerUserInputHandleRequest.c
 smdup.o: smdup.c
 SQLStatements.o: SQLStatements.c String.h SQLStatements.h
 String.o: String.c String.h MemoryManager.h ascii.h

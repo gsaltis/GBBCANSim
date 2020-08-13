@@ -38,6 +38,8 @@
 #include "WebConnection.h"
 #include "ANSIColors.h"
 #include "MemoryManager.h"
+#include "ClientUserInput.h"
+#include "ServerUserInput.h"
 
 /*****************************************************************************!
  * Local Macros
@@ -190,6 +192,7 @@ main
   }
   HTTPServerThreadInit();
   WebSocketServerInit();
+  ServerUserInputInit();
   printf("Web directory is %s\n", MainDefaultWebDirectory);
   pthread_create(&tr,  NULL, HandleUserInput, NULL);
   pthread_create(&tw,  NULL, HandleCanTraffic, NULL);
@@ -198,6 +201,7 @@ main
   pthread_join(tw, NULL);
   pthread_join(HTTPServerThreadID, NULL);
   pthread_join(WebSocketServerThreadID, NULL);
+  pthread_join(ServerUserInputThreadID, NULL);
   return EXIT_SUCCESS;
 }
 

@@ -30,11 +30,39 @@
  * Exported Data
  *****************************************************************************/
 extern pthread_t
+ClientUserInputCommThreadID;
+
+extern struct mg_connection*
+ClientUserInputConnection;
+
+extern string
+ClientUserInputPortNumber;
+
+extern string
+ClientUserInputAddress;
+
+extern pthread_t
 ClientUserInputThreadID;
 
 /*****************************************************************************!
  * Exported Functions
  *****************************************************************************/
+void
+ClientUserInputSendCommandMessage
+(string InCommandMessage);
+
+void
+ClientUserInputStartThread
+();
+
+void
+ClientUserInputSetPort
+(string InPortNumber);
+
+void
+ClientUserInputSetAddress
+(string InAddress);
+
 void
 ClientUserInputHandleOption
 (StringList* InParameters, string InCommandString);
