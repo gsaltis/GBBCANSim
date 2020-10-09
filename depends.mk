@@ -32,7 +32,7 @@ cansimwsclient.o: cansimwsclient.c linenoise.h String.h FileUtils.h \
  MemoryManager.h ClientUserInput.h
 ClientUserInput.o: ClientUserInput.c lib/include/mongoose.h \
  ClientUserInput.h String.h linenoise.h MemoryManager.h ascii.h \
- ThreadSafePrint.h ANSIColors.h ServerUserInput.h \
+ ThreadSafePrint.h ANSIColors.h ServerUserInput.h lib/include/json.h \
  ClientUserInput/ClientUserInputInit.c \
  ClientUserInput/ClientUserInputThread.c \
  ClientUserInput/ClientUserInputHandleExit.c \
@@ -70,7 +70,9 @@ ClientUserInput.o: ClientUserInput.c lib/include/mongoose.h \
  ClientUserInput/ClientUserInputSetPort.c \
  ClientUserInput/ClientUserInputStartThread.c \
  ClientUserInput/ClientUserInputCommThread.c \
- ClientUserInput/ClientUserInputSendCommandMessage.c
+ ClientUserInput/ClientUserInputSendCommandMessage.c \
+ ClientUserInput/ClientUserInputHandleClose.c \
+ ClientUserInput/ClientUserInputHandleConnections.c
 DefFileToken.o: DefFileToken.c DefFileToken.h
 DeviceDef.o: DeviceDef.c DeviceDef.h DeviceDefines.h DeviceRegDef.h \
  NumericTypes.h JSONIF.h lib/include/json.h String.h DeviceMessageDef.h \
@@ -141,15 +143,42 @@ Rectifier.o: Rectifier.c Rectifier.h CanMsg.h DeviceDef.h DeviceDefines.h \
  lib/include/mongoose.h FuseBreakerType.h WebConnection.h \
  PanelConnection.h MemoryManager.h
 ServerUserInput.o: ServerUserInput.c lib/include/mongoose.h \
- ServerUserInput.h String.h main.h lib/include/sqlite3.h DeviceDef.h \
- DeviceDefines.h DeviceRegDef.h NumericTypes.h JSONIF.h \
- lib/include/json.h DeviceMessageDef.h FuseBreakerType.h PanelType.h \
+ ServerUserInput.h lib/include/json.h String.h main.h \
+ lib/include/sqlite3.h DeviceDef.h DeviceDefines.h DeviceRegDef.h \
+ NumericTypes.h JSONIF.h DeviceMessageDef.h FuseBreakerType.h PanelType.h \
  BayType.h WebConnection.h WebSocketIF.h FuseBreaker.h CanMsg.h Bay.h \
  Panel.h PanelConnection.h Rectifier.h MemoryManager.h \
  ServerUserInput/ServerUserInputInit.c \
  ServerUserInput/ServerUserInputThread.c \
  ServerUserInput/ServerUserInputEventHandle.c \
- ServerUserInput/ServerUserInputHandleRequest.c
+ ServerUserInput/ServerUserInputHandleRequest.c \
+ ServerUserInput/ServerUserInputJSONArrayToStringList.c \
+ ServerUserInput/ServerUserInputHandleAdd.c \
+ ServerUserInput/ServerUserInputHandleRemove.c \
+ ServerUserInput/ServerUserInputHandleList.c \
+ ServerUserInput/ServerUserInputHandleClear.c \
+ ServerUserInput/ServerUserInputHandleSet.c \
+ ServerUserInput/ServerUserInputHandleShow.c \
+ ServerUserInput/ServerUserInputHandleBays.c \
+ ServerUserInput/ServerUserInputHandlePanels.c \
+ ServerUserInput/ServerUserInputHandleConnections.c \
+ ServerUserInput/ServerUserInputHandleOptions.c \
+ ServerUserInput/ServerUserInputHandleClose.c \
+ ServerUserInput/ServerUserInputHandleStatus.c \
+ ServerUserInput/ServerUserInputHandleAddDevice.c \
+ ServerUserInput/ServerUserInputHandleAddBay.c \
+ ServerUserInput/ServerUserInputHandleAddPanel.c \
+ ServerUserInput/ServerUserInputHandleRemovePanel.c \
+ ServerUserInput/ServerUserInputHandleRemoveBay.c \
+ ServerUserInput/ServerUserInputHandleListDevices.c \
+ ServerUserInput/ServerUserInputHandleListDeviceTypes.c \
+ ServerUserInput/ServerUserInputHandleListRegisters.c \
+ ServerUserInput/ServerUserInputHandleShowDevice.c \
+ ServerUserInput/ServerUserInputHandleShowGroup.c \
+ ServerUserInput/ServerUserInputHandleShowBay.c \
+ ServerUserInput/ServerUserInputHandleShowMessages.c \
+ ServerUserInput/ServerUserInputHandleShowAll.c \
+ ServerUserInput/ServerUserInputHandleShowCAN.c
 smdup.o: smdup.c
 SQLStatements.o: SQLStatements.c String.h SQLStatements.h
 String.o: String.c String.h MemoryManager.h ascii.h

@@ -43,5 +43,9 @@ ClientUserInputHandleShow
 	ClientUserInputHandleShowMessages(InParameters, InCommandString);
 	return;
   }
-  printf("%s%s%s is invalid subcommand to %s", ColorRed, InParameters->strings[1], ColorReset, InParameters->strings[0]);
+  if ( StringEqualNoCase(InParameters->strings[1], "?") ) {
+    printf("%s%s%s [ALL | BAY | CAN | DEVICE | GROUP | MESSAGES]\n", ColorGreen, InParameters->strings[0], ColorReset);
+	return;
+  }
+  printf("%s%s%s is invalid subcommand to %s\n", ColorRed, InParameters->strings[0], ColorReset, InParameters->strings[0]);
 }

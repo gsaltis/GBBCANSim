@@ -10,7 +10,7 @@ ClientUserInputHandleAdd
   }
 
   if ( InParameters->stringCount < 2 ) {
-    printf("%s%s%s command requires a subcommand", ColorRed, InParameters->strings[0], ColorReset);
+    printf("%s%s%s command requires a subcommand\n", ColorRed, InParameters->strings[0], ColorReset);
 	return;
   }
 
@@ -28,5 +28,10 @@ ClientUserInputHandleAdd
 	ClientUserInputHandleAddDevice(InParameters, InCommandString);
 	return;
   }
-  printf("%s%s%s is invalid subcommand to %s", ColorRed, InParameters->strings[1], ColorReset, InParameters->strings[0]);
+
+  if ( StringEqualNoCase(InParameters->strings[1], "?") ) {
+    printf("%s%s%s [ BAY | DEVICE | PANEL ]\n", ColorGreen, InParameters->strings[0], ColorReset);
+	return;
+  }	
+  printf("%s%s%s is invalid subcommand to %s\n", ColorRed, InParameters->strings[1], ColorReset, InParameters->strings[0]);
 }

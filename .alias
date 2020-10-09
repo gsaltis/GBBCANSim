@@ -1,4 +1,5 @@
 alias c=./cansimws
+alias cl=./cansimwsclient
 alias m=make
 alias mc='make clean'
 alias r=./restart

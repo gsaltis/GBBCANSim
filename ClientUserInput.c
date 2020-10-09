@@ -178,3 +178,5 @@ ClientUserInputHandleHelp
 #include "ClientUserInput/ClientUserInputStartThread.c"
 #include "ClientUserInput/ClientUserInputCommThread.c"
 #include "ClientUserInput/ClientUserInputSendCommandMessage.c"
+#include "ClientUserInput/ClientUserInputHandleClose.c"
+#include "ClientUserInput/ClientUserInputHandleConnections.c"

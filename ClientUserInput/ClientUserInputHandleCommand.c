@@ -8,7 +8,7 @@ ClientUserInputHandleCommand
   if ( InParameters == NULL || InParameters->stringCount == 0 ) {
     return;
   }
-  if ( StringEqualNoCase(InParameters->strings[0], "EXIT") ) {
+  if ( StringEqualNoCase(InParameters->strings[0], "EXIT") || StringEqualNoCase(InParameters->strings[0], "QUIT") ) {
     ClientUserInputHandleExit(InParameters, InCommandString);
 	return;
   }
@@ -52,6 +52,16 @@ ClientUserInputHandleCommand
 
   if ( StringEqualNoCase(InParameters->strings[0], "SHOW") ) {
 	ClientUserInputHandleShow(InParameters, InCommandString);
+	return;
+  }
+
+  if ( StringEqualNoCase(InParameters->strings[0], "CLOSE") ) {
+	ClientUserInputHandleClose(InParameters, InCommandString);
+	return;
+  }
+
+  if ( StringEqualNoCase(InParameters->strings[0], "CONNECTIONS") ) {
+	ClientUserInputHandleConnections(InParameters, InCommandString);
 	return;
   }
 

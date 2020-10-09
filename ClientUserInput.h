@@ -48,6 +48,14 @@ ClientUserInputThreadID;
  * Exported Functions
  *****************************************************************************/
 void
+ClientUserInputHandleConnections
+(StringList* InParameters, string InCommandString);
+
+void
+ClientUserInputHandleClose
+(StringList* InParameters, string InCommandString);
+
+void
 ClientUserInputSendCommandMessage
 (string InCommandMessage);
 
