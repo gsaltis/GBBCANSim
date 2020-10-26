@@ -4,17 +4,13 @@ ARCHIVE			= ar
 CC_FLAGS		= -g -c -Iinclude
 ARCHIVE_FLAGS		= r
 
-LIBS			 = libmongoose.a libjson.a libsqlite3.a
+LIBS			 = libmongoose.a libjson.a
 
 %.o			: %.c
 			  @echo [CC] $@
 			  @$(CC) $(CC_FLAGS) $<
 
 all			: $(LIBS)
-
-libsqlite3.a		: sqlite3.o
-			  @echo [AR] libsqlite3.a
-			  @$(ARCHIVE) $(ARCHIVE_FLAGS) $@ $^
 
 libmongoose.a		: mongoose.o
 			  @echo [AR] libmongoose.a

@@ -127,8 +127,7 @@ Panel.o: Panel.c Panel.h lib/include/sqlite3.h FuseBreaker.h String.h \
  lib/include/json.h CanMsg.h DeviceDef.h DeviceDefines.h DeviceRegDef.h \
  NumericTypes.h JSONIF.h DeviceMessageDef.h PanelType.h MemoryManager.h \
  Bay.h BayType.h main.h lib/include/mongoose.h FuseBreakerType.h \
- WebConnection.h PanelConnection.h Rectifier.h Devices.h CANInterface.h \
- SQLStatements.h
+ WebConnection.h PanelConnection.h Rectifier.h Devices.h CANInterface.h
 PanelConnection.o: PanelConnection.c PanelConnection.h lib/include/json.h \
  String.h MemoryManager.h JSONIF.h Bay.h Panel.h lib/include/sqlite3.h \
  FuseBreaker.h CanMsg.h DeviceDef.h DeviceDefines.h DeviceRegDef.h \
@@ -180,7 +179,6 @@ ServerUserInput.o: ServerUserInput.c lib/include/mongoose.h \
  ServerUserInput/ServerUserInputHandleShowAll.c \
  ServerUserInput/ServerUserInputHandleShowCAN.c
 smdup.o: smdup.c
-SQLStatements.o: SQLStatements.c String.h SQLStatements.h
 String.o: String.c String.h MemoryManager.h ascii.h
 StringUtils.o: StringUtils.c StringUtils.h
 ThreadSafePrint.o: ThreadSafePrint.c

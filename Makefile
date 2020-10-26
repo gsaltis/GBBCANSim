@@ -3,7 +3,7 @@ LINK			= gcc
 
 CC_FLAGS		= -g -c -Wall -Ilib/include  -DDEVELOPMENT
 
-LINK_FLAGS		= -g -Llib -ldl -lncurses -lsqlite3 
+LINK_FLAGS		= -g -Llib -ldl -lncurses
 
 TARGET			= cansimws
 
@@ -40,7 +40,6 @@ OBJS			= $(sort 				\
 			    PanelConnection.o			\
 			    PanelType.o				\
 			    Rectifier.o				\
-			    SQLStatements.o			\
 			    String.o				\
 			    StringUtils.o			\
 			    ThreadSafePrint.o			\
@@ -72,7 +71,7 @@ OBJS3			= $(sort				\
 			    linenoise.o				\
 			   )
 
-LIBS			= -ljson -lmongoose -lm -lpthread -lsqlite3 -lrt
+LIBS			= -ljson -lmongoose -lm -lpthread -lrt
 LIBS3			= -lpthread -lmongoose
 
 .PHONY			: all clean veryclean

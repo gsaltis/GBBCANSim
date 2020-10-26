@@ -111,7 +111,6 @@ BaysInitialize
   FreeMemory(base);
 
   if ( ! FileExists(valuesFilename) ) {
-    fprintf(stderr, "%s %d\n", __FILE__, __LINE__);
     BaysSaveValues(NULL);
   } else {
     char                                jsonError[256];
@@ -420,12 +419,13 @@ BayToJSONString
   int                                   i;
   bool                                  havePanel;
   string                                rString;
-  char                                  s1[8];
+  char                                  s1[64];
   string                                s;
   PanelConnection*			connection;
 
   rString = StringCopy("  {\n");
   rString = StringConcatTo(rString, "    \"name\" : \"");
+
   if ( InBay->name == NULL ) {
     sprintf(s1, "Bay %d", InBay->index);
     s = s1;
@@ -438,9 +438,9 @@ BayToJSONString
   sprintf(s1, "%d,\n", InBay->index);
   rString = StringConcatTo(rString, s1);
   
-  sprintf(s, "%d,\n", InBay->canDevice->CanAddress);
+  sprintf(s1, "%d,\n", InBay->canDevice->CanAddress);
   rString = StringConcatTo(rString, "    \"canaddress\" : ");
-  rString = StringConcatTo(rString, s);
+  rString = StringConcatTo(rString, s1);
 
   rString = StringConcatTo(rString, "    \"type\" : \"");
   rString = StringConcatTo(rString, BayTypeToString(InBay->type));
@@ -1624,35 +1624,6 @@ BayRemovePanelConnectionsByIndex
   }
   return true;
 }
-
-/*****************************************************************************!
- * Function : BaysSaveValuesSQL
- *****************************************************************************/
-void
-BaysSaveValuesSQL
-()
-{
-  Bay*					bay;
-
-  for ( bay = BaysFirstBay(); bay ; bay = BaysNextBay(bay) ) {
-    BaySaveValuesSQL(bay);
-  }  
-}
-
-/*****************************************************************************!
- * Function : BaySaveValuesSQL
- *****************************************************************************/
-void
-BaySaveValuesSQL
-(Bay* InBay)
-{
-  Panel*				panel;
-
-  for ( panel = BayFirstPanel(InBay); panel ; panel = BayNextPanel(InBay, panel) ) {
-    PanelSaveValuesSQL(panel);
-  }
-}
-
 
 /*****************************************************************************!
  * Function : BayAddRectifier

@@ -23,7 +23,6 @@
 #include "Bay.h"
 #include "JSONIF.h"
 #include "Devices.h"
-#include "SQLStatements.h"
 #include "main.h"
 
 /*****************************************************************************!
@@ -412,77 +411,5 @@ PanelFindCANRegister
     }
   }
   return NULL;
-}
-
-/*****************************************************************************!
- * Function : PanelSaveCANRegister
- *****************************************************************************/
-void
-PanelSaveCANRegister
-(Panel* InPanel, int InValueType, ufloatbit32_t* InValue, sqlite3* InDatabase)
-{
-  string				statement;
-  char					s[18];
-  int					sqliteReturn;
-  char*					errorMessage = NULL;
-
-  sprintf(s, "%08X", InValue->data32);
-  statement = (string)GetMemory(strlen(SQLStatementUpdateRegister) * 2);
-  sprintf(statement, SQLStatementUpdateRegister, InPanel->bay->index, InPanel->index,
-          InValueType, s); 
-  sqliteReturn = sqlite3_exec(MainDataBase, statement, NULL, NULL, &errorMessage);
-  if ( sqliteReturn != SQLITE_OK ) {
-    
-    fprintf(stderr, "Could not save data base entry : %s\n", errorMessage);
-    sqlite3_free(errorMessage);
-  }
-  FreeMemory(statement); 
-}
-
-/*****************************************************************************!
- * Function : PanelSaveValuesSQL
- *****************************************************************************/
-void
-PanelSaveValuesSQL
-(Panel* InPanel)
-{
-  int					i;
-  CanReg*				reg;
-
-  if ( NULL == InPanel ) {
-    return;
-  }
-  if ( InPanel->panelType == NULL ) {
-    return;
-  }
-  if ( !InPanel->panelType->usesSMDUH2 ) {
-    return;
-  } 
-
-  for ( i = 0 ; i < InPanel->smduh2->registersCount; i++ ) {
-    reg = &InPanel->smduh2->Registers[i];
-    PanelSaveRegisterValueSQL(InPanel, reg);
-  }
-}
-
-/*****************************************************************************!
- * Function : PanelSaveRegisterValueSQL 
- *****************************************************************************/
-void
-PanelSaveRegisterValueSQL
-(Panel* InPanel, CanReg* InReg)
-{
-  string				s;
-  char					s2[24];
-  char*					error;
-
-  s = GetMemory(strlen(SQLStatementUpdateRegister) * 2);
-  sprintf(s, SQLStatementUpdateRegister, InPanel->bay->index, InPanel->index, 
-          InReg->registerDef->valueType, CanRegGetFromString(s2, InReg));
-  if ( SQLITE_OK != sqlite3_exec(MainDataBase, s, NULL, NULL, &error) ) {
-    fprintf(stderr, "SQL Error : Statement : %s  : Error %s\n", s, error);
-    sqlite3_free(error);
-  }
-  FreeMemory(s); 
 }
 

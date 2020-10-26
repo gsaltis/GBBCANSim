@@ -1,74 +1,54 @@
-// FILE: ./Files/BayTypes/BayTypesListPopulate.js
+// FILE: ./Files/Main/MainDisplayBlocker.js
 /*****************************************************************************!
- * Function : BayTypesListPopulate 
+ * Function : MainDisplayBlocker
  *****************************************************************************/
 function
-BayTypesListPopulate(InBayTypeName)
+MainDisplayBlocker()
 {
-  var					displayarea;
-  var					y, i, bayType;
-  var					messageline;
-  var					lineheight;
-  var					topborder;
-
-  topborder = null;
-  displayarea = document.getElementById("EquipmentListArea");
-  oddeven = "LineElementEven";
-  y = 0;
-  lineheight = 17;
-  for (i = 0; i < MainBayTypes.length; i++) {
-    baytype = MainBayTypes[i];
-    paneltypes = PanelTypesGetByUsedIdListNumber(baytype.listnumber);
-    
-    messageline = document.createElement("div");
-    messageline.id = baytype.listnumber;
-    messageline.className = "LineElement LineElementEven";
-    messageline.dataBayType = baytype;
-    messageline.dataSelected = false;
-    messageline.dataType = "Bay";
-
-    messageline.draggable = true;
-    messageline.ondragstart = function(event) { CBBayTypeDragStart(event); }
-    messageline.ondragend   = function(event) { CBBayTypeDragEnd(event); }
-    messageline.innerHTML = baytype.name;
-
-    messageline.style.top = y;
-    messageline.style.cursor = "pointer";
-    if ( topborder ) {
-      messageline.style.borderTop = topborder;
-    }
-    topborder = "solid thin black";
-    displayarea.appendChild(messageline);
-    y += lineheight;
-    if ( InBayTypeName == null || InBayTypeName == baytype.name ) {
-      for ( j = 0; j < paneltypes.length; j++ ) {
-        paneltype = paneltypes[j];
-        messageline = document.createElement("div");
-        messageline.className = "LineElement LineElementOdd";
-        messageline.id = baytype.listnumber + " " + paneltype.name;
-        messageline.dataPanelType = paneltype;
-        messageline.dataBayType = baytype;
-        messageline.dataType = "Panel";
-        messageline.ondragstart = function(event) { CBPanelTypeDragStart(event); }
-        messageline.ondragend   = function(event) { CBPanelTypeDragEnd(event); }
-        messageline.draggable = true;
-        messageline.innerHTML = paneltype.name;
-
-        messageline.style.top = y;
-        messageline.style.cursor = "pointer";
-        messageline.style.paddingLeft = "10px";
-        displayarea.appendChild(messageline);
-        y += lineheight;
-      }   
-      y += 5;
-    }
-  } 
+  document.getElementById("MainBlocker").style.visibility = "visible";
 }
 
-// FILE: ./Files/BayTypes/BayTypes.js
+// FILE: ./Files/Main/MainInitializeDisplay.js
+/*****************************************************************************!
+ * Function : MainInitializeDisplay
+ *****************************************************************************/
+function
+MainInitializeDisplay()
+{
+  var					name;
+  name = null;
+
+  if ( MainBays.length > 0 ) {
+    name = MainBays[0].type;
+  }
+  
+  BayTypesListPopulate(name);
+}
+
+// FILE: ./Files/Main/MainDisplayMessage.js
+/*****************************************************************************!
+ * Function : MainDisplayMessage
+ *****************************************************************************/
+function
+MainDisplayMessage(InMessage)
+{
+  MainDisplayMessageColor(InMessage, "#000000"); 
+}
+
+// FILE: ./Files/Main/MainInitialize.js
+/*****************************************************************************!
+ * Function : MainInitialize
+ *****************************************************************************/
+function
+MainInitialize()
+{
+  WebSocketIFInitialize();
+}
+
+// FILE: ./Files/Main/Main.js
 /*****************************************************************************
- * FILE NAME    : BayTypes.js
- * DATE         : June 15 2020
+ * FILE NAME    : script.js
+ * DATE         : June 11 2020
  * PROJECT      : BDFB Simulator
  * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
  *****************************************************************************/
@@ -76,173 +56,276 @@ BayTypesListPopulate(InBayTypeName)
 /*****************************************************************************!
  * Local Data
  *****************************************************************************/
-var BayTypeDragElement			= null;
+var MAIN_DEFAULT_MESSAGE_TIME		= 10;
 
+var MainBayTypes 			= null;
+var MainPanelTypes			= null;
+var MainFuseBreakerTypes		= null;
+var MainBays				= [];
+var MainDeviceDefs			= null;
+var MainMessageTimerID			= null;
 
-// FILE: ./Files/BayTypes/BayTypeListClear.js
+// FILE: ./Files/Main/MainDisplayTimedMessage.js
 /*****************************************************************************!
- * Function : BayTypeListClear
+ * Function : MainDisplayTimedMessage
  *****************************************************************************/
 function
-BayTypeListClear
-()
+MainDisplayTimedMessage(InMessage, InTimeout)
 {
-  var					list;
+  var					messageArea;
 
-  list = document.getElementById("EquipmentListArea");
-
-  while ( list.children.length ) {
-    list.removeChild(list.children[0]);
-  }
+  MainMessageTimerID = setInterval(MainMessageTimeout, InTimeout * 1000);
+  messageArea = document.getElementById("MessageLine");
+  messageArea.innerHTML = InMessage;
 }
 
-// FILE: ./Files/BayTypes/BayTypeFindByName.js
+// FILE: ./Files/Main/MainHideBlocker.js
 /*****************************************************************************!
- * Function : BayTypeFindByName
+ * Function : MainHideBlocker
  *****************************************************************************/
 function
-BayTypeFindByName
-(InBayTypeName)
+MainHideBlocker()
+{
+  document.getElementById("MainBlocker").style.visibility = "hidden";
+}
+
+// FILE: ./Files/Main/MainDisplayMessageColor.js
+/*****************************************************************************!
+ * Function : MainDisplayMessageColor
+ *****************************************************************************/
+function
+MainDisplayMessageColor
+(InMessage, InColor)
+{
+  var					messageArewa;
+  
+  messageArea = document.getElementById("MessageLine");
+  messageArea.style.color = InColor;
+  MainDisplayTimedMessage(InMessage, MAIN_DEFAULT_MESSAGE_TIME);
+}
+// FILE: ./Files/Main/MainResizeBody.js
+/*****************************************************************************!
+ * Function : MainResizeBody
+ *****************************************************************************/
+function
+MainResizeBody
+(InEvent)
+{
+  var					mainArea, clientWidth, clientHeight;
+  var					i, bay, locationInfo;
+
+  mainArea = document.getElementById("BayDisplayArea");
+
+  clientWidth = mainArea.clientWidth;
+  clientHeight = mainArea.clientHeight;
+
+  console.log(clientWidth, clientHeight);
+
+  for (i = 0; i < mainArea.children.length; i++) {
+    bay = mainArea.children[i];
+    BayResize(bay);
+    locationInfo = GetPanelPositionsSizes(bay);
+    for ( j = 0; j < bay.children.length; j++ ) {
+      panel = bay.children[j];
+      if ( panel.dataType == "EmptyPanel" || panel.dataType == "Panel" ) {
+        panel.style.width = locationInfo.panelwidth;
+        panel.style.height = locationInfo.panelheight;
+        panel.style.top = locationInfo.panelYs[panel.dataIndex];
+        n = locationInfo.panelXs[(panel.dataIndex - 1) % 2];
+        panel.style.left = n;
+      }
+    }
+  }
+}
+// FILE: ./Files/Main/MainMessageTimeout.js
+/*****************************************************************************!
+ * Function : MainMessageTimeout
+ *****************************************************************************/
+function
+MainMessageTimeout()
+{
+  clearInterval(MainMessageTimerID)
+  document.getElementById("MessageLine").innerHTML = "";
+  MainMessageTimerID = null;
+}
+
+// FILE: ./Files/PanelTypes/FindPanelTypeByListNumber.js
+/*****************************************************************************!
+ * Function : FindPanelTypeByListNumber
+ *****************************************************************************/
+function
+FindPanelTypeByListNumber
+(InPanelTypeName)
 {
   var					i;
-  for (i = 0; i < MainBayTypes.length; i++) {
-    if ( InBayTypeName == MainBayTypes[i].name ) {
-      return MainBayTypes[i];
+  for ( i = 0; i < MainPanelTypes.length; i++ ) {
+    if ( MainPanelTypes[i].listnumber == InPanelTypeName ) {
+      return MainPanelTypes[i];
     }
   }
   return null;
 }
-// FILE: ./Files/Callbacks/CBRegisterGroupChange.js
+// FILE: ./Files/PanelTypes/PanelTypesGetByUsedIdListNumber.js
 /*****************************************************************************!
- * Function : CBRegisterGroupChange
+ * Function : PanelTypesGetByUsedIdListNumber 
  *****************************************************************************/
 function
-CBRegisterGroupChange
-(InEvent)
+PanelTypesGetByUsedIdListNumber(InListNumber)
 {
-  var					element, groupname;
-  var					i, deviceDef, register, regname;
+  var					returnTypes = [];
+  var					i;
 
-  element = InEvent.srcElement;
-  groupname = element.parentElement.dataGroup;
-
-  value = element.parentElement.children[2].value;
-  MainDisplayMessage(value);
-  element.parentElement.children[1].style.visibility = "hidden";
-  element.parentElement.children[2].style.visibility = "hidden";
-
-  deviceDef = document.getElementById("RegisterArea").dataDeviceDef
-
-  for (i = 0; i < deviceDef.registers.length; i++ ) {
-    register = deviceDef.registers[i];
-    if ( register.group == groupname ) {
-      regname = "RegInput " + register.valuetype;
-      document.getElementById(regname).value = value;
-    } 
-  }  
-}
-
-// FILE: ./Files/Callbacks/CBBayDragOver.js
-/*****************************************************************************!
- * Function : CBBayDragOver
- *****************************************************************************/
-function
-CBBayDragOver(InEvent)
-{
-  if ( DragElementType == "Bay" ) {
-    InEvent.preventDefault();
+  for (i = 0; i < MainPanelTypes.length; i++) {
+    if ( InListNumber == MainPanelTypes[i].usedin ) {
+      returnTypes.push(MainPanelTypes[i]);
+    }
   }
+  return returnTypes;
 }
 
-// FILE: ./Files/Callbacks/CBBayDrop.js
-/*****************************************************************************!
- * Function : CBBayDrop
- *****************************************************************************/
-function
-CBBayDrop(InEvent)
-{
-  var					bay;
-
-  if ( DragElementType == "Bay" ) {
-    bay = CreateNewBay(BayTypeDragElement, MainBays.length+1);
-    MainBays.push(bay.dataBayType);
-  }
-}
-
-
-// FILE: ./Files/Callbacks/CBGarbageCanClose.js
-/*****************************************************************************!
- * Function : CBGarbageCanClose
- *****************************************************************************/
-function
-CBGarbageCanClose
-(InEvent)
-{
-  var					e;
-  var					can;
-
-  e = document.getElementById("GarbageCanLid");
-  e.className = "GarbageCanLid";
-
-  can = document.getElementById("GarbageCan");
-  can.style.visibility = "hidden";
-  PanelBeingDragged = null;
-}
-
-// FILE: ./Files/Callbacks/CBPanelTypeDragEnd.js
-/*****************************************************************************!
- * Function : CBPanelTypeDragEnd
- *****************************************************************************/
-function
-CBPanelTypeDragEnd(InEvent)
-{
-  PanelTypeDragElement = null;
-  DragElementType = null;
-}
-
-
-// FILE: ./Files/Callbacks/CBRegisterGroupButton.js
-/*****************************************************************************!
- * Function : CBRegisterGroupButton
- *****************************************************************************/
-function
-CBRegisterGroupButton
-(InEvent)
-{
-  var					element;
-
-  element = InEvent.srcElement;
-
-  if ( InEvent.ctrlKey == true ) {
-    e = element.parentElement;
-    e.children[1].style.visibility = "visible";
-    e.children[2].style.visibility = "visible";
-    // Gang change all element in the group
-    return;
-  }
-  // Toggle the registers display
-  if ( element.parentElement.dataStatus == "Open" ) {
-    element.parentElement.dataStatus = "Closed";
-    element.className = "RegisterGroupCollapseButton RegisterGroupClosed";
-  } else {
-    element.parentElement.dataStatus = "Open";
-    element.className = "RegisterGroupCollapseButton RegisterGroupOpen";
-  }
-  BayRepositionRegisterLines();
-} 
-// FILE: ./Files/Callbacks/CBBayDragLeave.js
-/*****************************************************************************!
- * Function : CBBayDragLeave 
- *****************************************************************************/
-function
-CBBayDragLeave(InEvent)
-{
-}
-
-// FILE: ./Files/Callbacks/Callbacks.js
+// FILE: ./Files/PanelTypes/PanelTypes.js
 /*****************************************************************************
- * FILE NAME    : Callbacks.js
+ * FILE NAME    : PanelTypes.js
  * DATE         : June 15 2020
+ * PROJECT      : BDFB Simulator
+ * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
+ *****************************************************************************/
+
+// FILE: ./Files/DeviceDefs/DeviceDefFindByName.js
+/*****************************************************************************!
+ * Function : DeviceDefFindByName 
+ *****************************************************************************/
+function
+DeviceDefFindByName(InDeviceDefName)
+{
+  var i;
+  for (i = 0; i < MainDeviceDefs.length; i++) {
+    if ( MainDeviceDefs[i].name == InDeviceDefName ) {
+      return MainDeviceDefs[i];
+    }
+  }
+  return null;
+}
+
+// FILE: ./Files/DeviceDefs/DeviceDefs.js
+/*****************************************************************************
+ * FILE NAME    : DeviceDefs.js
+ * DATE         : June 16 2020
+ * PROJECT      : BDFB Simulator
+ * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
+ *****************************************************************************/
+
+// FILE: ./Files/DeviceDefs/DeviceDefSortRegsByGroupName.js
+/*****************************************************************************!
+ * Function : DeviceDefSortRegsByGroupName
+ *****************************************************************************/
+function
+DeviceDefSortRegsByGroupName
+(InDevice)
+{
+   InDevice.registers.sort(function(a, b) { var n = a.groupsort.localeCompare(b.groupsort); 
+					    if ( n == 0 ) {
+					      n = a.displaylabel.localeCompare(b.displaylabel);
+ 					    }
+					    return n;
+					  });
+}
+
+// FILE: ./Files/DeviceDefs/DeviceDefFindByDescription.js
+/*****************************************************************************!
+ * Function : DeviceDefFindByDescription 
+ *****************************************************************************/
+function
+DeviceDefFindByDescription(InDeviceDefDescription)
+{
+  var i;
+  for (i = 0; i < MainDeviceDefs.length; i++) {
+    if ( MainDeviceDefs[i].description == InDeviceDefDescription ) {
+      return MainDeviceDefs[i];
+    }
+  }
+  return null;
+}
+
+// FILE: ./Files/Bays/BayResize.js
+/*****************************************************************************!
+ * Function : BayResize
+ *****************************************************************************/
+function
+BayResize
+(InBay)
+{
+  var					registerAreaName, registerArea;
+  var					registerAreaWidth, registerAreaHeight;
+
+  dimensions = GetNewBayDimensions();
+  MainDisplayMessage(dimensions.baywidth + " : " + dimensions.bayheight);
+  registerAreaWidth  = 0;
+  registerAreaHeight = 0;
+  
+  registerAreaName = "RegisterArea";
+  registerArea = document.getElementById(registerAreaName);
+  if ( registerArea ) {
+    registerAreaWidth = registerArea.clientWidth;
+    registerAreaHeight = registerArea.clientHeight;
+  }
+  InBay.style.width = dimensions.baywidth;
+  InBay.style.height = dimensions.bayheight;
+}
+// FILE: ./Files/Bays/BayLowerZIndex.js
+/*****************************************************************************!
+ * Function : BayLowerZIndex
+ *****************************************************************************/
+function
+BayLowerZIndex
+(InBay)
+{
+  InBay.style.zIndex = 30;
+}
+
+
+// FILE: ./Files/Bays/BayRepositionRegisterLines.js
+/*****************************************************************************!
+ * Function : BayRepositionRegisterLines
+ *****************************************************************************/
+function
+BayRepositionRegisterLines
+()
+{
+  var					registerArea;
+  var					y, i, register;
+  var					groupstatus, currentgroup;
+
+  registerArea = document.getElementById("RegisterArea");
+  y = 0;
+  for ( i = 0 ; i < registerArea.children.length; i++ ) {
+    registerline = registerArea.children[i];
+    registerline.style.top = y + "px";
+    if ( registerline.className == "RegisterLine RegisterHeading" ) {
+      y += 19;
+      groupstatus = registerline.dataStatus;
+      currentgroup = registerline.dataGroup;
+    } else {
+      if ( registerline.dataGroup == currentgroup ) {
+        if ( groupstatus == "Open" ) {
+          registerline.style.top = y + "px";
+	  registerline.style.visibility = "visible";
+          y += 19;
+        } else {
+	  registerline.style.visibility = "hidden";
+        }
+      } else {
+        y += 19;
+        registerline.style.visibility = "visible";
+      }
+    }
+  }
+}
+
+// FILE: ./Files/Bays/Bays.js
+/*****************************************************************************
+ * FILE NAME    : Bays.js
+ * DATE         : June 16 2020
  * PROJECT      : BDFB Simulator
  * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
  *****************************************************************************/
@@ -251,197 +334,350 @@ CBBayDragLeave(InEvent)
 /*****************************************************************************!
  * Local Data
  *****************************************************************************/
-var DragElementType			= null;
-var PanelTypeDragElement		= null;
+var BayDisplayXSkip			= 20;
+var BayDisplayMaxBaysCount		= 8;
+var BayDisplayPanelXSkip		= 10;
+var BayDisplayPanelYSkip		= 10;
+var BayPanelTop				= 40;
+var BayPanelBottom			= 20;
 
-// FILE: ./Files/Callbacks/CBBayEdit.js
+
+// FILE: ./Files/Bays/BayRaiseZIndex.js
 /*****************************************************************************!
- * Function : CBBayEdit
+ * Function : BayRaiseZIndex
  *****************************************************************************/
 function
-CBBayEdit(InEvent)
+BayRaiseZIndex
+(InBay)
 {
-  var					bayelement;
-  bayelement = InEvent.srcElement.parentElement.parentElement;
-  BayEdit(bayelement);
+  InBay.style.zIndex = 30;
 }
 
-// FILE: ./Files/Callbacks/CBPanelTypeDragStart.js
+
+// FILE: ./Files/Bays/CreateBay.js
 /*****************************************************************************!
- * Function : CBPanelTypeDragStart 
+ * Function : CreateNewBay 
  *****************************************************************************/
 function
-CBPanelTypeDragStart(InEvent)
+CreateBay(InBay)
 {
-  PanelTypeDragElement = InEvent.currentTarget.dataPanelType;
-  DragElementType = InEvent.currentTarget.dataType;
+  var					displayarea;
+  var					bay;
+  var					headerbutton;
+  var					dimensions;
+  var					header;
+
+  console.log(InBay);
+  baytype = InBay;
+  displayarea = document.getElementById("BayDisplayArea");
+
+  dimensions = GetNewBayDimensions();   
+  
+  bay = document.createElement("div");
+  bay.className = "GeneralPane Bay";
+  bay.id = "Bay " + InIndex;
+  bay.dataBay = {};
+  bay.dataBay.type = InBayType;
+  bay.dataBay.index = InIndex;
+  bay.dataBay.device = DeviceDefFindByDescription("Bay");
+  bay.dataEdittingMode = "None";
+
+  bay.ondragenter  = function(event) { CBBayDragEnter(event); }
+  bay.ondragleave  = function(event) { CBBayDragLeave(event); }
+  bay.style.width  = dimensions.baywidth;
+  bay.style.height = dimensions.bayheight;
+  bay.style.left   = dimensions.bayx;
+
+  header = document.createElement("div");
+  header.className = "GeneralPaneHeader";
+  header.innerHTML = "Bay " + bay.dataBay.index;
+  
+  headerbutton = document.createElement("div");
+  headerbutton.className = "GeneralPaneHeaderButton";
+  headerbutton.onclick = function(event) { CBBayEdit(event); }
+  header.appendChild(headerbutton);
+
+  bay.appendChild(header);
+
+  CreateEmptyPanels(bay);
+  displayarea.appendChild(bay); 
+  bay.addEventListener("transitionend", BayTransitionEnd, true);
+  return bay;
 }
 
-// FILE: ./Files/Callbacks/CBGarbageCanOpen.js
+// FILE: ./Files/Bays/BayFindLowestPanel.js
 /*****************************************************************************!
- * Function : CBGarbageCanOpen
+ * Function : BayFindLowestPanel
  *****************************************************************************/
 function
-CBGarbageCanOpen
-(InEvent)
+BayFindLowestPanel
+(InBay)
 {
-  var					e;
-  var					can;
-  var					bayarea;
+  var					i, panel, panely, returnpanel, y;
 
-  bayarea = document.getElementById("BayDisplayArea");
-  bayareawidth = parseInt(bayarea.clientWidth, 10);
-  bayareaheight = parseInt(bayarea.clientHeight, 10);
-
-  can = document.getElementById("GarbageCan");
-  can.style.visibility = "visible";
- 
-  canwidth = parseInt(can.clientWidth, 10);
-  canheight = parseInt(can.clientHeight, 10);
-
-  canx = (bayareawidth - canwidth) / 2;
-  cany = (bayareaheight - canheight) / 2;
-
-  can.style.top = cany + "px";
-  can.style.left = canx + "px";
- 
-  e = document.getElementById("GarbageCanLid");
-  e.className = "GarbageCanLid GarbageCanLidOpen";
-
-  PanelBeingDragged = InEvent.currentTarget; 
-}
-
-// FILE: ./Files/Callbacks/CBPanelEdit.js
-/*****************************************************************************!
- * Function : CBPanelEdit
- *****************************************************************************/
-function
-CBPanelEdit(InEvent)
-{
-  var					panelElement;
-  var					editMode;
-  var					panelregisterarea;
-  var					edittingpanel;
-
-  panelregisterarea = document.getElementById("RegisterArea");
-
-  if ( panelregisterarea ) {
-    edittingpanel = panelregisterarea.dataPanel;
-  } else {
-    edittingpanel = null;
-  }
-  panelelement = InEvent.srcElement;
-  editMode = panelelement.parentElement.dataEdittingMode;
-  console.log(editMode);
-  if ( editMode == "None" ) {
-    PanelEdit(panelelement);
-  } else if ( editMode == "Panel" ) {
-    if ( edittingpanel == null || edittingpanel.dataPanel.index == panelelement.dataPanel.index ) {
-      PanelEditClose(panelelement.parentElement);
+  returnpanel = null;
+  y = 0;
+  for (i = 0; i < InBay.children.length; i++) {
+    panel = InBay.children[i];
+    if ( panel.dataType != "Panel" && panel.dataType != "EmptyPanel" ) {
+      continue;
+    }
+    panely = parseInt(panel.style.top, 10);
+    if ( panely > y ) {
+      returnpanel = panel;
+      y = panely;
     }
   }
+  return returnpanel;
 }
 
-// FILE: ./Files/Callbacks/CBGarbageCanDragOver.js
+
+// FILE: ./Files/Bays/BayResizeLarger.js
 /*****************************************************************************!
- * Function : CBGarbageCanDragOver
+ * Function : BayResizeLarger.js
  *****************************************************************************/
 function
-CBGarbageCanDragOver
-(InEvent)
+BayResizeLarger(InBay)
 {
-  if ( PanelBeingDragged ) {
-    InEvent.preventDefault();
+  var					bayareawidth, left, baywidth;
+
+  bayarea = document.getElementById("BayDisplayArea");
+  bayareawidth = bayarea.clientWidth;
+  
+  
+  InBay.dataBayWidth = InBay.style.width;
+  left = parseInt(InBay.style.left, 10);
+  
+  baywidth = parseInt(InBay.style.width, 10) + 500;
+  m = (left + baywidth) - 10;
+  if ( m > bayareawidth ) {
+    baywidth = bayareawidth - left;
   }
+  InBay.style.width = baywidth + "px";
 }
 
-// FILE: ./Files/Callbacks/CBPanelDragOver.js
+// FILE: ./Files/Bays/BaysFindPanelByIndex.js
 /*****************************************************************************!
- * Function : CBPanelDragOver
+ * Function : BayFindPanelByIndex
  *****************************************************************************/
 function
-CBPanelDragOver(InEvent)
+BayFindPanelByIndex
+(InBay, InPanelIndex)
 {
-  if ( DragElementType == "Panel" ) {
-    InEvent.preventDefault();
+  var					i;
+  if ( null == InBay ) {
+    return null;
   }
+  for (i = 0; i < InBay.panels.length; i++) {
+    if ( InBay.panels[i].panelindex == InPanelIndex ) {
+      return InBay.panels[i];
+    }
+  }
+  return null;
 }
-
-// FILE: ./Files/Callbacks/CBPanelDrop.js
+// FILE: ./Files/Bays/GetNewBayDimensions.js
 /*****************************************************************************!
- * Function : CBPanelDrop
+ * Function : GetNewBayDimensions
  *****************************************************************************/
 function
-CBPanelDrop(InEvent)
+GetNewBayDimensions
+()
 {
-  var					emptypanel;
-  var					paneltemplate = {};
-
+  var					dimensions = {};
+  var					displayarea, displayareaheight;
+  var					baytop;
  
-  if ( DragElementType != "Panel" ) {
-    return;
-  }
-  InEvent.preventDefault();
-  emptypanel = InEvent.target;
-  paneltemplate.panelindex = emptypanel.dataIndex;
-  paneltemplate.bayindex = emptypanel.dataBay.index; 
-  paneltemplate.listnumber = PanelTypeDragElement.listnumber;
-  if ( PanelTypeDragElement.usesSMDUH2 ) {
-    devicedef = DeviceDefFindByName("SMDUH2");
-    paneltemplate.canaddress = devicedef.startcanaddress + emptypanel.dataIndex - 1;
-  } else {
-    paneltemplate.canaddress = 0;
-  }
-  panel = CreatePanelFromEmptyPanel(PanelTypeDragElement, emptypanel, paneltemplate);
-  parentelement = emptypanel.parentElement;
-  parentelement.removeChild(emptypanel);
-  WebSocketIFSendAddPanelRequest(panel.dataPanel.bay.index, panel.dataPanel.index, panel.dataPanel.type.listnumber);
+  baytop = parseInt(getComputedStyle(document.body).getPropertyValue("--BayTop"), 10);
+
+  displayarea = document.getElementById("BayDisplayArea");
+  displayareaheight = displayarea.clientHeight;
+
+  dimensions.bayx = BayDisplayXSkip;
+  dimensions.bayheight = displayareaheight - (baytop * 2);
+  dimensions.baywidth = dimensions.bayheight / 84 * 30;
+  return dimensions;
 }
 
-// FILE: ./Files/Callbacks/CBBayTypeDragStart.js
+// FILE: ./Files/Bays/BayEditPopulateRegisters.js
 /*****************************************************************************!
- * Function : CBBayTypeDragStart 
+ * Function : BayEditPopulateRegisters
  *****************************************************************************/
 function
-CBBayTypeDragStart(InEvent)
+BayEditPopulateRegisters
+(InBayRegisterArea, InDeviceDef)
 {
-   BayTypeDragElement = InEvent.currentTarget.dataBayType;
-   DragElementType = InEvent.currentTarget.dataType;
+  var					iseven;
+  var					lineY;
+  var					lastgroupname;
+  var					i, line, label, input;
+  var					s, lineHeight;
+
+  s = getComputedStyle(document.body).getPropertyValue("--RegisterLineHeight");
+  lineHeight = parseInt(s, 10);
+  iseven = true;
+  lineY = 0;
+  DeviceDefSortRegsByGroupName(InDeviceDef);
+  lastgroupname = "";
+  for (i = 0; i < InDeviceDef.registers.length; i++) {
+    line = document.createElement("div");
+    if ( lastgroupname != InDeviceDef.registers[i].group ) {
+      line.className = "RegisterLine RegisterHeading";
+      line.id = "RegisterLine " + InDeviceDef.registers[i].valuetype;
+      line.innerHTML = InDeviceDef.registers[i].group;
+      lastgroupname = InDeviceDef.registers[i].group;
+      line.style.top = lineY;
+      line.style.left = 0;
+
+      button = document.createElement("div");
+      button.className = "RegisterGroupCollapseButton RegisterGroupClosed";
+      button.onclick = function(event) { CBRegisterGroupButton(event); };
+      line.appendChild(button);
+
+      setButton = document.createElement("div");
+      setButton.className = "RegisterHeaderSetButton";
+      setButton.onclick = function(event) { CBRegisterGroupChange(event); };
+      setButton.innerHTML = "Set";
+      line.appendChild(setButton);
+
+      groupInput = document.createElement("input");
+      groupInput.className = "RegisterLineInput RegisterHeaderInput";
+      line.appendChild(groupInput);
+
+      line.dataGroup = lastgroupname;
+      line.dataStatus = "Closed";
+      InBayRegisterArea.appendChild(line);
+      line = document.createElement("div");
+      lineY += lineHeight;
+      iseven = true;
+    }  
+    if ( i == 0 ) {
+      line.className = "RegisterLine RegisterLineEven RegisterLineFirst";
+    } else {
+      if ( iseven ) {
+        line.className = "RegisterLine RegisterLineEven";
+ 	iseven = false;
+      } else {
+        line.className = "RegisterLine RegisterLineOdd";
+        iseven = true;
+      }
+    } 
+    line.dataGroup = InDeviceDef.registers[i].group;
+    line.style.top = lineY;
+    line.style.left = 0;
+    line.dataRegisterDef = InDeviceDef.registers[i];
+    InBayRegisterArea.appendChild(line);
+
+    label = document.createElement("p");
+    label.className = "RegisterLineLabel";
+    label.innerHTML = InDeviceDef.registers[i].displaylabel + " :";
+    line.appendChild(label);
+
+    label = document.createElement("p");
+    label.className = "RegisterLineValueTypeLabel";
+    label.innerHTML = "0x" + InDeviceDef.registers[i].valuetype.toString(16).toString(16).toUpperCase();
+    line.appendChild(label);
+
+    input = document.createElement("input");
+    input.className = "RegisterLineInput";
+    input.dataChanged = false;
+    input.dataValueType = InDeviceDef.registers[i].valuetype;
+    input.dataValueRegister = InDeviceDef.registers[i];
+    input.dataOriginalValue = 0;
+    input.id = "RegInput " + InDeviceDef.registers[i].valuetype; 
+    line.appendChild(input);
+
+    lineY += lineHeight;
+  }
+  BayRepositionRegisterLines();
 }
 
-// FILE: ./Files/Callbacks/CBGarbageCanDrop.js
+// FILE: ./Files/Bays/BayTransitionEnd.js
 /*****************************************************************************!
- * Function : CBGarbageCanDrop
+ * Function : BayTransitionEnd
  *****************************************************************************/
 function
-CBGarbageCanDrop
+BayTransitionEnd
 (InEvent)
 {
-  if ( PanelBeingDragged ) {
-    console.log(PanelBeingDragged);
-    WebSocketIFSendRemovePanelRequest(PanelBeingDragged.dataPanel.bay.index, PanelBeingDragged.dataPanel.index); 
+  var					bay;
+  bay = InEvent.srcElement;
+
+  if ( bay.style.width == bay.dataBayWidth ) {
+    // Only remove the children when the bay is closed
+    bay.removeChild(bay.editregisterarea);
+    bay.removeChild(bay.editinfoarea);
+    bay.editregisterarea = null;
+    bay.editinfoarea = null;
   }
-  PanelBeingDragged = null;
 }
 
-// FILE: ./Files/Callbacks/CBBayTypeDragEnd.js
+// FILE: ./Files/Bays/CreateNewBay.js
 /*****************************************************************************!
- * Function : CBBayTypeDragEnd
+ * Function : CreateNewBay 
  *****************************************************************************/
 function
-CBBayTypeDragEnd(InEvent)
+CreateNewBay(InBayType, InIndex)
 {
-  BayTypeDragElement = null;
-  DragElementType = null;
+  var					displayarea;
+  var					bay;
+  var					displayareawidth, displayareaheight;
+  var					baywidth, bayheight, bayareawidth;
+  var					headerbutton;
+  var					bayx;
+  var					header, baytop;
+  var					dimensions;
+
+  dimensions = GetNewBayDimensions();
+
+  displayarea = document.getElementById("BayDisplayArea");
+   
+  bay = document.createElement("div");
+  bay.className = "GeneralPane Bay";
+  bay.id = "Bay " + InIndex;
+
+  bay.dataBay = {};
+  bay.dataBay.type = InBayType;
+  bay.dataBay.index = InIndex;
+  bay.dataBay.device = DeviceDefFindByDescription("Bay");
+  bay.dataEdittingMode = "None";
+
+  bay.ondragenter  = function(event) { CBBayDragEnter(event); }
+  bay.ondragleave  = function(event) { CBBayDragLeave(event); }
+
+  bay.style.width  = dimensions.baywidth;
+  bay.style.height = dimensions.bayheight;
+  bay.style.left   = dimensions.bayx;
+
+  header = document.createElement("div");
+  header.className = "GeneralPaneHeader";
+  header.innerHTML = "Bay " + bay.dataBay.index;
+  
+  headerbutton = document.createElement("div");
+  headerbutton.className = "GeneralPaneHeaderButton";
+  headerbutton.onclick = function(event) { CBBayEdit(event); }
+  header.appendChild(headerbutton);
+
+  bay.appendChild(header);
+
+  CreateEmptyPanels(bay);
+  displayarea.appendChild(bay); 
+  bay.addEventListener("transitionend", BayTransitionEnd, true);
+  return bay;
 }
 
-// FILE: ./Files/Callbacks/CBBayDragEnter.js
+
+// FILE: ./Files/Bays/BayEditAreaHide.js
 /*****************************************************************************!
- * Function : CBBayDragEnter 
+ * Function : BayEditAreaHide
  *****************************************************************************/
 function
-CBBayDragEnter(InEvent)
+BayEditAreaHide
+(InBay)
 {
+  InBay.dataEdittingMode = "None";
+  MainHideBlocker();
+  BayLowerZIndex(InBay);
+  InBay.style.width = InBay.dataBayWidth;
 }
 
 // FILE: ./Files/Bays/BayEdit.js
@@ -570,109 +806,20 @@ BayEdit(InBay)
 }
 
 
-// FILE: ./Files/Bays/BayEditClose.js
+// FILE: ./Files/Bays/BaysNormalizeZIndex.js
 /*****************************************************************************!
- * Function : BayEditClose
+ * Function : BaysNormalizeZIndex
  *****************************************************************************/
 function
-BayEditClose
-(InBay)
+BaysNormalizeZIndex
+()
 {
-  var					registerArea;
-  var					panel, i, registerInput;
-  var					request = {};
-
-  registerArea = document.getElementById("RegisterArea");
-  bay = InBay.dataBay;
-
-  request.bayindex = bay.index;
-  request.registers = [];
-
-  for (i = 0; i < bay.device.registers.length; i++) {
-    registerInput = document.getElementById("RegInput " + bay.device.registers[i].valuetype);
-    if ( registerInput.dataOriginalValue != registerInput.value ) {
-      n = new Object();
-      n.valuetype = bay.device.registers[i].valuetype;
-      n.value = registerInput.value;
-      request.registers.push(n);
-    }
-  }
-  WebSocketIFSendUpdateBayRegValuesRequest(bay.index, request);
-  BayEditAreaHide(InBay);
-} 
-// FILE: ./Files/Bays/CreateNewBay.js
-/*****************************************************************************!
- * Function : CreateNewBay 
- *****************************************************************************/
-function
-CreateNewBay(InBayType, InIndex)
-{
-  var					displayarea;
-  var					bay;
-  var					displayareawidth, displayareaheight;
-  var					baywidth, bayheight, bayareawidth;
-  var					headerbutton;
-  var					bayx;
-  var					header, baytop;
-  var					dimensions;
-
-  dimensions = GetNewBayDimensions();
-
+  var					displayarea, i;
   displayarea = document.getElementById("BayDisplayArea");
-   
-  bay = document.createElement("div");
-  bay.className = "GeneralPane Bay";
-  bay.id = "Bay " + InIndex;
-
-  bay.dataBay = {};
-  bay.dataBay.type = InBayType;
-  bay.dataBay.index = InIndex;
-  bay.dataBay.device = DeviceDefFindByDescription("Bay");
-  bay.dataEdittingMode = "None";
-
-  bay.ondragenter  = function(event) { CBBayDragEnter(event); }
-  bay.ondragleave  = function(event) { CBBayDragLeave(event); }
-
-  bay.style.width  = dimensions.baywidth;
-  bay.style.height = dimensions.bayheight;
-  bay.style.left   = dimensions.bayx;
-
-  header = document.createElement("div");
-  header.className = "GeneralPaneHeader";
-  header.innerHTML = "Bay " + bay.dataBay.index;
-  
-  headerbutton = document.createElement("div");
-  headerbutton.className = "GeneralPaneHeaderButton";
-  headerbutton.onclick = function(event) { CBBayEdit(event); }
-  header.appendChild(headerbutton);
-
-  bay.appendChild(header);
-
-  CreateEmptyPanels(bay);
-  displayarea.appendChild(bay); 
-  bay.addEventListener("transitionend", BayTransitionEnd, true);
-  return bay;
+  for (i = 0; i < displayarea.children.length; i++) {
+    displayarea.children[i].style.zIndex = 20;
+  }
 }
-
-
-// FILE: ./Files/Bays/Bays.js
-/*****************************************************************************
- * FILE NAME    : Bays.js
- * DATE         : June 16 2020
- * PROJECT      : BDFB Simulator
- * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
- *****************************************************************************/
-"use strict";
-
-/*****************************************************************************!
- * Local Data
- *****************************************************************************/
-var BayDisplayXSkip			= 20;
-var BayDisplayMaxBaysCount		= 8;
-var BayDisplayPanelXSkip		= 10;
-var BayDisplayPanelYSkip		= 10;
-var BayPanelTop				= 40;
-var BayPanelBottom			= 20;
 
 
 // FILE: ./Files/Bays/BaysPopulateWindow.js
@@ -718,107 +865,6 @@ BaysPopulateWindow
 }
 
 
-// FILE: ./Files/Bays/BayResize.js
-/*****************************************************************************!
- * Function : BayResize
- *****************************************************************************/
-function
-BayResize
-(InBay)
-{
-  var					registerAreaName, registerArea;
-  var					registerAreaWidth, registerAreaHeight;
-
-  dimensions = GetNewBayDimensions();
-  MainDisplayMessage(dimensions.baywidth + " : " + dimensions.bayheight);
-  registerAreaWidth  = 0;
-  registerAreaHeight = 0;
-  
-  registerAreaName = "RegisterArea";
-  registerArea = document.getElementById(registerAreaName);
-  if ( registerArea ) {
-    registerAreaWidth = registerArea.clientWidth;
-    registerAreaHeight = registerArea.clientHeight;
-  }
-  InBay.style.width = dimensions.baywidth;
-  InBay.style.height = dimensions.bayheight;
-}
-// FILE: ./Files/Bays/BayFindRegisterValueByValueType.js
-/*****************************************************************************!
- * Function : BayFindRegisterValueByValueType
- *****************************************************************************/
-function
-BayFindRegisterValueByValueType
-(InBay, InValueType)
-{
-  var					i;
-
-  if ( null == InBay || null == InBay.device.registers ) {
-    return null;
-  }
-
-  for (i = 0; i < InBay.device.registers.length; i++) {
-    if ( InBay.device.registers[i].valuetype == InValueType ) {
-      return InBay.device.registers[i];
-    }
-  }
-  return null;
-}
-
-// FILE: ./Files/Bays/BayRepositionRegisterLines.js
-/*****************************************************************************!
- * Function : BayRepositionRegisterLines
- *****************************************************************************/
-function
-BayRepositionRegisterLines
-()
-{
-  var					registerArea;
-  var					y, i, register;
-  var					groupstatus, currentgroup;
-
-  registerArea = document.getElementById("RegisterArea");
-  y = 0;
-  for ( i = 0 ; i < registerArea.children.length; i++ ) {
-    registerline = registerArea.children[i];
-    registerline.style.top = y + "px";
-    if ( registerline.className == "RegisterLine RegisterHeading" ) {
-      y += 19;
-      groupstatus = registerline.dataStatus;
-      currentgroup = registerline.dataGroup;
-    } else {
-      if ( registerline.dataGroup == currentgroup ) {
-        if ( groupstatus == "Open" ) {
-          registerline.style.top = y + "px";
-	  registerline.style.visibility = "visible";
-          y += 19;
-        } else {
-	  registerline.style.visibility = "hidden";
-        }
-      } else {
-        y += 19;
-        registerline.style.visibility = "visible";
-      }
-    }
-  }
-}
-
-// FILE: ./Files/Bays/BaysNormalizeZIndex.js
-/*****************************************************************************!
- * Function : BaysNormalizeZIndex
- *****************************************************************************/
-function
-BaysNormalizeZIndex
-()
-{
-  var					displayarea, i;
-  displayarea = document.getElementById("BayDisplayArea");
-  for (i = 0; i < displayarea.children.length; i++) {
-    displayarea.children[i].style.zIndex = 20;
-  }
-}
-
-
 // FILE: ./Files/Bays/GetPanelPositionsSizes.js
 /*****************************************************************************!
  * Function : GetPanelPositionsSizes
@@ -852,78 +898,6 @@ GetPanelPositionsSizes
   return returnInfo;
 }
 
-// FILE: ./Files/Bays/BayTransitionEnd.js
-/*****************************************************************************!
- * Function : BayTransitionEnd
- *****************************************************************************/
-function
-BayTransitionEnd
-(InEvent)
-{
-  var					bay;
-  bay = InEvent.srcElement;
-
-  if ( bay.style.width == bay.dataBayWidth ) {
-    // Only remove the children when the bay is closed
-    bay.removeChild(bay.editregisterarea);
-    bay.removeChild(bay.editinfoarea);
-    bay.editregisterarea = null;
-    bay.editinfoarea = null;
-  }
-}
-
-// FILE: ./Files/Bays/BayLowerZIndex.js
-/*****************************************************************************!
- * Function : BayLowerZIndex
- *****************************************************************************/
-function
-BayLowerZIndex
-(InBay)
-{
-  InBay.style.zIndex = 30;
-}
-
-
-// FILE: ./Files/Bays/GetNewBayDimensions.js
-/*****************************************************************************!
- * Function : GetNewBayDimensions
- *****************************************************************************/
-function
-GetNewBayDimensions
-()
-{
-  var					dimensions = {};
-  var					displayarea, displayareaheight;
-  var					baytop;
- 
-  baytop = parseInt(getComputedStyle(document.body).getPropertyValue("--BayTop"), 10);
-
-  displayarea = document.getElementById("BayDisplayArea");
-  displayareaheight = displayarea.clientHeight;
-
-  dimensions.bayx = BayDisplayXSkip;
-  dimensions.bayheight = displayareaheight - (baytop * 2);
-  dimensions.baywidth = dimensions.bayheight / 84 * 30;
-  return dimensions;
-}
-
-// FILE: ./Files/Bays/CreateEmptyPanels.js
-/*****************************************************************************!
- * Function : CreateEmptyPanels
- *****************************************************************************/
-function
-CreateEmptyPanels (InBay)
-{
-  var					i, x, n;
-
-  var locationInfo = GetPanelPositionsSizes(InBay);
-  for ( i = InBay.dataBay.type.panelcount; i > 0; i-- ) {
-    n = (i - 1) % 2;
-    x = locationInfo.panelXs[n];
-    CreateEmptyPanel(InBay, i, x, locationInfo.panelYs[i], locationInfo.panelwidth, locationInfo.panelheight);
-  }
-}
-
 // FILE: ./Files/Bays/BayFindByIndex.js
 /*****************************************************************************!
  * Function : BayFindByIndex
@@ -943,450 +917,580 @@ BayFindByIndex
 }
 
 
-// FILE: ./Files/Bays/BayResizeLarger.js
+// FILE: ./Files/Bays/BayEditClose.js
 /*****************************************************************************!
- * Function : BayResizeLarger.js
+ * Function : BayEditClose
  *****************************************************************************/
 function
-BayResizeLarger(InBay)
-{
-  var					bayareawidth, left, baywidth;
-
-  bayarea = document.getElementById("BayDisplayArea");
-  bayareawidth = bayarea.clientWidth;
-  
-  
-  InBay.dataBayWidth = InBay.style.width;
-  left = parseInt(InBay.style.left, 10);
-  
-  baywidth = parseInt(InBay.style.width, 10) + 500;
-  m = (left + baywidth) - 10;
-  if ( m > bayareawidth ) {
-    baywidth = bayareawidth - left;
-  }
-  InBay.style.width = baywidth + "px";
-}
-
-// FILE: ./Files/Bays/BayEditPopulateRegisters.js
-/*****************************************************************************!
- * Function : BayEditPopulateRegisters
- *****************************************************************************/
-function
-BayEditPopulateRegisters
-(InBayRegisterArea, InDeviceDef)
-{
-  var					iseven;
-  var					lineY;
-  var					lastgroupname;
-  var					i, line, label, input;
-  var					s, lineHeight;
-
-  s = getComputedStyle(document.body).getPropertyValue("--RegisterLineHeight");
-  lineHeight = parseInt(s, 10);
-  iseven = true;
-  lineY = 0;
-  DeviceDefSortRegsByGroupName(InDeviceDef);
-  lastgroupname = "";
-  for (i = 0; i < InDeviceDef.registers.length; i++) {
-    line = document.createElement("div");
-    if ( lastgroupname != InDeviceDef.registers[i].group ) {
-      line.className = "RegisterLine RegisterHeading";
-      line.id = "RegisterLine " + InDeviceDef.registers[i].valuetype;
-      line.innerHTML = InDeviceDef.registers[i].group;
-      lastgroupname = InDeviceDef.registers[i].group;
-      line.style.top = lineY;
-      line.style.left = 0;
-
-      button = document.createElement("div");
-      button.className = "RegisterGroupCollapseButton RegisterGroupClosed";
-      button.onclick = function(event) { CBRegisterGroupButton(event); };
-      line.appendChild(button);
-
-      setButton = document.createElement("div");
-      setButton.className = "RegisterHeaderSetButton";
-      setButton.onclick = function(event) { CBRegisterGroupChange(event); };
-      setButton.innerHTML = "Set";
-      line.appendChild(setButton);
-
-      groupInput = document.createElement("input");
-      groupInput.className = "RegisterLineInput RegisterHeaderInput";
-      line.appendChild(groupInput);
-
-      line.dataGroup = lastgroupname;
-      line.dataStatus = "Closed";
-      InBayRegisterArea.appendChild(line);
-      line = document.createElement("div");
-      lineY += lineHeight;
-      iseven = true;
-    }  
-    if ( i == 0 ) {
-      line.className = "RegisterLine RegisterLineEven RegisterLineFirst";
-    } else {
-      if ( iseven ) {
-        line.className = "RegisterLine RegisterLineEven";
- 	iseven = false;
-      } else {
-        line.className = "RegisterLine RegisterLineOdd";
-        iseven = true;
-      }
-    } 
-    line.dataGroup = InDeviceDef.registers[i].group;
-    line.style.top = lineY;
-    line.style.left = 0;
-    line.dataRegisterDef = InDeviceDef.registers[i];
-    InBayRegisterArea.appendChild(line);
-
-    label = document.createElement("p");
-    label.className = "RegisterLineLabel";
-    label.innerHTML = InDeviceDef.registers[i].displaylabel + " :";
-    line.appendChild(label);
-
-    label = document.createElement("p");
-    label.className = "RegisterLineValueTypeLabel";
-    label.innerHTML = "0x" + InDeviceDef.registers[i].valuetype.toString(16).toString(16).toUpperCase();
-    line.appendChild(label);
-
-    input = document.createElement("input");
-    input.className = "RegisterLineInput";
-    input.dataChanged = false;
-    input.dataValueType = InDeviceDef.registers[i].valuetype;
-    input.dataValueRegister = InDeviceDef.registers[i];
-    input.dataOriginalValue = 0;
-    input.id = "RegInput " + InDeviceDef.registers[i].valuetype; 
-    line.appendChild(input);
-
-    lineY += lineHeight;
-  }
-  BayRepositionRegisterLines();
-}
-
-// FILE: ./Files/Bays/CreateBay.js
-/*****************************************************************************!
- * Function : CreateNewBay 
- *****************************************************************************/
-function
-CreateBay(InBay)
-{
-  var					displayarea;
-  var					bay;
-  var					headerbutton;
-  var					dimensions;
-  var					header;
-
-  baytype = InBay;
-  displayarea = document.getElementById("BayDisplayArea");
-
-  dimensions = GetNewBayDimensions();   
-  
-  bay = document.createElement("div");
-  bay.className = "GeneralPane Bay";
-  bay.id = "Bay " + InIndex;
-  bay.dataBay = {};
-  bay.dataBay.type = InBayType;
-  bay.dataBay.index = InIndex;
-  bay.dataBay.device = DeviceDefFindByDescription("Bay");
-  bay.dataEdittingMode = "None";
-
-  bay.ondragenter  = function(event) { CBBayDragEnter(event); }
-  bay.ondragleave  = function(event) { CBBayDragLeave(event); }
-  bay.style.width  = dimensions.baywidth;
-  bay.style.height = dimensions.bayheight;
-  bay.style.left   = dimensions.bayx;
-
-  header = document.createElement("div");
-  header.className = "GeneralPaneHeader";
-  header.innerHTML = "Bay " + bay.dataBay.index;
-  
-  headerbutton = document.createElement("div");
-  headerbutton.className = "GeneralPaneHeaderButton";
-  headerbutton.onclick = function(event) { CBBayEdit(event); }
-  header.appendChild(headerbutton);
-
-  bay.appendChild(header);
-
-  CreateEmptyPanels(bay);
-  displayarea.appendChild(bay); 
-  bay.addEventListener("transitionend", BayTransitionEnd, true);
-  return bay;
-}
-
-// FILE: ./Files/Bays/BayEditAreaHide.js
-/*****************************************************************************!
- * Function : BayEditAreaHide
- *****************************************************************************/
-function
-BayEditAreaHide
+BayEditClose
 (InBay)
 {
-  InBay.dataEdittingMode = "None";
-  MainHideBlocker();
-  BayLowerZIndex(InBay);
-  InBay.style.width = InBay.dataBayWidth;
-}
+  var					registerArea;
+  var					panel, i, registerInput;
+  var					request = {};
 
-// FILE: ./Files/Bays/BayFindLowestPanel.js
-/*****************************************************************************!
- * Function : BayFindLowestPanel
- *****************************************************************************/
-function
-BayFindLowestPanel
-(InBay)
-{
-  var					i, panel, panely, returnpanel, y;
+  registerArea = document.getElementById("RegisterArea");
+  bay = InBay.dataBay;
 
-  returnpanel = null;
-  y = 0;
-  for (i = 0; i < InBay.children.length; i++) {
-    panel = InBay.children[i];
-    if ( panel.dataType != "Panel" && panel.dataType != "EmptyPanel" ) {
-      continue;
-    }
-    panely = parseInt(panel.style.top, 10);
-    if ( panely > y ) {
-      returnpanel = panel;
-      y = panely;
+  request.bayindex = bay.index;
+  request.registers = [];
+
+  for (i = 0; i < bay.device.registers.length; i++) {
+    registerInput = document.getElementById("RegInput " + bay.device.registers[i].valuetype);
+    if ( registerInput.dataOriginalValue != registerInput.value ) {
+      n = new Object();
+      n.valuetype = bay.device.registers[i].valuetype;
+      n.value = registerInput.value;
+      request.registers.push(n);
     }
   }
-  return returnpanel;
-}
-
-
-// FILE: ./Files/Bays/BayRaiseZIndex.js
+  WebSocketIFSendUpdateBayRegValuesRequest(bay.index, request);
+  BayEditAreaHide(InBay);
+} 
+// FILE: ./Files/Bays/CreateEmptyPanels.js
 /*****************************************************************************!
- * Function : BayRaiseZIndex
+ * Function : CreateEmptyPanels
  *****************************************************************************/
 function
-BayRaiseZIndex
-(InBay)
+CreateEmptyPanels (InBay)
 {
-  InBay.style.zIndex = 30;
+  var					i, x, n;
+
+  var locationInfo = GetPanelPositionsSizes(InBay);
+  for ( i = InBay.dataBay.type.panelcount; i > 0; i-- ) {
+    n = (i - 1) % 2;
+    x = locationInfo.panelXs[n];
+    CreateEmptyPanel(InBay, i, x, locationInfo.panelYs[i], locationInfo.panelwidth, locationInfo.panelheight);
+  }
 }
 
-
-// FILE: ./Files/Bays/BaysFindPanelByIndex.js
+// FILE: ./Files/Bays/BayFindRegisterValueByValueType.js
 /*****************************************************************************!
- * Function : BayFindPanelByIndex
+ * Function : BayFindRegisterValueByValueType
  *****************************************************************************/
 function
-BayFindPanelByIndex
-(InBay, InPanelIndex)
+BayFindRegisterValueByValueType
+(InBay, InValueType)
 {
   var					i;
-  if ( null == InBay ) {
+
+  if ( null == InBay || null == InBay.device.registers ) {
     return null;
   }
-  for (i = 0; i < InBay.panels.length; i++) {
-    if ( InBay.panels[i].panelindex == InPanelIndex ) {
-      return InBay.panels[i];
+
+  for (i = 0; i < InBay.device.registers.length; i++) {
+    if ( InBay.device.registers[i].valuetype == InValueType ) {
+      return InBay.device.registers[i];
     }
   }
   return null;
 }
-// FILE: ./Files/DeviceDefs/DeviceDefs.js
+
+// FILE: ./Files/WebSocketIF/WebSocketIFSendUpdateBayRegValuesRequest.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendUpdateBayRegValuesRequest
+ *****************************************************************************/
+function
+WebSocketIFSendUpdateBayRegValuesRequest
+(InBayIndex, InBody)
+{
+  var                           request = {};
+
+  request.packettype = "request";
+  request.packetid = WebSocketIFGetNextID();
+  request.time = 0;
+  request.bayindex = InBayIndex;
+  request.type = "setbayregvalues";
+  request.body = InBody;
+
+  WebSocketIFSendGeneralRequest(request);
+}
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleBays.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandleBays
+ *****************************************************************************/
+function
+WebSocketIFHandleBays(InBays)
+{
+  MainBays = InBays;
+  BaysPopulateWindow();
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIFSendUpdatePanelRegValuesRequest.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendUpdatePanelRegValuesRequest
+ *****************************************************************************/
+function
+WebSocketIFSendUpdatePanelRegValuesRequest
+(InBayIndex, InPanelIndex, InBody)
+{
+  var                           request = {};
+
+  request.packettype = "request";
+  request.packetid = WebSocketIFGetNextID();
+  request.time = 0;
+  request.bayindex = InBayIndex;
+  request.panelindex = InPanelIndex
+  request.type = "setpanelregvalues";
+  request.body = InBody;
+
+  WebSocketIFSendGeneralRequest(request);
+}
+// FILE: ./Files/WebSocketIF/WebSocketIFSendSimpleRequest.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendSimpleRequest
+ *****************************************************************************/
+function
+WebSocketIFSendSimpleRequest(InRequest)
+{
+  var                           request = {};
+
+  request.packettype = "request";
+  request.packetid = WebSocketIFGetNextID();
+  request.time = 0;
+  request.type = InRequest;
+  request.body = "";
+
+  WebSocketIFSendGeneralRequest(request);
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFSendAddBayRequest.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendAddBayRequest
+ *****************************************************************************/
+function
+WebSocketIFSendAddBayRequest
+(InBay)
+{
+  var                                   request;
+
+  request = {};
+  request.packettype = "request";
+  request.packetid = WebSocketIFGetNextID();
+  request.time = 0;
+  request.bayindex = InBay.dataBay.index;
+  request.type = "addbay";
+  request.body = {};
+  request.body.bayindex = InBay.dataBay.index;
+  request.body.bayinfo = {};
+  request.body.bayinfo.panelcount = InBay.dataBay.type.panelcount;
+  request.body.bayinfo.bayindex = InBay.dataBay.index;
+  request.body.bayinfo.name = InBay.id;
+  request.body.bayinfo.ipaddress = "127.0.0.1";
+  request.body.bayinfo.type = InBay.dataBay.type.name;
+  request.body.bayinfo.portnumber = 8001;
+  request.body.bayinfo.canaddress = 0;
+  request.body.bayinfo.listnumber = InBay.dataBay.type.listnumber;
+  WebSocketIFSendGeneralRequest(request); 
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleInputPacket.js
+/*****************************************************************************!
+ * Function : WebSocketHandlerInputPacket
+ *****************************************************************************/
+function
+WebSocketIFHandleInputPacket(InData)
+{
+  var					requestpacket;
+
+  console.log(InData);
+  requestpacket = JSON.parse(InData);
+
+  if ( requestpacket.packettype == "response" ) {
+    console.log(requestpacket);
+    WebSocketIFHandleResponsePacket(requestpacket);
+  }
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFSendBayRegValuesRequest.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendBayRegValuesRequest
+ *****************************************************************************/
+function
+WebSocketIFSendBayRegValuesRequest(InBayIndex)
+{
+  var                           request = {};
+
+  request.packettype = "request";
+  request.packetid = WebSocketIFGetNextID();
+  request.time = 0;
+  request.bayindex = InBayIndex;
+  request.type = "getbayregvalues";
+  request.body = "";
+
+  WebSocketIFSendGeneralRequest(request);
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIFSendDeviceDefRegRequestNext.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendDeviceDefRegRequestNext
+ *****************************************************************************/
+function
+WebSocketIFSendDeviceDefRegRequestNext
+()
+{
+  WebSocketIFDeviceIndex++;
+  if ( WebSocketIFDeviceIndex >= MainDeviceDefs.length ) {
+    WebSocketIFSendSimpleRequest("getbays");
+  } else {
+    WebSocketIFSendDeviceDefRegRequest();
+  }
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIFSendGeneralRequest.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendGeneralRequest
+ *****************************************************************************/
+function 
+WebSocketIFSendGeneralRequest(InRequest) {
+  console.log(InRequest);
+  if ( WebSocketIFConnection ) {
+    WebSocketIFConnection.send(JSON.stringify(InRequest));
+  }
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFGetNextID.js
+/*****************************************************************************!
+ * Function : WebSocketIFGetNextID
+ *****************************************************************************/
+function 
+WebSocketIFGetNextID()
+{
+  WebSocketIFNextID++;
+  return WebSocketIFNextID;
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleResponsePacket.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandleResponsePacket
+ *****************************************************************************/
+function
+WebSocketIFHandleResponsePacket(InPacket)
+{
+  if ( InPacket.responseid != "OK" ) {
+    MainDisplayMessage(InPacket.responsemessage);
+    return;
+  }
+  if ( InPacket.type == "resbaytypes" ) {
+    WebSocketIFHandleResponseBayTypes(InPacket.body.baytypes);
+    WebSocketIFSendSimpleRequest("getpaneltypes");
+  } else if ( InPacket.type == "respaneltypes" ) {
+    WebSocketIFHandleResponsePanelTypes(InPacket.body.paneltypes);
+    WebSocketIFSendSimpleRequest("getdevicedefs");
+  } else if ( InPacket.type == "resdevicedefs" ) {
+    WebSocketIFHandleDeviceDefs(InPacket.body.devicedefs);
+    WebSocketIFSendDeviceDefRegRequestStart();
+  } else if ( InPacket.type == "resdeviceregs" ) {
+    WebSocketIFHandleDeviceRegs(InPacket.body);
+  } else if ( InPacket.type == "resbays" ) {
+    WebSocketIFHandleBays(InPacket.body.bays);
+    MainInitializeDisplay();
+  } else if ( InPacket.type == "resbayregvalues") {
+    WebSocketIFHandleBayRegValues(InPacket.body.bayregvalues);
+  } else if ( InPacket.type == "respanelregvalues") {
+    WebSocketIFHandlePanelRegValues(InPacket.body.panelregvalues);
+  } else if ( InPacket.type == "resremovepanel" ) {
+    WebSocketIFHandleRemovePanelResponse(InPacket.responseid, InPacket.responsemessage, InPacket.body.bayindex, InPacket.body.panelindex);
+  }
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleFuseBreakerTypes.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandleFuseBreakerTypes
+ *****************************************************************************/
+function
+WebSocketIFHandleFuseBreakerTypes(InFuseBreakerTypes)
+{
+  MainFuseBreakerTypes = InFuseBreakerTypes;
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFSendPanelRegValuesRequest.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendPanelRegValuesRequest
+ *****************************************************************************/
+function
+WebSocketIFSendPanelRegValuesRequest(InBayIndex, InPanelIndex)
+{
+  var                           request = {};
+
+  request.packettype = "request";
+  request.packetid = WebSocketIFGetNextID();
+  request.time = 0;
+  request.panelindex = InPanelIndex;
+  request.bayindex = InBayIndex;
+  request.type = "getpanelregvalues";
+  request.body = "";
+
+  WebSocketIFSendGeneralRequest(request);
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIFSendDeviceDefRequestStart.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendDeviceDefRegRequestStart
+ *****************************************************************************/
+function
+WebSocketIFSendDeviceDefRegRequestStart
+()
+{
+  WebSocketIFDeviceIndex = 0;
+  WebSocketIFSendDeviceDefRegRequest();
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIFSendDeviceDegRegRequest.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendDeviceDefRegRequest 
+ *****************************************************************************/
+function
+WebSocketIFSendDeviceDefRegRequest
+()
+{
+  var                           request = {};
+
+  request.packettype = "request";
+  request.packetid = WebSocketIFGetNextID();
+  request.time = 0;
+  request.devicename = MainDeviceDefs[WebSocketIFDeviceIndex].name;
+  request.type = "getdeviceregs";
+  request.body = "";
+
+  WebSocketIFSendGeneralRequest(request);
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIF.js
 /*****************************************************************************
- * FILE NAME    : DeviceDefs.js
- * DATE         : June 16 2020
- * PROJECT      : BDFB Simulator
- * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
- *****************************************************************************/
-
-// FILE: ./Files/DeviceDefs/DeviceDefSortRegsByGroupName.js
-/*****************************************************************************!
- * Function : DeviceDefSortRegsByGroupName
- *****************************************************************************/
-function
-DeviceDefSortRegsByGroupName
-(InDevice)
-{
-   InDevice.registers.sort(function(a, b) { var n = a.groupsort.localeCompare(b.groupsort); 
-					    if ( n == 0 ) {
-					      n = a.displaylabel.localeCompare(b.displaylabel);
- 					    }
-					    return n;
-					  });
-}
-
-// FILE: ./Files/DeviceDefs/DeviceDefFindByDescription.js
-/*****************************************************************************!
- * Function : DeviceDefFindByDescription 
- *****************************************************************************/
-function
-DeviceDefFindByDescription(InDeviceDefDescription)
-{
-  var i;
-  for (i = 0; i < MainDeviceDefs.length; i++) {
-    if ( MainDeviceDefs[i].description == InDeviceDefDescription ) {
-      return MainDeviceDefs[i];
-    }
-  }
-  return null;
-}
-
-// FILE: ./Files/DeviceDefs/DeviceDefFindByName.js
-/*****************************************************************************!
- * Function : DeviceDefFindByName 
- *****************************************************************************/
-function
-DeviceDefFindByName(InDeviceDefName)
-{
-  var i;
-  for (i = 0; i < MainDeviceDefs.length; i++) {
-    if ( MainDeviceDefs[i].name == InDeviceDefName ) {
-      return MainDeviceDefs[i];
-    }
-  }
-  return null;
-}
-
-// FILE: ./Files/Main/MainDisplayMessage.js
-/*****************************************************************************!
- * Function : MainDisplayMessage
- *****************************************************************************/
-function
-MainDisplayMessage(InMessage)
-{
-  MainDisplayMessageColor(InMessage, "#000000"); 
-}
-
-// FILE: ./Files/Main/MainDisplayTimedMessage.js
-/*****************************************************************************!
- * Function : MainDisplayTimedMessage
- *****************************************************************************/
-function
-MainDisplayTimedMessage(InMessage, InTimeout)
-{
-  var					messageArea;
-
-  MainMessageTimerID = setInterval(MainMessageTimeout, InTimeout * 1000);
-  messageArea = document.getElementById("MessageLine");
-  messageArea.innerHTML = InMessage;
-}
-
-// FILE: ./Files/Main/MainHideBlocker.js
-/*****************************************************************************!
- * Function : MainHideBlocker
- *****************************************************************************/
-function
-MainHideBlocker()
-{
-  document.getElementById("MainBlocker").style.visibility = "hidden";
-}
-
-// FILE: ./Files/Main/MainMessageTimeout.js
-/*****************************************************************************!
- * Function : MainMessageTimeout
- *****************************************************************************/
-function
-MainMessageTimeout()
-{
-  clearInterval(MainMessageTimerID)
-  document.getElementById("MessageLine").innerHTML = "";
-  MainMessageTimerID = null;
-}
-
-// FILE: ./Files/Main/MainResizeBody.js
-/*****************************************************************************!
- * Function : MainResizeBody
- *****************************************************************************/
-function
-MainResizeBody
-(InEvent)
-{
-  var					mainArea, clientWidth, clientHeight;
-  var					i, bay, locationInfo;
-
-  mainArea = document.getElementById("BayDisplayArea");
-
-  clientWidth = mainArea.clientWidth;
-  clientHeight = mainArea.clientHeight;
-
-  console.log(clientWidth, clientHeight);
-
-  for (i = 0; i < mainArea.children.length; i++) {
-    bay = mainArea.children[i];
-    BayResize(bay);
-    locationInfo = GetPanelPositionsSizes(bay);
-    for ( j = 0; j < bay.children.length; j++ ) {
-      panel = bay.children[j];
-      if ( panel.dataType == "EmptyPanel" || panel.dataType == "Panel" ) {
-        panel.style.width = locationInfo.panelwidth;
-        panel.style.height = locationInfo.panelheight;
-        panel.style.top = locationInfo.panelYs[panel.dataIndex];
-        n = locationInfo.panelXs[(panel.dataIndex - 1) % 2];
-        panel.style.left = n;
-      }
-    }
-  }
-}
-// FILE: ./Files/Main/MainInitializeDisplay.js
-/*****************************************************************************!
- * Function : MainInitializeDisplay
- *****************************************************************************/
-function
-MainInitializeDisplay()
-{
-  var					name;
-  name = null;
-
-  if ( MainBays.length > 0 ) {
-    name = MainBays[0].type;
-  }
-  
-  BayTypesListPopulate(name);
-}
-
-// FILE: ./Files/Main/MainDisplayMessageColor.js
-/*****************************************************************************!
- * Function : MainDisplayMessageColor
- *****************************************************************************/
-function
-MainDisplayMessageColor
-(InMessage, InColor)
-{
-  var					messageArewa;
-  
-  messageArea = document.getElementById("MessageLine");
-  messageArea.style.color = InColor;
-  MainDisplayTimedMessage(InMessage, MAIN_DEFAULT_MESSAGE_TIME);
-}
-// FILE: ./Files/Main/MainDisplayBlocker.js
-/*****************************************************************************!
- * Function : MainDisplayBlocker
- *****************************************************************************/
-function
-MainDisplayBlocker()
-{
-  document.getElementById("MainBlocker").style.visibility = "visible";
-}
-
-// FILE: ./Files/Main/Main.js
-/*****************************************************************************
- * FILE NAME    : script.js
+ * FILE NAME    : WebSocketIF.js
  * DATE         : June 11 2020
  * PROJECT      : BDFB Simulator
  * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
  *****************************************************************************/
 
 /*****************************************************************************!
- * Local Data
+ * Local Data 
  *****************************************************************************/
-var MAIN_DEFAULT_MESSAGE_TIME		= 10;
+var WebSocketIFConnection = null;
+var WebSocketIFNextID = 1;
+var WebSocketIFDeviceIndex = 0;
 
-var MainBayTypes 			= null;
-var MainPanelTypes			= null;
-var MainFuseBreakerTypes		= null;
-var MainBays				= [];
-var MainDeviceDefs			= null;
-var MainMessageTimerID			= null;
-
-// FILE: ./Files/Main/MainInitialize.js
+// FILE: ./Files/WebSocketIF/WebSocketIFSendAddPanelRequest.js
 /*****************************************************************************!
- * Function : MainInitialize
+ * Function : WebSocketIFSendAddPanelRequest
  *****************************************************************************/
 function
-MainInitialize()
+WebSocketIFSendAddPanelRequest
+(InBayIndex, InPanelIndex, InListNumber)
 {
-  WebSocketIFInitialize();
+  var						request;
+
+  request = {};
+
+  request.packettype = "request";
+  request.packetid = WebSocketIFGetNextID();
+  request.time = 0;
+  request.panelindex = InPanelIndex;
+  request.bayindex = InBayIndex;
+  request.type = "addpanel";
+  request.body = {};
+  request.body.listnumber = InListNumber
+  request.body.panelindex = InPanelIndex;
+  request.body.bayindex = InBayIndex;
+
+  WebSocketIFSendGeneralRequest(request);
+}
+// FILE: ./Files/WebSocketIF/WebSocketIFSendRemovePanelRequest.js
+/*****************************************************************************!
+ * Function : WebSocketIFSendRemovePanelRequest
+ *****************************************************************************/
+function
+WebSocketIFSendRemovePanelRequest
+(InBayIndex, InPanelIndex)
+{
+  var					request;
+  request = {};
+
+  request.packettype = "request";
+  request.packetid = WebSocketIFGetNextID();
+  request.time = 0;
+  request.type = "removepanel";
+  request.body = {};
+  request.body.panelindex = InPanelIndex;
+  request.body.bayindex = InBayIndex;
+
+  WebSocketIFSendGeneralRequest(request); 
+
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleBayRegValues.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandleBayRegValues
+ *****************************************************************************/
+function 
+WebSocketIFHandleBayRegValues
+(InPacket)
+{
+  var					bay;
+  var					i;
+
+  bay = BayFindByIndex(InPacket.bayindex);
+  if ( null == bay ) {
+    return;
+  }
+  bay.registers = InPacket.registers;
+  for (i = 0; i < bay.registers.length; i++) {
+    input = document.getElementById("RegInput " + bay.registers[i].valuetype);
+    if ( input ) {
+      input.value = bay.registers[i].value;
+    }
+  }
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIFRequestBayTypes.js
+/*****************************************************************************!
+ * Function : WebSocketIFRequestGetBayTypes
+ *****************************************************************************/
+function
+WebSocketIFRequestGetBayTypes()
+{
+   WebSocketIFSendSimpleRequest("getbaytypes");
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleDeviceDefs.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandleDeviceDefs
+ *****************************************************************************/
+function
+WebSocketIFHandleDeviceDefs(InDeviceDefs)
+{
+  MainDeviceDefs = InDeviceDefs;
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIFHandlePanelRegValues.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandlePanelRegValues
+ *****************************************************************************/
+function 
+WebSocketIFHandlePanelRegValues
+(InPacket)
+{
+  var					panel;
+  var					i;
+
+  bay = BayFindByIndex(InPacket.bayindex);
+
+  if ( bay == null ) {
+    return;
+  }
+  panel = BayFindPanelByIndex(bay, InPacket.panelindex);
+  if ( null == panel ) {
+    return;
+  }
+  panel.registers = InPacket.registers;
+  for (i = 0; i < panel.registers.length; i++) {
+    input = document.getElementById("RegInput " + panel.registers[i].valuetype);
+    if ( input ) {
+      input.value = panel.registers[i].value;
+      input.dataOriginalValue = panel.registers[i].value;
+    }
+  }
+}
+
+
+// FILE: ./Files/WebSocketIF/WebSocketIFInitialize.js
+/*****************************************************************************!
+ * Function : WebSocketIFInitialize
+ *****************************************************************************/
+function 
+WebSocketIFInitialize()
+{
+  var hostAddress = "ws://" + WebSocketIFAddress + ":" + WebSocketIFPort;
+
+  // ShowDeviceList();
+
+  WebSocketIFConnection = new WebSocket(hostAddress);
+
+  WebSocketIFConnection.onopen = function () {
+    WebSocketIFRequestGetBayTypes();
+    MainHideBlocker();
+    MainDisplayMessage("Connected");
+  };
+
+  // Log errors
+  WebSocketIFConnection.onerror = function (error) {
+  };
+
+  // 
+  WebSocketIFConnection.onclose = function() {
+    MainHideBlocker();
+  }
+  
+  // Log messages from the server
+  WebSocketIFConnection.onmessage = function (e) {
+    WebSocketIFHandleInputPacket(e.data);
+  };
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleResponsePanelTypes.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandleResponsePanelTypes
+ *****************************************************************************/
+function
+WebSocketIFHandleResponsePanelTypes(InPanelTypes)
+{
+  MainPanelTypes = InPanelTypes;
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleDeviceRegs.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandleDeviceRegs
+ *****************************************************************************/
+function
+WebSocketIFHandleDeviceRegs
+(InPacket)
+{
+  var					device;
+
+  device = DeviceDefFindByName(InPacket.devicename);
+  if ( device ) {
+    device.registers = InPacket.registers;
+  }
+  WebSocketIFSendDeviceDefRegRequestNext();
+}
+ 
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleRemovePanelResponse.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandleRemovePanelResponse
+ *****************************************************************************/
+function
+WebSocketIFHandleRemovePanelResponse
+(InID, InMessage, InBayIndex, InPanelIndex)
+{
+  RemovePanel(InBayIndex, InPanelIndex);
+  MainDisplayMessageColor(InMessage, "#080");
+
+  bay = document.getElementById("Bay " + InBayIndex);
+  locationInfo = GetPanelPositionsSizes(bay);
+
+  CreateEmptyPanel(bay, InPanelIndex, 
+                   locationInfo.panelXs[(InPanelIndex - 1) % 2], locationInfo.panelYs[InPanelIndex],
+                   locationInfo.panelwidth, locationInfo.panelheight); 
+}
+
+// FILE: ./Files/WebSocketIF/WebSocketIFHandleResponseBays.js
+/*****************************************************************************!
+ * Function : WebSocketIFHandleResponseBayTypes
+ *****************************************************************************/
+function
+WebSocketIFHandleResponseBayTypes(InBayTypes)
+{
+  MainBayTypes = InBayTypes;
 }
 
 // FILE: ./Files/Panels/PanelEdit.js
@@ -1504,82 +1608,6 @@ PanelEdit(InPanel)
   }
 }
 
-// FILE: ./Files/Panels/PanelEditClose.js
-/*****************************************************************************!
- * Function : PanelEditClose 
- *****************************************************************************/
-function PanelEditClose(InBay)
-{
-  var					registerArea;
-  var					panel, i, registerInput;
-  var					request = {};
-
-  registerArea = document.getElementById("RegisterArea");
-  registerArea.dataPanel.style.border = "solid 1px black";
-  panel = registerArea.dataPanel.dataPanel.panel;
-
-  request.panelindex = panel.panelindex;
-  request.bayindex = panel.bayindex;
-  request.registers = [];
-
-  if ( panel.registers ) {
-    for (i = 0; i < panel.registers.length; i++) {
-      registerInput = document.getElementById("RegInput " + panel.registers[i].valuetype);
-      if ( registerInput.dataOriginalValue != registerInput.value ) {
-        n = new Object();
-        n.valuetype = panel.registers[i].valuetype;
-        n.value = registerInput.value;
-        request.registers.push(n);
-      }
-    }
-    WebSocketIFSendUpdatePanelRegValuesRequest(panel.bayindex, panel.panelindex, request);
-  }
-  BayEditAreaHide(InBay);
-}
-
-// FILE: ./Files/Panels/CreatePanelFromEmptyPanel.js
-/*****************************************************************************!
- * Function : CreatePanelFromEmptyPanel
- *****************************************************************************/
-function
-CreatePanelFromEmptyPanel(InPanelType, InEmptyPanel, InPanel)
-{
-  var					panel;
-
-  panel = document.createElement("div");
-  if ( InPanelType.usesSMDUH2 ) {
-    panel.className    = "GeneralPane Panel AdvancedPanel";
-  } else {
-    panel.className    = "GeneralPane Panel SimplePanel";
-  }
-  panel.draggable = true;
-  panel.ondragstart = function(event) { CBGarbageCanOpen(event); };
-  panel.ondragend   = function(event) { CBGarbageCanClose(event); };
-  panel.dataPanel    = {};
-  panel.style.width  = InEmptyPanel.style.width;
-  panel.style.height = InEmptyPanel.style.height;
-  panel.style.top    = InEmptyPanel.style.top;
-  panel.style.left   = InEmptyPanel.style.left;
-  panel.id = "Panel Bay " + InEmptyPanel.dataBay.index + " Panel " + InEmptyPanel.dataIndex;
-  panel.dataPanel.bay   = InEmptyPanel.dataBay;
-  panel.dataPanel.index = InEmptyPanel.dataIndex;
-  panel.dataIndex = InEmptyPanel.dataIndex;
-  panel.dataPanel.type  = InPanelType;
-  panel.dataType = "Panel";
-  panel.dataPanel.panel = InPanel;
-  if ( InPanelType.usesSMDUH2 ) {
-    panel.dataPanel.devicedef = DeviceDefFindByName("SMDUH2");
-  }
-  label = document.createElement("div");
-  label.className = "GeneralPaneHeader PanelHeader";
-  label.innerHTML = "Panel " + panel.dataPanel.index;
-  panel.appendChild(label);
- 
-  InEmptyPanel.parentElement.appendChild(panel);
-  panel.onclick = function(ev) { CBPanelEdit(ev); };
-  return panel;
-}
-
 // FILE: ./Files/Panels/RemovePanel.js
 /*****************************************************************************!
  * Function : RemovePanel
@@ -1627,6 +1655,82 @@ CreateEmptyPanel(InBay, InPanelIndex, InX, InY, InPanelWidth, InPanelHeight)
   InBay.appendChild(panel);
 }
 
+// FILE: ./Files/Panels/CreatePanelFromEmptyPanel.js
+/*****************************************************************************!
+ * Function : CreatePanelFromEmptyPanel
+ *****************************************************************************/
+function
+CreatePanelFromEmptyPanel(InPanelType, InEmptyPanel, InPanel)
+{
+  var					panel;
+
+  panel = document.createElement("div");
+  if ( InPanelType.usesSMDUH2 ) {
+    panel.className    = "GeneralPane Panel AdvancedPanel";
+  } else {
+    panel.className    = "GeneralPane Panel SimplePanel";
+  }
+  panel.draggable = true;
+  panel.ondragstart = function(event) { CBGarbageCanOpen(event); };
+  panel.ondragend   = function(event) { CBGarbageCanClose(event); };
+  panel.dataPanel    = {};
+  panel.style.width  = InEmptyPanel.style.width;
+  panel.style.height = InEmptyPanel.style.height;
+  panel.style.top    = InEmptyPanel.style.top;
+  panel.style.left   = InEmptyPanel.style.left;
+  panel.id = "Panel Bay " + InEmptyPanel.dataBay.index + " Panel " + InEmptyPanel.dataIndex;
+  panel.dataPanel.bay   = InEmptyPanel.dataBay;
+  panel.dataPanel.index = InEmptyPanel.dataIndex;
+  panel.dataIndex = InEmptyPanel.dataIndex;
+  panel.dataPanel.type  = InPanelType;
+  panel.dataType = "Panel";
+  panel.dataPanel.panel = InPanel;
+  if ( InPanelType.usesSMDUH2 ) {
+    panel.dataPanel.devicedef = DeviceDefFindByName("SMDUH2");
+  }
+  label = document.createElement("div");
+  label.className = "GeneralPaneHeader PanelHeader";
+  label.innerHTML = "Panel " + panel.dataPanel.index;
+  panel.appendChild(label);
+ 
+  InEmptyPanel.parentElement.appendChild(panel);
+  panel.onclick = function(ev) { CBPanelEdit(ev); };
+  return panel;
+}
+
+// FILE: ./Files/Panels/PanelEditClose.js
+/*****************************************************************************!
+ * Function : PanelEditClose 
+ *****************************************************************************/
+function PanelEditClose(InBay)
+{
+  var					registerArea;
+  var					panel, i, registerInput;
+  var					request = {};
+
+  registerArea = document.getElementById("RegisterArea");
+  registerArea.dataPanel.style.border = "solid 1px black";
+  panel = registerArea.dataPanel.dataPanel.panel;
+
+  request.panelindex = panel.panelindex;
+  request.bayindex = panel.bayindex;
+  request.registers = [];
+
+  if ( panel.registers ) {
+    for (i = 0; i < panel.registers.length; i++) {
+      registerInput = document.getElementById("RegInput " + panel.registers[i].valuetype);
+      if ( registerInput.dataOriginalValue != registerInput.value ) {
+        n = new Object();
+        n.valuetype = panel.registers[i].valuetype;
+        n.value = registerInput.value;
+        request.registers.push(n);
+      }
+    }
+    WebSocketIFSendUpdatePanelRegValuesRequest(panel.bayindex, panel.panelindex, request);
+  }
+  BayEditAreaHide(InBay);
+}
+
 // FILE: ./Files/Panels/Panels.js
 /*****************************************************************************
  * FILE NAME    : Panels.js
@@ -1636,523 +1740,454 @@ CreateEmptyPanel(InBay, InPanelIndex, InX, InY, InPanelWidth, InPanelHeight)
  ****************************************************************************/
 
 var PanelBeingDragged = null;
-// FILE: ./Files/PanelTypes/PanelTypes.js
+// FILE: ./Files/Callbacks/CBBayTypeDragStart.js
+/*****************************************************************************!
+ * Function : CBBayTypeDragStart 
+ *****************************************************************************/
+function
+CBBayTypeDragStart(InEvent)
+{
+   BayTypeDragElement = InEvent.currentTarget.dataBayType;
+   DragElementType = InEvent.currentTarget.dataType;
+}
+
+// FILE: ./Files/Callbacks/CBBayDragEnter.js
+/*****************************************************************************!
+ * Function : CBBayDragEnter 
+ *****************************************************************************/
+function
+CBBayDragEnter(InEvent)
+{
+}
+
+// FILE: ./Files/Callbacks/CBBayDragLeave.js
+/*****************************************************************************!
+ * Function : CBBayDragLeave 
+ *****************************************************************************/
+function
+CBBayDragLeave(InEvent)
+{
+}
+
+// FILE: ./Files/Callbacks/CBPanelEdit.js
+/*****************************************************************************!
+ * Function : CBPanelEdit
+ *****************************************************************************/
+function
+CBPanelEdit(InEvent)
+{
+  var					panelElement;
+  var					editMode;
+  var					panelregisterarea;
+  var					edittingpanel;
+
+  panelregisterarea = document.getElementById("RegisterArea");
+
+  if ( panelregisterarea ) {
+    edittingpanel = panelregisterarea.dataPanel;
+  } else {
+    edittingpanel = null;
+  }
+  panelelement = InEvent.srcElement;
+  editMode = panelelement.parentElement.dataEdittingMode;
+  console.log(editMode);
+  if ( editMode == "None" ) {
+    PanelEdit(panelelement);
+  } else if ( editMode == "Panel" ) {
+    if ( edittingpanel == null || edittingpanel.dataPanel.index == panelelement.dataPanel.index ) {
+      PanelEditClose(panelelement.parentElement);
+    }
+  }
+}
+
+// FILE: ./Files/Callbacks/CBBayTypeDragEnd.js
+/*****************************************************************************!
+ * Function : CBBayTypeDragEnd
+ *****************************************************************************/
+function
+CBBayTypeDragEnd(InEvent)
+{
+  BayTypeDragElement = null;
+  DragElementType = null;
+}
+
+// FILE: ./Files/Callbacks/CBGarbageCanDrop.js
+/*****************************************************************************!
+ * Function : CBGarbageCanDrop
+ *****************************************************************************/
+function
+CBGarbageCanDrop
+(InEvent)
+{
+  if ( PanelBeingDragged ) {
+    console.log(PanelBeingDragged);
+    WebSocketIFSendRemovePanelRequest(PanelBeingDragged.dataPanel.bay.index, PanelBeingDragged.dataPanel.index); 
+  }
+  PanelBeingDragged = null;
+}
+
+// FILE: ./Files/Callbacks/CBGarbageCanClose.js
+/*****************************************************************************!
+ * Function : CBGarbageCanClose
+ *****************************************************************************/
+function
+CBGarbageCanClose
+(InEvent)
+{
+  var					e;
+  var					can;
+
+  e = document.getElementById("GarbageCanLid");
+  e.className = "GarbageCanLid";
+
+  can = document.getElementById("GarbageCan");
+  can.style.visibility = "hidden";
+  PanelBeingDragged = null;
+}
+
+// FILE: ./Files/Callbacks/CBPanelDragOver.js
+/*****************************************************************************!
+ * Function : CBPanelDragOver
+ *****************************************************************************/
+function
+CBPanelDragOver(InEvent)
+{
+  if ( DragElementType == "Panel" ) {
+    InEvent.preventDefault();
+  }
+}
+
+// FILE: ./Files/Callbacks/CBRegisterGroupButton.js
+/*****************************************************************************!
+ * Function : CBRegisterGroupButton
+ *****************************************************************************/
+function
+CBRegisterGroupButton
+(InEvent)
+{
+  var					element;
+
+  element = InEvent.srcElement;
+
+  if ( InEvent.ctrlKey == true ) {
+    e = element.parentElement;
+    e.children[1].style.visibility = "visible";
+    e.children[2].style.visibility = "visible";
+    // Gang change all element in the group
+    return;
+  }
+  // Toggle the registers display
+  if ( element.parentElement.dataStatus == "Open" ) {
+    element.parentElement.dataStatus = "Closed";
+    element.className = "RegisterGroupCollapseButton RegisterGroupClosed";
+  } else {
+    element.parentElement.dataStatus = "Open";
+    element.className = "RegisterGroupCollapseButton RegisterGroupOpen";
+  }
+  BayRepositionRegisterLines();
+} 
+// FILE: ./Files/Callbacks/CBPanelDrop.js
+/*****************************************************************************!
+ * Function : CBPanelDrop
+ *****************************************************************************/
+function
+CBPanelDrop(InEvent)
+{
+  var					emptypanel;
+  var					paneltemplate = {};
+
+ 
+  if ( DragElementType != "Panel" ) {
+    return;
+  }
+  InEvent.preventDefault();
+  emptypanel = InEvent.target;
+  paneltemplate.panelindex = emptypanel.dataIndex;
+  paneltemplate.bayindex = emptypanel.dataBay.index; 
+  paneltemplate.listnumber = PanelTypeDragElement.listnumber;
+  if ( PanelTypeDragElement.usesSMDUH2 ) {
+    devicedef = DeviceDefFindByName("SMDUH2");
+    paneltemplate.canaddress = devicedef.startcanaddress + emptypanel.dataIndex - 1;
+  } else {
+    paneltemplate.canaddress = 0;
+  }
+  panel = CreatePanelFromEmptyPanel(PanelTypeDragElement, emptypanel, paneltemplate);
+  parentelement = emptypanel.parentElement;
+  parentelement.removeChild(emptypanel);
+  WebSocketIFSendAddPanelRequest(panel.dataPanel.bay.index, panel.dataPanel.index, panel.dataPanel.type.listnumber);
+}
+
+// FILE: ./Files/Callbacks/CBPanelTypeDragStart.js
+/*****************************************************************************!
+ * Function : CBPanelTypeDragStart 
+ *****************************************************************************/
+function
+CBPanelTypeDragStart(InEvent)
+{
+  PanelTypeDragElement = InEvent.currentTarget.dataPanelType;
+  DragElementType = InEvent.currentTarget.dataType;
+}
+
+// FILE: ./Files/Callbacks/CBBayDrop.js
+/*****************************************************************************!
+ * Function : CBBayDrop
+ *****************************************************************************/
+function
+CBBayDrop(InEvent)
+{
+  var					bay;
+
+  if ( DragElementType == "Bay" ) {
+    bay = CreateNewBay(BayTypeDragElement, MainBays.length+1);
+	console.log(bay.dataBay);
+	WebSocketIFSendAddBayRequest(bay);
+    MainBays.push(bay.dataBay);
+  }
+}
+
+
+// FILE: ./Files/Callbacks/CBGarbageCanDragOver.js
+/*****************************************************************************!
+ * Function : CBGarbageCanDragOver
+ *****************************************************************************/
+function
+CBGarbageCanDragOver
+(InEvent)
+{
+  if ( PanelBeingDragged ) {
+    InEvent.preventDefault();
+  }
+}
+
+// FILE: ./Files/Callbacks/CBRegisterGroupChange.js
+/*****************************************************************************!
+ * Function : CBRegisterGroupChange
+ *****************************************************************************/
+function
+CBRegisterGroupChange
+(InEvent)
+{
+  var					element, groupname;
+  var					i, deviceDef, register, regname;
+
+  element = InEvent.srcElement;
+  groupname = element.parentElement.dataGroup;
+
+  value = element.parentElement.children[2].value;
+  MainDisplayMessage(value);
+  element.parentElement.children[1].style.visibility = "hidden";
+  element.parentElement.children[2].style.visibility = "hidden";
+
+  deviceDef = document.getElementById("RegisterArea").dataDeviceDef
+
+  for (i = 0; i < deviceDef.registers.length; i++ ) {
+    register = deviceDef.registers[i];
+    if ( register.group == groupname ) {
+      regname = "RegInput " + register.valuetype;
+      document.getElementById(regname).value = value;
+    } 
+  }  
+}
+
+// FILE: ./Files/Callbacks/Callbacks.js
 /*****************************************************************************
- * FILE NAME    : PanelTypes.js
+ * FILE NAME    : Callbacks.js
+ * DATE         : June 15 2020
+ * PROJECT      : BDFB Simulator
+ * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
+ *****************************************************************************/
+"use strict";
+
+/*****************************************************************************!
+ * Local Data
+ *****************************************************************************/
+var DragElementType			= null;
+var PanelTypeDragElement		= null;
+
+// FILE: ./Files/Callbacks/CBPanelTypeDragEnd.js
+/*****************************************************************************!
+ * Function : CBPanelTypeDragEnd
+ *****************************************************************************/
+function
+CBPanelTypeDragEnd(InEvent)
+{
+  PanelTypeDragElement = null;
+  DragElementType = null;
+}
+
+
+// FILE: ./Files/Callbacks/CBGarbageCanOpen.js
+/*****************************************************************************!
+ * Function : CBGarbageCanOpen
+ *****************************************************************************/
+function
+CBGarbageCanOpen
+(InEvent)
+{
+  var					e;
+  var					can;
+  var					bayarea;
+
+  bayarea = document.getElementById("BayDisplayArea");
+  bayareawidth = parseInt(bayarea.clientWidth, 10);
+  bayareaheight = parseInt(bayarea.clientHeight, 10);
+
+  can = document.getElementById("GarbageCan");
+  can.style.visibility = "visible";
+ 
+  canwidth = parseInt(can.clientWidth, 10);
+  canheight = parseInt(can.clientHeight, 10);
+
+  canx = (bayareawidth - canwidth) / 2;
+  cany = (bayareaheight - canheight) / 2;
+
+  can.style.top = cany + "px";
+  can.style.left = canx + "px";
+ 
+  e = document.getElementById("GarbageCanLid");
+  e.className = "GarbageCanLid GarbageCanLidOpen";
+
+  PanelBeingDragged = InEvent.currentTarget; 
+}
+
+// FILE: ./Files/Callbacks/CBBayEdit.js
+/*****************************************************************************!
+ * Function : CBBayEdit
+ *****************************************************************************/
+function
+CBBayEdit(InEvent)
+{
+  var					bayelement;
+  bayelement = InEvent.srcElement.parentElement.parentElement;
+  BayEdit(bayelement);
+}
+
+// FILE: ./Files/Callbacks/CBBayDragOver.js
+/*****************************************************************************!
+ * Function : CBBayDragOver
+ *****************************************************************************/
+function
+CBBayDragOver(InEvent)
+{
+  if ( DragElementType == "Bay" ) {
+    InEvent.preventDefault();
+  }
+}
+
+// FILE: ./Files/BayTypes/BayTypesListPopulate.js
+/*****************************************************************************!
+ * Function : BayTypesListPopulate 
+ *****************************************************************************/
+function
+BayTypesListPopulate(InBayTypeName)
+{
+  var					displayarea;
+  var					y, i, bayType;
+  var					messageline;
+  var					lineheight;
+  var					topborder;
+
+  topborder = null;
+  displayarea = document.getElementById("EquipmentListArea");
+  oddeven = "LineElementEven";
+  y = 0;
+  lineheight = 17;
+  for (i = 0; i < MainBayTypes.length; i++) {
+    baytype = MainBayTypes[i];
+    paneltypes = PanelTypesGetByUsedIdListNumber(baytype.listnumber);
+    
+    messageline = document.createElement("div");
+    messageline.id = baytype.listnumber;
+    messageline.className = "LineElement LineElementEven";
+    messageline.dataBayType = baytype;
+    messageline.dataSelected = false;
+    messageline.dataType = "Bay";
+
+    messageline.draggable = true;
+    messageline.ondragstart = function(event) { CBBayTypeDragStart(event); }
+    messageline.ondragend   = function(event) { CBBayTypeDragEnd(event); }
+    messageline.innerHTML = baytype.name;
+
+    messageline.style.top = y;
+    messageline.style.cursor = "pointer";
+    if ( topborder ) {
+      messageline.style.borderTop = topborder;
+    }
+    topborder = "solid thin black";
+    displayarea.appendChild(messageline);
+    y += lineheight;
+    if ( InBayTypeName == null || InBayTypeName == baytype.name ) {
+      for ( j = 0; j < paneltypes.length; j++ ) {
+        paneltype = paneltypes[j];
+        messageline = document.createElement("div");
+        messageline.className = "LineElement LineElementOdd";
+        messageline.id = baytype.listnumber + " " + paneltype.name;
+        messageline.dataPanelType = paneltype;
+        messageline.dataBayType = baytype;
+        messageline.dataType = "Panel";
+        messageline.ondragstart = function(event) { CBPanelTypeDragStart(event); }
+        messageline.ondragend   = function(event) { CBPanelTypeDragEnd(event); }
+        messageline.draggable = true;
+        messageline.innerHTML = paneltype.name;
+
+        messageline.style.top = y;
+        messageline.style.cursor = "pointer";
+        messageline.style.paddingLeft = "10px";
+        displayarea.appendChild(messageline);
+        y += lineheight;
+      }   
+      y += 5;
+    }
+  } 
+}
+
+// FILE: ./Files/BayTypes/BayTypes.js
+/*****************************************************************************
+ * FILE NAME    : BayTypes.js
  * DATE         : June 15 2020
  * PROJECT      : BDFB Simulator
  * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
  *****************************************************************************/
 
-// FILE: ./Files/PanelTypes/PanelTypesGetByUsedIdListNumber.js
 /*****************************************************************************!
- * Function : PanelTypesGetByUsedIdListNumber 
+ * Local Data
+ *****************************************************************************/
+var BayTypeDragElement			= null;
+
+
+// FILE: ./Files/BayTypes/BayTypeListClear.js
+/*****************************************************************************!
+ * Function : BayTypeListClear
  *****************************************************************************/
 function
-PanelTypesGetByUsedIdListNumber(InListNumber)
+BayTypeListClear
+()
 {
-  var					returnTypes = [];
-  var					i;
+  var					list;
 
-  for (i = 0; i < MainPanelTypes.length; i++) {
-    if ( InListNumber == MainPanelTypes[i].usedin ) {
-      returnTypes.push(MainPanelTypes[i]);
-    }
+  list = document.getElementById("EquipmentListArea");
+
+  while ( list.children.length ) {
+    list.removeChild(list.children[0]);
   }
-  return returnTypes;
 }
 
-// FILE: ./Files/PanelTypes/FindPanelTypeByListNumber.js
+// FILE: ./Files/BayTypes/BayTypeFindByName.js
 /*****************************************************************************!
- * Function : FindPanelTypeByListNumber
+ * Function : BayTypeFindByName
  *****************************************************************************/
 function
-FindPanelTypeByListNumber
-(InPanelTypeName)
+BayTypeFindByName
+(InBayTypeName)
 {
   var					i;
-  for ( i = 0; i < MainPanelTypes.length; i++ ) {
-    if ( MainPanelTypes[i].listnumber == InPanelTypeName ) {
-      return MainPanelTypes[i];
+  for (i = 0; i < MainBayTypes.length; i++) {
+    if ( InBayTypeName == MainBayTypes[i].name ) {
+      return MainBayTypes[i];
     }
   }
   return null;
 }
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleRemovePanelResponse.js
-/*****************************************************************************!
- * Function : WebSocketIFHandleRemovePanelResponse
- *****************************************************************************/
-function
-WebSocketIFHandleRemovePanelResponse
-(InID, InMessage, InBayIndex, InPanelIndex)
-{
-  RemovePanel(InBayIndex, InPanelIndex);
-  MainDisplayMessageColor(InMessage, "#080");
-
-  bay = document.getElementById("Bay " + InBayIndex);
-  locationInfo = GetPanelPositionsSizes(bay);
-
-  CreateEmptyPanel(bay, InPanelIndex, 
-                   locationInfo.panelXs[(InPanelIndex - 1) % 2], locationInfo.panelYs[InPanelIndex],
-                   locationInfo.panelwidth, locationInfo.panelheight); 
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFInitialize.js
-/*****************************************************************************!
- * Function : WebSocketIFInitialize
- *****************************************************************************/
-function 
-WebSocketIFInitialize()
-{
-  var hostAddress = "ws://" + WebSocketIFAddress + ":" + WebSocketIFPort;
-
-  // ShowDeviceList();
-
-  WebSocketIFConnection = new WebSocket(hostAddress);
-
-  WebSocketIFConnection.onopen = function () {
-    WebSocketIFRequestGetBayTypes();
-    MainHideBlocker();
-    MainDisplayMessage("Connected");
-  };
-
-  // Log errors
-  WebSocketIFConnection.onerror = function (error) {
-  };
-
-  // 
-  WebSocketIFConnection.onclose = function() {
-    MainHideBlocker();
-  }
-  
-  // Log messages from the server
-  WebSocketIFConnection.onmessage = function (e) {
-    WebSocketIFHandleInputPacket(e.data);
-  };
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleBayRegValues.js
-/*****************************************************************************!
- * Function : WebSocketIFHandleBayRegValues
- *****************************************************************************/
-function 
-WebSocketIFHandleBayRegValues
-(InPacket)
-{
-  var					bay;
-  var					i;
-
-  bay = BayFindByIndex(InPacket.bayindex);
-  if ( null == bay ) {
-    return;
-  }
-  bay.registers = InPacket.registers;
-  for (i = 0; i < bay.registers.length; i++) {
-    input = document.getElementById("RegInput " + bay.registers[i].valuetype);
-    if ( input ) {
-      input.value = bay.registers[i].value;
-    }
-  }
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIFRequestBayTypes.js
-/*****************************************************************************!
- * Function : WebSocketIFRequestGetBayTypes
- *****************************************************************************/
-function
-WebSocketIFRequestGetBayTypes()
-{
-   WebSocketIFSendSimpleRequest("getbaytypes");
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleResponsePanelTypes.js
-/*****************************************************************************!
- * Function : WebSocketIFHandleResponsePanelTypes
- *****************************************************************************/
-function
-WebSocketIFHandleResponsePanelTypes(InPanelTypes)
-{
-  MainPanelTypes = InPanelTypes;
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFSendSimpleRequest.js
-/*****************************************************************************!
- * Function : WebSocketIFSendSimpleRequest
- *****************************************************************************/
-function
-WebSocketIFSendSimpleRequest(InRequest)
-{
-  var                           request = {};
-
-  request.packettype = "request";
-  request.packetid = WebSocketIFGetNextID();
-  request.time = 0;
-  request.type = InRequest;
-  request.body = "";
-
-  WebSocketIFSendGeneralRequest(request);
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFSendDeviceDefRegRequestNext.js
-/*****************************************************************************!
- * Function : WebSocketIFSendDeviceDefRegRequestNext
- *****************************************************************************/
-function
-WebSocketIFSendDeviceDefRegRequestNext
-()
-{
-  WebSocketIFDeviceIndex++;
-  if ( WebSocketIFDeviceIndex >= MainDeviceDefs.length ) {
-    WebSocketIFSendSimpleRequest("getbays");
-  } else {
-    WebSocketIFSendDeviceDefRegRequest();
-  }
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIFSendDeviceDegRegRequest.js
-/*****************************************************************************!
- * Function : WebSocketIFSendDeviceDefRegRequest 
- *****************************************************************************/
-function
-WebSocketIFSendDeviceDefRegRequest
-()
-{
-  var                           request = {};
-
-  request.packettype = "request";
-  request.packetid = WebSocketIFGetNextID();
-  request.time = 0;
-  request.devicename = MainDeviceDefs[WebSocketIFDeviceIndex].name;
-  request.type = "getdeviceregs";
-  request.body = "";
-
-  WebSocketIFSendGeneralRequest(request);
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleBays.js
-/*****************************************************************************!
- * Function : WebSocketIFHandleBays
- *****************************************************************************/
-function
-WebSocketIFHandleBays(InBays)
-{
-  MainBays = InBays;
-  BaysPopulateWindow();
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIFSendUpdatePanelRegValuesRequest.js
-/*****************************************************************************!
- * Function : WebSocketIFSendUpdatePanelRegValuesRequest
- *****************************************************************************/
-function
-WebSocketIFSendUpdatePanelRegValuesRequest
-(InBayIndex, InPanelIndex, InBody)
-{
-  var                           request = {};
-
-  request.packettype = "request";
-  request.packetid = WebSocketIFGetNextID();
-  request.time = 0;
-  request.bayindex = InBayIndex;
-  request.panelindex = InPanelIndex
-  request.type = "setpanelregvalues";
-  request.body = InBody;
-
-  WebSocketIFSendGeneralRequest(request);
-}
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleInputPacket.js
-/*****************************************************************************!
- * Function : WebSocketHandlerInputPacket
- *****************************************************************************/
-function
-WebSocketIFHandleInputPacket(InData)
-{
-  var					requestpacket;
-
-  requestpacket = JSON.parse(InData);
-
-  if ( requestpacket.packettype == "response" ) {
-    console.log(requestpacket);
-    WebSocketIFHandleResponsePacket(requestpacket);
-  }
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFGetNextID.js
-/*****************************************************************************!
- * Function : WebSocketIFGetNextID
- *****************************************************************************/
-function 
-WebSocketIFGetNextID()
-{
-  WebSocketIFNextID++;
-  return WebSocketIFNextID;
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleDeviceRegs.js
-/*****************************************************************************!
- * Function : WebSocketIFHandleDeviceRegs
- *****************************************************************************/
-function
-WebSocketIFHandleDeviceRegs
-(InPacket)
-{
-  var					device;
-
-  device = DeviceDefFindByName(InPacket.devicename);
-  if ( device ) {
-    device.registers = InPacket.registers;
-  }
-  WebSocketIFSendDeviceDefRegRequestNext();
-}
- 
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleDeviceDefs.js
-/*****************************************************************************!
- * Function : WebSocketIFHandleDeviceDefs
- *****************************************************************************/
-function
-WebSocketIFHandleDeviceDefs(InDeviceDefs)
-{
-  MainDeviceDefs = InDeviceDefs;
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIF.js
-/*****************************************************************************
- * FILE NAME    : WebSocketIF.js
- * DATE         : June 11 2020
- * PROJECT      : BDFB Simulator
- * COPYRIGHT    : Copyright (C) 2020 by Vertiv Company
- *****************************************************************************/
-
-/*****************************************************************************!
- * Local Data 
- *****************************************************************************/
-var WebSocketIFConnection = null;
-var WebSocketIFNextID = 1;
-var WebSocketIFDeviceIndex = 0;
-
-// FILE: ./Files/WebSocketIF/WebSocketIFSendBayRegValuesRequest.js
-/*****************************************************************************!
- * Function : WebSocketIFSendBayRegValuesRequest
- *****************************************************************************/
-function
-WebSocketIFSendBayRegValuesRequest(InBayIndex)
-{
-  var                           request = {};
-
-  request.packettype = "request";
-  request.packetid = WebSocketIFGetNextID();
-  request.time = 0;
-  request.bayindex = InBayIndex;
-  request.type = "getbayregvalues";
-  request.body = "";
-
-  WebSocketIFSendGeneralRequest(request);
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleResponsePacket.js
-/*****************************************************************************!
- * Function : WebSocketIFHandleResponsePacket
- *****************************************************************************/
-function
-WebSocketIFHandleResponsePacket(InPacket)
-{
-  if ( InPacket.responseid != "OK" ) {
-    MainDisplayMessage(InPacket.responsemessage);
-    return;
-  }
-  if ( InPacket.type == "resbaytypes" ) {
-    WebSocketIFHandleResponseBayTypes(InPacket.body.baytypes);
-    WebSocketIFSendSimpleRequest("getpaneltypes");
-  } else if ( InPacket.type == "respaneltypes" ) {
-    WebSocketIFHandleResponsePanelTypes(InPacket.body.paneltypes);
-    WebSocketIFSendSimpleRequest("getdevicedefs");
-  } else if ( InPacket.type == "resdevicedefs" ) {
-    WebSocketIFHandleDeviceDefs(InPacket.body.devicedefs);
-    WebSocketIFSendDeviceDefRegRequestStart();
-  } else if ( InPacket.type == "resdeviceregs" ) {
-    WebSocketIFHandleDeviceRegs(InPacket.body);
-  } else if ( InPacket.type == "resbays" ) {
-    WebSocketIFHandleBays(InPacket.body.bays);
-    MainInitializeDisplay();
-  } else if ( InPacket.type == "resbayregvalues") {
-    WebSocketIFHandleBayRegValues(InPacket.body.bayregvalues);
-  } else if ( InPacket.type == "respanelregvalues") {
-    WebSocketIFHandlePanelRegValues(InPacket.body.panelregvalues);
-  } else if ( InPacket.type == "resremovepanel" ) {
-    WebSocketIFHandleRemovePanelResponse(InPacket.responseid, InPacket.responsemessage, InPacket.body.bayindex, InPacket.body.panelindex);
-  }
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFSendAddPanelRequest.js
-/*****************************************************************************!
- * Function : WebSocketIFSendAddPanelRequest
- *****************************************************************************/
-function
-WebSocketIFSendAddPanelRequest
-(InBayIndex, InPanelIndex, InListNumber)
-{
-  var						request;
-
-  request = {};
-
-  request.packettype = "request";
-  request.packetid = WebSocketIFGetNextID();
-  request.time = 0;
-  request.panelindex = InPanelIndex;
-  request.bayindex = InBayIndex;
-  request.type = "addpanel";
-  request.body = {};
-  request.body.listnumber = InListNumber
-  request.body.panelindex = InPanelIndex;
-  request.body.bayindex = InBayIndex;
-
-  WebSocketIFSendGeneralRequest(request);
-}
-// FILE: ./Files/WebSocketIF/WebSocketIFSendDeviceDefRequestStart.js
-/*****************************************************************************!
- * Function : WebSocketIFSendDeviceDefRegRequestStart
- *****************************************************************************/
-function
-WebSocketIFSendDeviceDefRegRequestStart
-()
-{
-  WebSocketIFDeviceIndex = 0;
-  WebSocketIFSendDeviceDefRegRequest();
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIFSendUpdateBayRegValuesRequest.js
-/*****************************************************************************!
- * Function : WebSocketIFSendUpdateBayRegValuesRequest
- *****************************************************************************/
-function
-WebSocketIFSendUpdateBayRegValuesRequest
-(InBayIndex, InBody)
-{
-  var                           request = {};
-
-  request.packettype = "request";
-  request.packetid = WebSocketIFGetNextID();
-  request.time = 0;
-  request.bayindex = InBayIndex;
-  request.type = "setbayregvalues";
-  request.body = InBody;
-
-  WebSocketIFSendGeneralRequest(request);
-}
-// FILE: ./Files/WebSocketIF/WebSocketIFSendRemovePanelRequest.js
-/*****************************************************************************!
- * Function : WebSocketIFSendRemovePanelRequest
- *****************************************************************************/
-function
-WebSocketIFSendRemovePanelRequest
-(InBayIndex, InPanelIndex)
-{
-  var					request;
-  request = {};
-
-  request.packettype = "request";
-  request.packetid = WebSocketIFGetNextID();
-  request.time = 0;
-  request.type = "removepanel";
-  request.body = {};
-  request.body.panelindex = InPanelIndex;
-  request.body.bayindex = InBayIndex;
-
-  WebSocketIFSendGeneralRequest(request); 
-
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFHandlePanelRegValues.js
-/*****************************************************************************!
- * Function : WebSocketIFHandlePanelRegValues
- *****************************************************************************/
-function 
-WebSocketIFHandlePanelRegValues
-(InPacket)
-{
-  var					panel;
-  var					i;
-
-  bay = BayFindByIndex(InPacket.bayindex);
-
-  if ( bay == null ) {
-    return;
-  }
-  panel = BayFindPanelByIndex(bay, InPacket.panelindex);
-  if ( null == panel ) {
-    return;
-  }
-  panel.registers = InPacket.registers;
-  for (i = 0; i < panel.registers.length; i++) {
-    input = document.getElementById("RegInput " + panel.registers[i].valuetype);
-    if ( input ) {
-      input.value = panel.registers[i].value;
-      input.dataOriginalValue = panel.registers[i].value;
-    }
-  }
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIFSendGeneralRequest.js
-/*****************************************************************************!
- * Function : WebSocketIFSendGeneralRequest
- *****************************************************************************/
-function 
-WebSocketIFSendGeneralRequest(InRequest) {
-  if ( WebSocketIFConnection ) {
-    WebSocketIFConnection.send(JSON.stringify(InRequest));
-  }
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFSendPanelRegValuesRequest.js
-/*****************************************************************************!
- * Function : WebSocketIFSendPanelRegValuesRequest
- *****************************************************************************/
-function
-WebSocketIFSendPanelRegValuesRequest(InBayIndex, InPanelIndex)
-{
-  var                           request = {};
-
-  request.packettype = "request";
-  request.packetid = WebSocketIFGetNextID();
-  request.time = 0;
-  request.panelindex = InPanelIndex;
-  request.bayindex = InBayIndex;
-  request.type = "getpanelregvalues";
-  request.body = "";
-
-  WebSocketIFSendGeneralRequest(request);
-}
-
-
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleFuseBreakerTypes.js
-/*****************************************************************************!
- * Function : WebSocketIFHandleFuseBreakerTypes
- *****************************************************************************/
-function
-WebSocketIFHandleFuseBreakerTypes(InFuseBreakerTypes)
-{
-  MainFuseBreakerTypes = InFuseBreakerTypes;
-}
-
-// FILE: ./Files/WebSocketIF/WebSocketIFHandleResponseBays.js
-/*****************************************************************************!
- * Function : WebSocketIFHandleResponseBayTypes
- *****************************************************************************/
-function
-WebSocketIFHandleResponseBayTypes(InBayTypes)
-{
-  MainBayTypes = InBayTypes;
-}
-
 // FILE: ./websocketinfo.js
-var WebSocketIFAddress = "192.168.100.101";
+var WebSocketIFAddress = "192.168.0.26";
 var WebSocketIFPort = "8001";

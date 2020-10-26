@@ -54,9 +54,6 @@ sig_atomic_t s_signal_received = 0;
 
 char mainDeviceDefsFileName[FILENAME_MAX+1];
 
-bool
-MainClearDBValues = false;
-
 DeviceDefList* 
 mainDeviceDefs;
 
@@ -187,9 +184,6 @@ main
     FileCreateEmptyFile(baysFilename);
   }
   BaysInitialize(baysFilename);
-  if ( MainClearDBValues ) {
-    BaysSaveValuesSQL();
-  }
   HTTPServerThreadInit();
   WebSocketServerInit();
   ServerUserInputInit();
@@ -234,13 +228,6 @@ SystemInitialize
         printf_safe("Could not read devices definitions file %s\n", mainDeviceDefsFileName);
         return;
     }
-#if USE_SQLITE_DB
-    GetDeviceDataFileName(mainDeviceDataFileName, FILENAME_MAX);
-    int dbRValue = sqlite3_open_v2(mainDeviceDataFileName, &mainDeviceDB, SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, NULL);
-    if ( dbRValue != SQLITE_OK ) {
-        printf_safe("Could not open device file %s\n", mainDeviceDataFileName);
-    }
-#endif
 }
 
 /*****************************************************************************!
@@ -414,8 +401,6 @@ void
 MainInitialize
 ()
 {
-  int						n;
-
   MainDefaultWebDirectory = StringCopy("www");
   CanDeviceListInitialize();
   HTTPServerSetPort(MainDefaultHTTPPort);
@@ -423,11 +408,6 @@ MainInitialize
 
   MainMonitorWebRequest = false;
   CANMonitorInput       = false;
-  n = sqlite3_open(MAIN_DATABASE_NAME, &MainDataBase);
-  if ( SQLITE_OK != n ) {
-    fprintf(stderr, "Could not open database %s\n", MAIN_DATABASE_NAME);
-    exit(EXIT_FAILURE);
-  }
 }
 
 /*****************************************************************************!
@@ -495,10 +475,6 @@ MainCommandLineProcess
       CANMonitorInput = true;
       continue;
     }
-    if ( StringEqualsOneOf(command, "-cv", "--clearvalues", NULL) ) {
-      MainClearDBValues = true;
-      continue;
-    }
     if ( command[0] == '-' ) {
       fprintf(stderr, "%s is an invalid command\n", command);
       MainDisplayHelp();
@@ -523,7 +499,6 @@ MainDisplayHelp
   printf("%*s -W  --websocketport : Define Web Socket listening port\n", n, " ");
   printf("%*s -w  --webdir        : Specifiy the base www directory\n", n, " ");
   printf("%*s -mc --monitorcan    : Monitor CAN requests\n", n, " ");
-  printf("%*s -cv --clearvalues   : Clear the Database register values\n", n, " ");
   printf("%*s -r  --rectifiers    : Support the processing of rectifiers\n", n, " ");
   printf("%*s -h  --help          : Display this information\n", n, " ");
 }

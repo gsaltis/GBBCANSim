@@ -338,6 +338,7 @@ HandlePacketRequest
   if ( MainMonitorWebRequest ) {
     printf_safe("%s\n", requesttype);
   }
+
   if ( StringEqual("getbays", requesttype) ){
     HandleGetBaysRequest(InConnection, InPacket);
   } else if ( StringEqual("setbayregvalues", requesttype) ) {
@@ -352,6 +353,7 @@ HandlePacketRequest
     HandleGetBaysValuesRequest(InConnection, InPacket);
   } else if ( StringEqual("addbay", requesttype) ) {
     HandleAddBayRequest(InConnection, InPacket);
+	Bay* b = BaysFirstBay();
   } else if ( StringEqual("getbay", requesttype) ) {
     HandleGetBayRequest(InConnection, InPacket);
   } else if ( StringEqual("writebays", requesttype) ) {
@@ -367,6 +369,7 @@ HandlePacketRequest
   } else if ( StringEqual("getpaneltypes", requesttype) ) {
     HandleGetPanelTypesRequest(InConnection, InPacket);
   } else if ( StringEqual("addpanel", requesttype) ) {
+	Bay* b = BaysFirstBay();
     HandleAddPanelRequest(InConnection, InPacket);
   } else if ( StringEqual("open", requesttype) ) {
     HandleOpenRequest(InConnection, InPacket);
@@ -1147,7 +1150,7 @@ HandleAddBayRequest
   int                                   bayindex;
   char                                  bodyString[64];
   char                                  message[128];
- 
+
   body = JSONIFGetObject(InPacket, "body");
   packetid = JSONIFGetInt(InPacket, "packetid");
   bayindex = JSONIFGetInt(body, "bayindex");
