@@ -234,4 +234,8 @@ Rectifier*
 BayFindRectifierByIndex
 (Bay* InBay, uint16_t InIndex);
 
+void
+BaySaveFilename
+(string InFilename);
+
 #endif /* _bay_h_*/

@@ -89,6 +89,18 @@ MainDefaultWebSocketPort = "8001";
 string
 MainDefaultWebDirectory = NULL;
 
+string
+MainDeviceDefsFilenameDefault = "DeviceDefs.json";
+
+string
+MainDeviceDefsFilename = NULL;
+
+string
+MainBaysFilename = NULL;
+
+string
+MainBaysFilenameDefault = "Bays.json";
+
 /*******************************************************************************
  * Local Functions
  *******************************************************************************/
@@ -140,6 +152,7 @@ main
   MainInitialize();
   MainCommandLineProcess(argc, argv);
 
+  BaySaveFilename(MainBaysFilename);
   if ( s_http_port == NULL || *s_http_port == 0x00 ) {
     printf("HTTP Server port cannot be empty\n");
     MainDisplayHelp();
@@ -172,7 +185,7 @@ main
   s_http_server_opts.enable_directory_listing = "yes";
 
   DeviceDefsRead();
-  baysFilename = "Bays.json";
+  baysFilename = MainBaysFilename;
   if ( !FileExists(baysFilename) ) {
     FileCreateEmptyFile(baysFilename);
   }
@@ -376,7 +389,7 @@ DeviceDefsRead
 
   defs = NULL; 
   memset(&jsettings, NUL, sizeof(json_settings));
-  if ( GetFileBuffer("DeviceDefs.json", &buffer, &bufferLen) ) {
+  if ( GetFileBuffer(MainDeviceDefsFilename, &buffer, &bufferLen) ) {
     devicejson = json_parse_ex(&jsettings, buffer, bufferLen, error);
     if ( NULL == devicejson ) {
       printf("%s%s%s\n", ColorRed, error, ColorWhite);
@@ -399,8 +412,10 @@ MainInitialize
   HTTPServerSetPort(MainDefaultHTTPPort);
   WebSocketIFSetPort(MainDefaultWebSocketPort);
 
-  MainMonitorWebRequest = false;
-  CANMonitorInput       = false;
+  MainMonitorWebRequest 	= false;
+  CANMonitorInput       	= false;
+  MainDeviceDefsFilename 	= StringCopy(MainDeviceDefsFilenameDefault);
+  MainBaysFilename			= StringCopy(MainBaysFilenameDefault);
 }
 
 /*****************************************************************************!
@@ -464,10 +479,42 @@ MainCommandLineProcess
       MainSupportRectifiers = true;
       continue;
     }
+
     if ( StringEqualsOneOf(command, "-mc", "--monitorcan", NULL) ) {
       CANMonitorInput = true;
       continue;
     }
+
+	//! Handle Device Definitions
+	if ( StringEqualsOneOf(command, "-d", "--devicedef", NULL) ) {
+	  i++;
+	  if ( i >= argc ) {
+		fprintf(stderr, "%s is missing a devicedef file\n", command);
+		MainDisplayHelp();
+		exit(EXIT_FAILURE);
+	  }
+	  if ( MainDeviceDefsFilename ) {
+		FreeMemory(MainDeviceDefsFilename);
+	  }
+	  MainDeviceDefsFilename = StringCopy(argv[i]);
+	  continue;
+	}
+
+	//! Handle Bay Definitions
+	if ( StringEqualsOneOf(command, "-b", "--baysfile", NULL) ) {
+	  i++;
+	  if ( i >= argc ) {
+		fprintf(stderr, "%s is missing a bays file\n", command);
+		MainDisplayHelp();
+		exit(EXIT_FAILURE);
+	  }
+	  if ( MainBaysFilename ) {
+		FreeMemory(MainBaysFilename);
+	  }
+	  MainBaysFilename = StringCopy(argv[i]);
+	  continue;
+	}
+
     if ( command[0] == '-' ) {
       fprintf(stderr, "%s is an invalid command\n", command);
       MainDisplayHelp();
@@ -487,12 +534,14 @@ MainDisplayHelp
 
   n = printf("%s options\n", PROGRAM_NAME);
   printf("options\n");
-  printf("%*s -mw --monitorweb    : Monitor web page requests\n", n, " ");
-  printf("%*s -H  --httpport      : Define HTTP listening port\n", n, " ");
-  printf("%*s -W  --websocketport : Define Web Socket listening port\n", n, " ");
-  printf("%*s -w  --webdir        : Specifiy the base www directory\n", n, " ");
-  printf("%*s -mc --monitorcan    : Monitor CAN requests\n", n, " ");
-  printf("%*s -r  --rectifiers    : Support the processing of rectifiers\n", n, " ");
+  printf("%*s -b  --baysfile      : Specify the bays information file (default %s)\n", n, " ", MainBaysFilenameDefault);
+  printf("%*s -d  --devicedef     : Specify the device definition file (default %s)\n", n, " ", MainDeviceDefsFilenameDefault);
   printf("%*s -h  --help          : Display this information\n", n, " ");
+  printf("%*s -H  --httpport      : Define HTTP listening port\n", n, " ");
+  printf("%*s -mc --monitorcan    : Monitor CAN requests\n", n, " ");
+  printf("%*s -mw --monitorweb    : Monitor web page requests\n", n, " ");
+  printf("%*s -r  --rectifiers    : Support the processing of rectifiers\n", n, " ");
+  printf("%*s -w  --webdir        : Specifiy the base www directory\n", n, " ");
+  printf("%*s -W  --websocketport : Define Web Socket listening port\n", n, " ");
 }
 

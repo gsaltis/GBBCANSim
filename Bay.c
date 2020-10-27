@@ -53,10 +53,6 @@ BaysRemoveAll
 ();
 
 void
-BaySaveFilename
-(string InFilename);
-
-void
 BayCreateEmptyPanel
 (Bay* InBay, int InIndex);
 
