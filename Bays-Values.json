@@ -53,11 +53,11 @@
       },
       {
         "valuetype" : 68,
-        "value" : "2147483647"
+        "value" : "3490119901"
       },
       {
         "valuetype" : 69,
-        "value" : "4321"
+        "value" : "1234"
       },
       {
         "valuetype" : 70,
@@ -65,27 +65,27 @@
       },
       {
         "valuetype" : 71,
-        "value" : "6321"
+        "value" : "1236"
       },
       {
         "valuetype" : 72,
-        "value" : "7321"
+        "value" : "1237"
       },
       {
         "valuetype" : 73,
-        "value" : "8321"
+        "value" : "1238"
       },
       {
         "valuetype" : 74,
-        "value" : "S130"
+        "value" : "031S"
       },
       {
         "valuetype" : 75,
-        "value" : "EUDM"
+        "value" : "MDUE"
       },
       {
         "valuetype" : 76,
-        "value" : "A20"
+        "value" : "A02"
       },
       {
         "valuetype" : 77,
@@ -349,727 +349,727 @@
     [
       {
         "valuetype" : 5,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 64,
          "value" : "42000000"      },
       {
         "valuetype" : 65,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 66,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 81,
          "value" : 0.000      },
       {
         "valuetype" : 84,
-         "value" : 0      },
+         "value" : 1330644737      },
       {
         "valuetype" : 85,
-         "value" : 0      },
+         "value" : 1120403456      },
       {
         "valuetype" : 86,
          "value" : 0.000      },
       {
         "valuetype" : 90,
-         "value" : "S130"      },
+         "value" : "031S"      },
       {
         "valuetype" : 91,
-         "value" : "HUDM"      },
+         "value" : "MDUH"      },
       {
         "valuetype" : 92,
-         "value" : "10A2"      },
+         "value" : "2A01"      },
       {
         "valuetype" : 93,
-         "value" : "F   "      },
+         "value" : "   F"      },
       {
         "valuetype" : 162,
          "value" : 0.000      },
       {
         "valuetype" : 170,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 256,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 257,
-         "value" : 0.000      },
+         "value" : 76.000      },
       {
         "valuetype" : 258,
-         "value" : 0.000      },
+         "value" : 77.000      },
       {
         "valuetype" : 259,
-         "value" : 0.000      },
+         "value" : 78.000      },
       {
         "valuetype" : 260,
-         "value" : 0.000      },
+         "value" : 79.000      },
       {
         "valuetype" : 261,
-         "value" : 0.000      },
+         "value" : 80.000      },
       {
         "valuetype" : 262,
-         "value" : 0.000      },
+         "value" : 81.000      },
       {
         "valuetype" : 263,
-         "value" : 0.000      },
+         "value" : 82.000      },
       {
         "valuetype" : 264,
-         "value" : 0.000      },
+         "value" : 81.000      },
       {
         "valuetype" : 265,
-         "value" : 0.000      },
+         "value" : 80.000      },
       {
         "valuetype" : 266,
-         "value" : 0.000      },
+         "value" : 79.000      },
       {
         "valuetype" : 267,
-         "value" : 0.000      },
+         "value" : 78.000      },
       {
         "valuetype" : 268,
-         "value" : 0.000      },
+         "value" : 76.000      },
       {
         "valuetype" : 269,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 270,
-         "value" : 0.000      },
+         "value" : 74.000      },
       {
         "valuetype" : 271,
-         "value" : 0.000      },
+         "value" : 73.000      },
       {
         "valuetype" : 272,
-         "value" : 0.000      },
+         "value" : 72.000      },
       {
         "valuetype" : 273,
-         "value" : 0.000      },
+         "value" : 71.000      },
       {
         "valuetype" : 274,
-         "value" : 0.000      },
+         "value" : 72.000      },
       {
         "valuetype" : 275,
-         "value" : 0.000      },
+         "value" : 73.000      },
       {
         "valuetype" : 276,
-         "value" : 0.000      },
+         "value" : 74.000      },
       {
         "valuetype" : 277,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 278,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 279,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 280,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 281,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 306,
          "value" : "00000000"      },
       {
         "valuetype" : 307,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 308,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 309,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 310,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 311,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 312,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 313,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 314,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 315,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 316,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 317,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 318,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 319,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 320,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 321,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 322,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 323,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 324,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 325,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 326,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 327,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 328,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 329,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 330,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 331,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 332,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 333,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 334,
-         "value" : 0.000      },
+         "value" : 300.300      },
       {
         "valuetype" : 335,
-         "value" : 0.000      },
+         "value" : 300.400      },
       {
         "valuetype" : 336,
-         "value" : 0.000      },
+         "value" : 300.500      },
       {
         "valuetype" : 337,
-         "value" : 0.000      },
+         "value" : 300.600      },
       {
         "valuetype" : 338,
-         "value" : 0.000      },
+         "value" : 300.700      },
       {
         "valuetype" : 339,
-         "value" : 0.000      },
+         "value" : 300.800      },
       {
         "valuetype" : 340,
-         "value" : 0.000      },
+         "value" : 300.900      },
       {
         "valuetype" : 341,
-         "value" : 0.000      },
+         "value" : 301.000      },
       {
         "valuetype" : 342,
-         "value" : 0.000      },
+         "value" : 301.100      },
       {
         "valuetype" : 343,
-         "value" : 0.000      },
+         "value" : 301.200      },
       {
         "valuetype" : 344,
-         "value" : 0.000      },
+         "value" : 301.300      },
       {
         "valuetype" : 345,
-         "value" : 0.000      },
+         "value" : 301.400      },
       {
         "valuetype" : 346,
-         "value" : 0.000      },
+         "value" : 301.500      },
       {
         "valuetype" : 347,
-         "value" : 0.000      },
+         "value" : 301.600      },
       {
         "valuetype" : 348,
-         "value" : 0.000      },
+         "value" : 301.700      },
       {
         "valuetype" : 349,
-         "value" : 0.000      },
+         "value" : 301.800      },
       {
         "valuetype" : 350,
-         "value" : 0.000      },
+         "value" : 301.900      },
       {
         "valuetype" : 351,
-         "value" : 0.000      },
+         "value" : 302.000      },
       {
         "valuetype" : 352,
-         "value" : 0.000      },
+         "value" : 302.100      },
       {
         "valuetype" : 353,
-         "value" : 0.000      },
+         "value" : 302.200      },
       {
         "valuetype" : 354,
-         "value" : 0.000      },
+         "value" : 302.300      },
       {
         "valuetype" : 355,
-         "value" : 0.000      },
+         "value" : 302.400      },
       {
         "valuetype" : 356,
-         "value" : 0.000      },
+         "value" : 302.500      },
       {
         "valuetype" : 357,
-         "value" : 0.000      },
+         "value" : 500.100      },
       {
         "valuetype" : 358,
-         "value" : 0.000      },
+         "value" : 500.200      },
       {
         "valuetype" : 359,
-         "value" : 0.000      },
+         "value" : 500.300      },
       {
         "valuetype" : 360,
-         "value" : 0.000      },
+         "value" : 500.400      },
       {
         "valuetype" : 361,
-         "value" : 0.000      },
+         "value" : 500.500      },
       {
         "valuetype" : 362,
-         "value" : 0.000      },
+         "value" : 500.600      },
       {
         "valuetype" : 363,
-         "value" : 0.000      },
+         "value" : 500.700      },
       {
         "valuetype" : 364,
-         "value" : 0.000      },
+         "value" : 500.800      },
       {
         "valuetype" : 365,
-         "value" : 0.000      },
+         "value" : 500.900      },
       {
         "valuetype" : 366,
-         "value" : 0.000      },
+         "value" : 501.000      },
       {
         "valuetype" : 367,
-         "value" : 0.000      },
+         "value" : 501.100      },
       {
         "valuetype" : 368,
-         "value" : 0.000      },
+         "value" : 501.200      },
       {
         "valuetype" : 369,
-         "value" : 0.000      },
+         "value" : 501.300      },
       {
         "valuetype" : 370,
-         "value" : 0.000      },
+         "value" : 501.400      },
       {
         "valuetype" : 371,
-         "value" : 0.000      },
+         "value" : 501.500      },
       {
         "valuetype" : 372,
-         "value" : 0.000      },
+         "value" : 501.600      },
       {
         "valuetype" : 373,
-         "value" : 0.000      },
+         "value" : 501.700      },
       {
         "valuetype" : 374,
-         "value" : 0.000      },
+         "value" : 501.800      },
       {
         "valuetype" : 375,
-         "value" : 0.000      },
+         "value" : 501.900      },
       {
         "valuetype" : 376,
-         "value" : 0.000      },
+         "value" : 502.000      },
       {
         "valuetype" : 377,
-         "value" : 0.000      },
+         "value" : 502.100      },
       {
         "valuetype" : 378,
-         "value" : 0.000      },
+         "value" : 502.200      },
       {
         "valuetype" : 379,
-         "value" : 0.000      },
+         "value" : 502.300      },
       {
         "valuetype" : 380,
-         "value" : 0.000      },
+         "value" : 502.400      },
       {
         "valuetype" : 381,
-         "value" : 0.000      },
+         "value" : 502.500      },
       {
         "valuetype" : 382,
-         "value" : 0.000      },
+         "value" : 600.000      },
       {
         "valuetype" : 383,
-         "value" : 0.000      },
+         "value" : 600.100      },
       {
         "valuetype" : 384,
-         "value" : 0.000      },
+         "value" : 600.200      },
       {
         "valuetype" : 385,
-         "value" : 0.000      },
+         "value" : 600.300      },
       {
         "valuetype" : 386,
-         "value" : 0.000      },
+         "value" : 600.400      },
       {
         "valuetype" : 387,
-         "value" : 0.000      },
+         "value" : 600.500      },
       {
         "valuetype" : 388,
-         "value" : 0.000      },
+         "value" : 600.600      },
       {
         "valuetype" : 389,
-         "value" : 0.000      },
+         "value" : 600.700      },
       {
         "valuetype" : 390,
-         "value" : 0.000      },
+         "value" : 600.800      },
       {
         "valuetype" : 391,
-         "value" : 0.000      },
+         "value" : 600.900      },
       {
         "valuetype" : 392,
-         "value" : 0.000      },
+         "value" : 601.000      },
       {
         "valuetype" : 393,
-         "value" : 0.000      },
+         "value" : 601.100      },
       {
         "valuetype" : 394,
-         "value" : 0.000      },
+         "value" : 601.200      },
       {
         "valuetype" : 395,
-         "value" : 0.000      },
+         "value" : 601.300      },
       {
         "valuetype" : 396,
-         "value" : 0.000      },
+         "value" : 601.400      },
       {
         "valuetype" : 397,
-         "value" : 0.000      },
+         "value" : 601.500      },
       {
         "valuetype" : 398,
-         "value" : 0.000      },
+         "value" : 601.600      },
       {
         "valuetype" : 399,
-         "value" : 0.000      },
+         "value" : 601.700      },
       {
         "valuetype" : 400,
-         "value" : 0.000      },
+         "value" : 601.800      },
       {
         "valuetype" : 401,
-         "value" : 0.000      },
+         "value" : 601.900      },
       {
         "valuetype" : 402,
-         "value" : 0.000      },
+         "value" : 602.000      },
       {
         "valuetype" : 403,
-         "value" : 0.000      },
+         "value" : 602.100      },
       {
         "valuetype" : 404,
-         "value" : 0.000      },
+         "value" : 602.200      },
       {
         "valuetype" : 405,
-         "value" : 0.000      },
+         "value" : 602.300      },
       {
         "valuetype" : 406,
-         "value" : 0.000      },
+         "value" : 602.400      },
       {
         "valuetype" : 407,
-         "value" : 0.000      },
+         "value" : 3200.100      },
       {
         "valuetype" : 408,
-         "value" : 0.000      },
+         "value" : 3200.200      },
       {
         "valuetype" : 409,
-         "value" : 0.000      },
+         "value" : 3200.300      },
       {
         "valuetype" : 410,
-         "value" : 0.000      },
+         "value" : 3200.400      },
       {
         "valuetype" : 411,
-         "value" : 0.000      },
+         "value" : 3200.500      },
       {
         "valuetype" : 412,
-         "value" : 0.000      },
+         "value" : 3200.600      },
       {
         "valuetype" : 413,
-         "value" : 0.000      },
+         "value" : 3200.700      },
       {
         "valuetype" : 414,
-         "value" : 0.000      },
+         "value" : 3200.800      },
       {
         "valuetype" : 415,
-         "value" : 0.000      },
+         "value" : 3200.900      },
       {
         "valuetype" : 416,
-         "value" : 0.000      },
+         "value" : 3201.000      },
       {
         "valuetype" : 417,
-         "value" : 0.000      },
+         "value" : 3201.100      },
       {
         "valuetype" : 418,
-         "value" : 0.000      },
+         "value" : 3201.200      },
       {
         "valuetype" : 419,
-         "value" : 0.000      },
+         "value" : 3201.300      },
       {
         "valuetype" : 420,
-         "value" : 0.000      },
+         "value" : 3201.400      },
       {
         "valuetype" : 421,
-         "value" : 0.000      },
+         "value" : 3201.500      },
       {
         "valuetype" : 422,
-         "value" : 0.000      },
+         "value" : 3201.600      },
       {
         "valuetype" : 423,
-         "value" : 0.000      },
+         "value" : 3201.700      },
       {
         "valuetype" : 424,
-         "value" : 0.000      },
+         "value" : 3201.800      },
       {
         "valuetype" : 425,
-         "value" : 0.000      },
+         "value" : 3201.900      },
       {
         "valuetype" : 426,
-         "value" : 0.000      },
+         "value" : 3202.000      },
       {
         "valuetype" : 427,
-         "value" : 0.000      },
+         "value" : 3202.100      },
       {
         "valuetype" : 428,
-         "value" : 0.000      },
+         "value" : 3202.200      },
       {
         "valuetype" : 429,
-         "value" : 0.000      },
+         "value" : 3202.300      },
       {
         "valuetype" : 430,
-         "value" : 0.000      },
+         "value" : 3202.400      },
       {
         "valuetype" : 431,
-         "value" : 0.000      },
+         "value" : 3202.500      },
       {
         "valuetype" : 432,
-         "value" : 0.000      },
+         "value" : 110.100      },
       {
         "valuetype" : 433,
-         "value" : 0.000      },
+         "value" : 110.200      },
       {
         "valuetype" : 434,
-         "value" : 0.000      },
+         "value" : 110.300      },
       {
         "valuetype" : 435,
-         "value" : 0.000      },
+         "value" : 110.400      },
       {
         "valuetype" : 436,
-         "value" : 0.000      },
+         "value" : 110.500      },
       {
         "valuetype" : 437,
-         "value" : 0.000      },
+         "value" : 110.600      },
       {
         "valuetype" : 438,
-         "value" : 0.000      },
+         "value" : 110.700      },
       {
         "valuetype" : 439,
-         "value" : 0.000      },
+         "value" : 110.800      },
       {
         "valuetype" : 440,
-         "value" : 0.000      },
+         "value" : 110.900      },
       {
         "valuetype" : 441,
-         "value" : 0.000      },
+         "value" : 111.000      },
       {
         "valuetype" : 442,
-         "value" : 0.000      },
+         "value" : 111.100      },
       {
         "valuetype" : 443,
-         "value" : 0.000      },
+         "value" : 111.200      },
       {
         "valuetype" : 444,
-         "value" : 0.000      },
+         "value" : 111.300      },
       {
         "valuetype" : 445,
-         "value" : 0.000      },
+         "value" : 111.400      },
       {
         "valuetype" : 446,
-         "value" : 0.000      },
+         "value" : 111.500      },
       {
         "valuetype" : 447,
-         "value" : 0.000      },
+         "value" : 200.000      },
       {
         "valuetype" : 448,
-         "value" : 0.000      },
+         "value" : 200.100      },
       {
         "valuetype" : 449,
-         "value" : 0.000      },
+         "value" : 200.200      },
       {
         "valuetype" : 450,
-         "value" : 0.000      },
+         "value" : 200.300      },
       {
         "valuetype" : 451,
-         "value" : 0.000      },
+         "value" : 200.400      },
       {
         "valuetype" : 452,
-         "value" : 0.000      },
+         "value" : 200.500      },
       {
         "valuetype" : 453,
-         "value" : 0.000      },
+         "value" : 200.600      },
       {
         "valuetype" : 454,
-         "value" : 0.000      },
+         "value" : 200.700      },
       {
         "valuetype" : 455,
-         "value" : 0.000      },
+         "value" : 200.800      },
       {
         "valuetype" : 456,
-         "value" : 0.000      },
+         "value" : 200.900      },
       {
         "valuetype" : 457,
-         "value" : 0.000      },
+         "value" : 201.000      },
       {
         "valuetype" : 458,
-         "value" : 0.000      },
+         "value" : 201.100      },
       {
         "valuetype" : 459,
-         "value" : 0.000      },
+         "value" : 201.200      },
       {
         "valuetype" : 460,
-         "value" : 0.000      },
+         "value" : 201.300      },
       {
         "valuetype" : 461,
-         "value" : 0.000      },
+         "value" : 201.400      },
       {
         "valuetype" : 462,
-         "value" : 0.000      },
+         "value" : 210.100      },
       {
         "valuetype" : 463,
-         "value" : 0.000      },
+         "value" : 210.200      },
       {
         "valuetype" : 464,
-         "value" : 0.000      },
+         "value" : 210.300      },
       {
         "valuetype" : 465,
-         "value" : 0.000      },
+         "value" : 210.400      },
       {
         "valuetype" : 466,
-         "value" : 0.000      },
+         "value" : 210.500      },
       {
         "valuetype" : 467,
-         "value" : 0.000      },
+         "value" : 210.600      },
       {
         "valuetype" : 468,
-         "value" : 0.000      },
+         "value" : 210.700      },
       {
         "valuetype" : 469,
-         "value" : 0.000      },
+         "value" : 210.800      },
       {
         "valuetype" : 470,
-         "value" : 0.000      },
+         "value" : 210.900      },
       {
         "valuetype" : 471,
-         "value" : 0.000      },
+         "value" : 211.000      },
       {
         "valuetype" : 472,
-         "value" : 0.000      },
+         "value" : 211.100      },
       {
         "valuetype" : 473,
-         "value" : 0.000      },
+         "value" : 211.200      },
       {
         "valuetype" : 474,
-         "value" : 0.000      },
+         "value" : 211.300      },
       {
         "valuetype" : 475,
-         "value" : 0.000      },
+         "value" : 211.400      },
       {
         "valuetype" : 476,
-         "value" : 0.000      },
+         "value" : 211.500      },
       {
         "valuetype" : 477,
-         "value" : 0.000      },
+         "value" : 300.100      },
       {
         "valuetype" : 478,
-         "value" : 0.000      },
+         "value" : 300.200      },
       {
         "valuetype" : 479,
-         "value" : 0.000      },
+         "value" : 300.300      },
       {
         "valuetype" : 480,
-         "value" : 0.000      },
+         "value" : 300.400      },
       {
         "valuetype" : 481,
-         "value" : 0.000      },
+         "value" : 300.500      },
       {
         "valuetype" : 482,
-         "value" : 0.000      },
+         "value" : 300.600      },
       {
         "valuetype" : 483,
-         "value" : 0.000      },
+         "value" : 300.700      },
       {
         "valuetype" : 484,
-         "value" : 0.000      },
+         "value" : 300.800      },
       {
         "valuetype" : 485,
-         "value" : 0.000      },
+         "value" : 300.900      },
       {
         "valuetype" : 486,
-         "value" : 0.000      },
+         "value" : 301.000      },
       {
         "valuetype" : 487,
-         "value" : 0.000      },
+         "value" : 301.100      },
       {
         "valuetype" : 488,
-         "value" : 0.000      },
+         "value" : 301.200      },
       {
         "valuetype" : 489,
-         "value" : 0.000      },
+         "value" : 301.300      },
       {
         "valuetype" : 490,
-         "value" : 0.000      },
+         "value" : 301.400      },
       {
         "valuetype" : 491,
-         "value" : 0.000      },
+         "value" : 301.500      },
       {
         "valuetype" : 492,
-         "value" : 0.000      },
+         "value" : 3210.100      },
       {
         "valuetype" : 493,
-         "value" : 0.000      },
+         "value" : 3210.200      },
       {
         "valuetype" : 494,
-         "value" : 0.000      },
+         "value" : 3210.300      },
       {
         "valuetype" : 495,
-         "value" : 0.000      },
+         "value" : 3210.400      },
       {
         "valuetype" : 496,
-         "value" : 0.000      },
+         "value" : 3210.500      },
       {
         "valuetype" : 497,
-         "value" : 0.000      },
+         "value" : 3210.600      },
       {
         "valuetype" : 498,
-         "value" : 0.000      },
+         "value" : 3210.700      },
       {
         "valuetype" : 499,
-         "value" : 0.000      },
+         "value" : 3210.800      },
       {
         "valuetype" : 500,
-         "value" : 0.000      },
+         "value" : 3210.900      },
       {
         "valuetype" : 501,
-         "value" : 0.000      },
+         "value" : 3211.000      },
       {
         "valuetype" : 502,
-         "value" : 0.000      },
+         "value" : 3211.100      },
       {
         "valuetype" : 503,
-         "value" : 0.000      },
+         "value" : 3211.200      },
       {
         "valuetype" : 504,
-         "value" : 0.000      },
+         "value" : 3211.300      },
       {
         "valuetype" : 505,
-         "value" : 0.000      },
+         "value" : 3211.400      },
       {
         "valuetype" : 506,
-         "value" : 0.000      }
+         "value" : 3211.500      }
     ]
   },
   {
@@ -1079,2187 +1079,727 @@
     [
       {
         "valuetype" : 5,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 64,
          "value" : "42000000"      },
       {
         "valuetype" : 65,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 66,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 81,
          "value" : 0.000      },
       {
         "valuetype" : 84,
-         "value" : 0      },
+         "value" : 1330644737      },
       {
         "valuetype" : 85,
-         "value" : 0      },
+         "value" : 1120403456      },
       {
         "valuetype" : 86,
          "value" : 0.000      },
       {
         "valuetype" : 90,
-         "value" : "S130"      },
+         "value" : "031S"      },
       {
         "valuetype" : 91,
-         "value" : "HUDM"      },
+         "value" : "MDUH"      },
       {
         "valuetype" : 92,
-         "value" : "10A2"      },
+         "value" : "2A01"      },
       {
         "valuetype" : 93,
-         "value" : "F   "      },
+         "value" : "   F"      },
       {
         "valuetype" : 162,
          "value" : 0.000      },
       {
         "valuetype" : 170,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 256,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 257,
-         "value" : 0.000      },
+         "value" : 76.000      },
       {
         "valuetype" : 258,
-         "value" : 0.000      },
+         "value" : 77.000      },
       {
         "valuetype" : 259,
-         "value" : 0.000      },
+         "value" : 78.000      },
       {
         "valuetype" : 260,
-         "value" : 0.000      },
+         "value" : 79.000      },
       {
         "valuetype" : 261,
-         "value" : 0.000      },
+         "value" : 80.000      },
       {
         "valuetype" : 262,
-         "value" : 0.000      },
+         "value" : 81.000      },
       {
         "valuetype" : 263,
-         "value" : 0.000      },
+         "value" : 82.000      },
       {
         "valuetype" : 264,
-         "value" : 0.000      },
+         "value" : 81.000      },
       {
         "valuetype" : 265,
-         "value" : 0.000      },
+         "value" : 80.000      },
       {
         "valuetype" : 266,
-         "value" : 0.000      },
+         "value" : 79.000      },
       {
         "valuetype" : 267,
-         "value" : 0.000      },
+         "value" : 78.000      },
       {
         "valuetype" : 268,
-         "value" : 0.000      },
+         "value" : 76.000      },
       {
         "valuetype" : 269,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 270,
-         "value" : 0.000      },
+         "value" : 74.000      },
       {
         "valuetype" : 271,
-         "value" : 0.000      },
+         "value" : 73.000      },
       {
         "valuetype" : 272,
-         "value" : 0.000      },
+         "value" : 72.000      },
       {
         "valuetype" : 273,
-         "value" : 0.000      },
+         "value" : 71.000      },
       {
         "valuetype" : 274,
-         "value" : 0.000      },
+         "value" : 72.000      },
       {
         "valuetype" : 275,
-         "value" : 0.000      },
+         "value" : 73.000      },
       {
         "valuetype" : 276,
-         "value" : 0.000      },
+         "value" : 74.000      },
       {
         "valuetype" : 277,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 278,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 279,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 280,
-         "value" : 0.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 281,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 306,
          "value" : "00000000"      },
       {
         "valuetype" : 307,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 308,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 309,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 310,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 311,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 312,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 313,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 314,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 315,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 316,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 317,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 318,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 319,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 320,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 321,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 322,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 323,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 324,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 325,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 326,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 327,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 328,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 329,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 330,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 331,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 332,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 333,
-         "value" : 0.000      },
+         "value" : 100.000      },
       {
         "valuetype" : 334,
-         "value" : 0.000      },
+         "value" : 300.300      },
       {
         "valuetype" : 335,
-         "value" : 0.000      },
+         "value" : 300.400      },
       {
         "valuetype" : 336,
-         "value" : 0.000      },
+         "value" : 300.500      },
       {
         "valuetype" : 337,
-         "value" : 0.000      },
+         "value" : 300.600      },
       {
         "valuetype" : 338,
-         "value" : 0.000      },
+         "value" : 300.700      },
       {
         "valuetype" : 339,
-         "value" : 0.000      },
+         "value" : 300.800      },
       {
         "valuetype" : 340,
-         "value" : 0.000      },
+         "value" : 300.900      },
       {
         "valuetype" : 341,
-         "value" : 0.000      },
+         "value" : 301.000      },
       {
         "valuetype" : 342,
-         "value" : 0.000      },
+         "value" : 301.100      },
       {
         "valuetype" : 343,
-         "value" : 0.000      },
+         "value" : 301.200      },
       {
         "valuetype" : 344,
-         "value" : 0.000      },
+         "value" : 301.300      },
       {
         "valuetype" : 345,
-         "value" : 0.000      },
+         "value" : 301.400      },
       {
         "valuetype" : 346,
-         "value" : 0.000      },
+         "value" : 301.500      },
       {
         "valuetype" : 347,
-         "value" : 0.000      },
+         "value" : 301.600      },
       {
         "valuetype" : 348,
-         "value" : 0.000      },
+         "value" : 301.700      },
       {
         "valuetype" : 349,
-         "value" : 0.000      },
+         "value" : 301.800      },
       {
         "valuetype" : 350,
-         "value" : 0.000      },
+         "value" : 301.900      },
       {
         "valuetype" : 351,
-         "value" : 0.000      },
+         "value" : 302.000      },
       {
         "valuetype" : 352,
-         "value" : 0.000      },
+         "value" : 302.100      },
       {
         "valuetype" : 353,
-         "value" : 0.000      },
+         "value" : 302.200      },
       {
         "valuetype" : 354,
-         "value" : 0.000      },
+         "value" : 302.300      },
       {
         "valuetype" : 355,
-         "value" : 0.000      },
+         "value" : 302.400      },
       {
         "valuetype" : 356,
-         "value" : 0.000      },
+         "value" : 302.500      },
       {
         "valuetype" : 357,
-         "value" : 0.000      },
+         "value" : 500.100      },
       {
         "valuetype" : 358,
-         "value" : 0.000      },
+         "value" : 500.200      },
       {
         "valuetype" : 359,
-         "value" : 0.000      },
+         "value" : 500.300      },
       {
         "valuetype" : 360,
-         "value" : 0.000      },
+         "value" : 500.400      },
       {
         "valuetype" : 361,
-         "value" : 0.000      },
+         "value" : 500.500      },
       {
         "valuetype" : 362,
-         "value" : 0.000      },
+         "value" : 500.600      },
       {
         "valuetype" : 363,
-         "value" : 0.000      },
+         "value" : 500.700      },
       {
         "valuetype" : 364,
-         "value" : 0.000      },
+         "value" : 500.800      },
       {
         "valuetype" : 365,
-         "value" : 0.000      },
+         "value" : 500.900      },
       {
         "valuetype" : 366,
-         "value" : 0.000      },
+         "value" : 501.000      },
       {
         "valuetype" : 367,
-         "value" : 0.000      },
+         "value" : 501.100      },
       {
         "valuetype" : 368,
-         "value" : 0.000      },
+         "value" : 501.200      },
       {
         "valuetype" : 369,
-         "value" : 0.000      },
+         "value" : 501.300      },
       {
         "valuetype" : 370,
-         "value" : 0.000      },
+         "value" : 501.400      },
       {
         "valuetype" : 371,
-         "value" : 0.000      },
+         "value" : 501.500      },
       {
         "valuetype" : 372,
-         "value" : 0.000      },
+         "value" : 501.600      },
       {
         "valuetype" : 373,
-         "value" : 0.000      },
+         "value" : 501.700      },
       {
         "valuetype" : 374,
-         "value" : 0.000      },
+         "value" : 501.800      },
       {
         "valuetype" : 375,
-         "value" : 0.000      },
+         "value" : 501.900      },
       {
         "valuetype" : 376,
-         "value" : 0.000      },
+         "value" : 502.000      },
       {
         "valuetype" : 377,
-         "value" : 0.000      },
+         "value" : 502.100      },
       {
         "valuetype" : 378,
-         "value" : 0.000      },
+         "value" : 502.200      },
       {
         "valuetype" : 379,
-         "value" : 0.000      },
+         "value" : 502.300      },
       {
         "valuetype" : 380,
-         "value" : 0.000      },
+         "value" : 502.400      },
       {
         "valuetype" : 381,
-         "value" : 0.000      },
+         "value" : 502.500      },
       {
         "valuetype" : 382,
-         "value" : 0.000      },
+         "value" : 600.000      },
       {
         "valuetype" : 383,
-         "value" : 0.000      },
+         "value" : 600.100      },
       {
         "valuetype" : 384,
-         "value" : 0.000      },
+         "value" : 600.200      },
       {
         "valuetype" : 385,
-         "value" : 0.000      },
+         "value" : 600.300      },
       {
         "valuetype" : 386,
-         "value" : 0.000      },
+         "value" : 600.400      },
       {
         "valuetype" : 387,
-         "value" : 0.000      },
+         "value" : 600.500      },
       {
         "valuetype" : 388,
-         "value" : 0.000      },
+         "value" : 600.600      },
       {
         "valuetype" : 389,
-         "value" : 0.000      },
+         "value" : 600.700      },
       {
         "valuetype" : 390,
-         "value" : 0.000      },
+         "value" : 600.800      },
       {
         "valuetype" : 391,
-         "value" : 0.000      },
+         "value" : 600.900      },
       {
         "valuetype" : 392,
-         "value" : 0.000      },
+         "value" : 601.000      },
       {
         "valuetype" : 393,
-         "value" : 0.000      },
+         "value" : 601.100      },
       {
         "valuetype" : 394,
-         "value" : 0.000      },
+         "value" : 601.200      },
       {
         "valuetype" : 395,
-         "value" : 0.000      },
+         "value" : 601.300      },
       {
         "valuetype" : 396,
-         "value" : 0.000      },
+         "value" : 601.400      },
       {
         "valuetype" : 397,
-         "value" : 0.000      },
+         "value" : 601.500      },
       {
         "valuetype" : 398,
-         "value" : 0.000      },
+         "value" : 601.600      },
       {
         "valuetype" : 399,
-         "value" : 0.000      },
+         "value" : 601.700      },
       {
         "valuetype" : 400,
-         "value" : 0.000      },
+         "value" : 601.800      },
       {
         "valuetype" : 401,
-         "value" : 0.000      },
+         "value" : 601.900      },
       {
         "valuetype" : 402,
-         "value" : 0.000      },
+         "value" : 602.000      },
       {
         "valuetype" : 403,
-         "value" : 0.000      },
+         "value" : 602.100      },
       {
         "valuetype" : 404,
-         "value" : 0.000      },
+         "value" : 602.200      },
       {
         "valuetype" : 405,
-         "value" : 0.000      },
+         "value" : 602.300      },
       {
         "valuetype" : 406,
-         "value" : 0.000      },
+         "value" : 602.400      },
       {
         "valuetype" : 407,
-         "value" : 0.000      },
+         "value" : 3200.100      },
       {
         "valuetype" : 408,
-         "value" : 0.000      },
+         "value" : 3200.200      },
       {
         "valuetype" : 409,
-         "value" : 0.000      },
+         "value" : 3200.300      },
       {
         "valuetype" : 410,
-         "value" : 0.000      },
+         "value" : 3200.400      },
       {
         "valuetype" : 411,
-         "value" : 0.000      },
+         "value" : 3200.500      },
       {
         "valuetype" : 412,
-         "value" : 0.000      },
+         "value" : 3200.600      },
       {
         "valuetype" : 413,
-         "value" : 0.000      },
+         "value" : 3200.700      },
       {
         "valuetype" : 414,
-         "value" : 0.000      },
+         "value" : 3200.800      },
       {
         "valuetype" : 415,
-         "value" : 0.000      },
+         "value" : 3200.900      },
       {
         "valuetype" : 416,
-         "value" : 0.000      },
+         "value" : 3201.000      },
       {
         "valuetype" : 417,
-         "value" : 0.000      },
+         "value" : 3201.100      },
       {
         "valuetype" : 418,
-         "value" : 0.000      },
+         "value" : 3201.200      },
       {
         "valuetype" : 419,
-         "value" : 0.000      },
+         "value" : 3201.300      },
       {
         "valuetype" : 420,
-         "value" : 0.000      },
+         "value" : 3201.400      },
       {
         "valuetype" : 421,
-         "value" : 0.000      },
+         "value" : 3201.500      },
       {
         "valuetype" : 422,
-         "value" : 0.000      },
+         "value" : 3201.600      },
       {
         "valuetype" : 423,
-         "value" : 0.000      },
+         "value" : 3201.700      },
       {
         "valuetype" : 424,
-         "value" : 0.000      },
+         "value" : 3201.800      },
       {
         "valuetype" : 425,
-         "value" : 0.000      },
+         "value" : 3201.900      },
       {
         "valuetype" : 426,
-         "value" : 0.000      },
+         "value" : 3202.000      },
       {
         "valuetype" : 427,
-         "value" : 0.000      },
+         "value" : 3202.100      },
       {
         "valuetype" : 428,
-         "value" : 0.000      },
+         "value" : 3202.200      },
       {
         "valuetype" : 429,
-         "value" : 0.000      },
+         "value" : 3202.300      },
       {
         "valuetype" : 430,
-         "value" : 0.000      },
+         "value" : 3202.400      },
       {
         "valuetype" : 431,
-         "value" : 0.000      },
+         "value" : 3202.500      },
       {
         "valuetype" : 432,
-         "value" : 0.000      },
+         "value" : 110.100      },
       {
         "valuetype" : 433,
-         "value" : 0.000      },
+         "value" : 110.200      },
       {
         "valuetype" : 434,
-         "value" : 0.000      },
+         "value" : 110.300      },
       {
         "valuetype" : 435,
-         "value" : 0.000      },
+         "value" : 110.400      },
       {
         "valuetype" : 436,
-         "value" : 0.000      },
+         "value" : 110.500      },
       {
         "valuetype" : 437,
-         "value" : 0.000      },
+         "value" : 110.600      },
       {
         "valuetype" : 438,
-         "value" : 0.000      },
+         "value" : 110.700      },
       {
         "valuetype" : 439,
-         "value" : 0.000      },
+         "value" : 110.800      },
       {
         "valuetype" : 440,
-         "value" : 0.000      },
+         "value" : 110.900      },
       {
         "valuetype" : 441,
-         "value" : 0.000      },
+         "value" : 111.000      },
       {
         "valuetype" : 442,
-         "value" : 0.000      },
+         "value" : 111.100      },
       {
         "valuetype" : 443,
-         "value" : 0.000      },
+         "value" : 111.200      },
       {
         "valuetype" : 444,
-         "value" : 0.000      },
+         "value" : 111.300      },
       {
         "valuetype" : 445,
-         "value" : 0.000      },
+         "value" : 111.400      },
       {
         "valuetype" : 446,
-         "value" : 0.000      },
+         "value" : 111.500      },
       {
         "valuetype" : 447,
-         "value" : 0.000      },
+         "value" : 200.000      },
       {
         "valuetype" : 448,
-         "value" : 0.000      },
+         "value" : 200.100      },
       {
         "valuetype" : 449,
-         "value" : 0.000      },
+         "value" : 200.200      },
       {
         "valuetype" : 450,
-         "value" : 0.000      },
+         "value" : 200.300      },
       {
         "valuetype" : 451,
-         "value" : 0.000      },
+         "value" : 200.400      },
       {
         "valuetype" : 452,
-         "value" : 0.000      },
+         "value" : 200.500      },
       {
         "valuetype" : 453,
-         "value" : 0.000      },
+         "value" : 200.600      },
       {
         "valuetype" : 454,
-         "value" : 0.000      },
+         "value" : 200.700      },
       {
         "valuetype" : 455,
-         "value" : 0.000      },
+         "value" : 200.800      },
       {
         "valuetype" : 456,
-         "value" : 0.000      },
+         "value" : 200.900      },
       {
         "valuetype" : 457,
-         "value" : 0.000      },
+         "value" : 201.000      },
       {
         "valuetype" : 458,
-         "value" : 0.000      },
+         "value" : 201.100      },
       {
         "valuetype" : 459,
-         "value" : 0.000      },
+         "value" : 201.200      },
       {
         "valuetype" : 460,
-         "value" : 0.000      },
+         "value" : 201.300      },
       {
         "valuetype" : 461,
-         "value" : 0.000      },
+         "value" : 201.400      },
       {
         "valuetype" : 462,
-         "value" : 0.000      },
+         "value" : 210.100      },
       {
         "valuetype" : 463,
-         "value" : 0.000      },
+         "value" : 210.200      },
       {
         "valuetype" : 464,
-         "value" : 0.000      },
+         "value" : 210.300      },
       {
         "valuetype" : 465,
-         "value" : 0.000      },
+         "value" : 210.400      },
       {
         "valuetype" : 466,
-         "value" : 0.000      },
+         "value" : 210.500      },
       {
         "valuetype" : 467,
-         "value" : 0.000      },
+         "value" : 210.600      },
       {
         "valuetype" : 468,
-         "value" : 0.000      },
+         "value" : 210.700      },
       {
         "valuetype" : 469,
-         "value" : 0.000      },
+         "value" : 210.800      },
       {
         "valuetype" : 470,
-         "value" : 0.000      },
+         "value" : 210.900      },
       {
         "valuetype" : 471,
-         "value" : 0.000      },
+         "value" : 211.000      },
       {
         "valuetype" : 472,
-         "value" : 0.000      },
+         "value" : 211.100      },
       {
         "valuetype" : 473,
-         "value" : 0.000      },
+         "value" : 211.200      },
       {
         "valuetype" : 474,
-         "value" : 0.000      },
+         "value" : 211.300      },
       {
         "valuetype" : 475,
-         "value" : 0.000      },
+         "value" : 211.400      },
       {
         "valuetype" : 476,
-         "value" : 0.000      },
+         "value" : 211.500      },
       {
         "valuetype" : 477,
-         "value" : 0.000      },
+         "value" : 300.100      },
       {
         "valuetype" : 478,
-         "value" : 0.000      },
+         "value" : 300.200      },
       {
         "valuetype" : 479,
-         "value" : 0.000      },
+         "value" : 300.300      },
       {
         "valuetype" : 480,
-         "value" : 0.000      },
+         "value" : 300.400      },
       {
         "valuetype" : 481,
-         "value" : 0.000      },
+         "value" : 300.500      },
       {
         "valuetype" : 482,
-         "value" : 0.000      },
+         "value" : 300.600      },
       {
         "valuetype" : 483,
-         "value" : 0.000      },
+         "value" : 300.700      },
       {
         "valuetype" : 484,
-         "value" : 0.000      },
+         "value" : 300.800      },
       {
         "valuetype" : 485,
-         "value" : 0.000      },
+         "value" : 300.900      },
       {
         "valuetype" : 486,
-         "value" : 0.000      },
+         "value" : 301.000      },
       {
         "valuetype" : 487,
-         "value" : 0.000      },
+         "value" : 301.100      },
       {
         "valuetype" : 488,
-         "value" : 0.000      },
+         "value" : 301.200      },
       {
         "valuetype" : 489,
-         "value" : 0.000      },
+         "value" : 301.300      },
       {
         "valuetype" : 490,
-         "value" : 0.000      },
+         "value" : 301.400      },
       {
         "valuetype" : 491,
-         "value" : 0.000      },
+         "value" : 301.500      },
       {
         "valuetype" : 492,
-         "value" : 0.000      },
+         "value" : 3210.100      },
       {
         "valuetype" : 493,
-         "value" : 0.000      },
+         "value" : 3210.200      },
       {
         "valuetype" : 494,
-         "value" : 0.000      },
+         "value" : 3210.300      },
       {
         "valuetype" : 495,
-         "value" : 0.000      },
+         "value" : 3210.400      },
       {
         "valuetype" : 496,
-         "value" : 0.000      },
+         "value" : 3210.500      },
       {
         "valuetype" : 497,
-         "value" : 0.000      },
+         "value" : 3210.600      },
       {
         "valuetype" : 498,
-         "value" : 0.000      },
+         "value" : 3210.700      },
       {
         "valuetype" : 499,
-         "value" : 0.000      },
+         "value" : 3210.800      },
       {
         "valuetype" : 500,
-         "value" : 0.000      },
+         "value" : 3210.900      },
       {
         "valuetype" : 501,
-         "value" : 0.000      },
+         "value" : 3211.000      },
       {
         "valuetype" : 502,
-         "value" : 0.000      },
+         "value" : 3211.100      },
       {
         "valuetype" : 503,
-         "value" : 0.000      },
+         "value" : 3211.200      },
       {
         "valuetype" : 504,
-         "value" : 0.000      },
+         "value" : 3211.300      },
       {
         "valuetype" : 505,
-         "value" : 0.000      },
+         "value" : 3211.400      },
       {
         "valuetype" : 506,
-         "value" : 0.000      }
-    ]
-  },
-  {
-    "panelindex" : 3,
-    "bayindex" : 1,
-    "registers" :
-    [
-      {
-        "valuetype" : 5,
-         "value" : 0.000      },
-      {
-        "valuetype" : 64,
-         "value" : "42000000"      },
-      {
-        "valuetype" : 65,
-         "value" : 0.000      },
-      {
-        "valuetype" : 66,
-         "value" : 0.000      },
-      {
-        "valuetype" : 81,
-         "value" : 0.000      },
-      {
-        "valuetype" : 84,
-         "value" : 0      },
-      {
-        "valuetype" : 85,
-         "value" : 0      },
-      {
-        "valuetype" : 86,
-         "value" : 0.000      },
-      {
-        "valuetype" : 90,
-         "value" : "S130"      },
-      {
-        "valuetype" : 91,
-         "value" : "HUDM"      },
-      {
-        "valuetype" : 92,
-         "value" : "10A2"      },
-      {
-        "valuetype" : 93,
-         "value" : "F   "      },
-      {
-        "valuetype" : 162,
-         "value" : 0.000      },
-      {
-        "valuetype" : 170,
-         "value" : 0.000      },
-      {
-        "valuetype" : 256,
-         "value" : 0.000      },
-      {
-        "valuetype" : 257,
-         "value" : 0.000      },
-      {
-        "valuetype" : 258,
-         "value" : 0.000      },
-      {
-        "valuetype" : 259,
-         "value" : 0.000      },
-      {
-        "valuetype" : 260,
-         "value" : 0.000      },
-      {
-        "valuetype" : 261,
-         "value" : 0.000      },
-      {
-        "valuetype" : 262,
-         "value" : 0.000      },
-      {
-        "valuetype" : 263,
-         "value" : 0.000      },
-      {
-        "valuetype" : 264,
-         "value" : 0.000      },
-      {
-        "valuetype" : 265,
-         "value" : 0.000      },
-      {
-        "valuetype" : 266,
-         "value" : 0.000      },
-      {
-        "valuetype" : 267,
-         "value" : 0.000      },
-      {
-        "valuetype" : 268,
-         "value" : 0.000      },
-      {
-        "valuetype" : 269,
-         "value" : 0.000      },
-      {
-        "valuetype" : 270,
-         "value" : 0.000      },
-      {
-        "valuetype" : 271,
-         "value" : 0.000      },
-      {
-        "valuetype" : 272,
-         "value" : 0.000      },
-      {
-        "valuetype" : 273,
-         "value" : 0.000      },
-      {
-        "valuetype" : 274,
-         "value" : 0.000      },
-      {
-        "valuetype" : 275,
-         "value" : 0.000      },
-      {
-        "valuetype" : 276,
-         "value" : 0.000      },
-      {
-        "valuetype" : 277,
-         "value" : 0.000      },
-      {
-        "valuetype" : 278,
-         "value" : 0.000      },
-      {
-        "valuetype" : 279,
-         "value" : 0.000      },
-      {
-        "valuetype" : 280,
-         "value" : 0.000      },
-      {
-        "valuetype" : 281,
-         "value" : 0.000      },
-      {
-        "valuetype" : 306,
-         "value" : "00000000"      },
-      {
-        "valuetype" : 307,
-         "value" : 0.000      },
-      {
-        "valuetype" : 308,
-         "value" : 0.000      },
-      {
-        "valuetype" : 309,
-         "value" : 0.000      },
-      {
-        "valuetype" : 310,
-         "value" : 0.000      },
-      {
-        "valuetype" : 311,
-         "value" : 0.000      },
-      {
-        "valuetype" : 312,
-         "value" : 0.000      },
-      {
-        "valuetype" : 313,
-         "value" : 0.000      },
-      {
-        "valuetype" : 314,
-         "value" : 0.000      },
-      {
-        "valuetype" : 315,
-         "value" : 0.000      },
-      {
-        "valuetype" : 316,
-         "value" : 0.000      },
-      {
-        "valuetype" : 317,
-         "value" : 0.000      },
-      {
-        "valuetype" : 318,
-         "value" : 0.000      },
-      {
-        "valuetype" : 319,
-         "value" : 0.000      },
-      {
-        "valuetype" : 320,
-         "value" : 0.000      },
-      {
-        "valuetype" : 321,
-         "value" : 0.000      },
-      {
-        "valuetype" : 322,
-         "value" : 0.000      },
-      {
-        "valuetype" : 323,
-         "value" : 0.000      },
-      {
-        "valuetype" : 324,
-         "value" : 0.000      },
-      {
-        "valuetype" : 325,
-         "value" : 0.000      },
-      {
-        "valuetype" : 326,
-         "value" : 0.000      },
-      {
-        "valuetype" : 327,
-         "value" : 0.000      },
-      {
-        "valuetype" : 328,
-         "value" : 0.000      },
-      {
-        "valuetype" : 329,
-         "value" : 0.000      },
-      {
-        "valuetype" : 330,
-         "value" : 0.000      },
-      {
-        "valuetype" : 331,
-         "value" : 0.000      },
-      {
-        "valuetype" : 332,
-         "value" : 0.000      },
-      {
-        "valuetype" : 333,
-         "value" : 0.000      },
-      {
-        "valuetype" : 334,
-         "value" : 0.000      },
-      {
-        "valuetype" : 335,
-         "value" : 0.000      },
-      {
-        "valuetype" : 336,
-         "value" : 0.000      },
-      {
-        "valuetype" : 337,
-         "value" : 0.000      },
-      {
-        "valuetype" : 338,
-         "value" : 0.000      },
-      {
-        "valuetype" : 339,
-         "value" : 0.000      },
-      {
-        "valuetype" : 340,
-         "value" : 0.000      },
-      {
-        "valuetype" : 341,
-         "value" : 0.000      },
-      {
-        "valuetype" : 342,
-         "value" : 0.000      },
-      {
-        "valuetype" : 343,
-         "value" : 0.000      },
-      {
-        "valuetype" : 344,
-         "value" : 0.000      },
-      {
-        "valuetype" : 345,
-         "value" : 0.000      },
-      {
-        "valuetype" : 346,
-         "value" : 0.000      },
-      {
-        "valuetype" : 347,
-         "value" : 0.000      },
-      {
-        "valuetype" : 348,
-         "value" : 0.000      },
-      {
-        "valuetype" : 349,
-         "value" : 0.000      },
-      {
-        "valuetype" : 350,
-         "value" : 0.000      },
-      {
-        "valuetype" : 351,
-         "value" : 0.000      },
-      {
-        "valuetype" : 352,
-         "value" : 0.000      },
-      {
-        "valuetype" : 353,
-         "value" : 0.000      },
-      {
-        "valuetype" : 354,
-         "value" : 0.000      },
-      {
-        "valuetype" : 355,
-         "value" : 0.000      },
-      {
-        "valuetype" : 356,
-         "value" : 0.000      },
-      {
-        "valuetype" : 357,
-         "value" : 0.000      },
-      {
-        "valuetype" : 358,
-         "value" : 0.000      },
-      {
-        "valuetype" : 359,
-         "value" : 0.000      },
-      {
-        "valuetype" : 360,
-         "value" : 0.000      },
-      {
-        "valuetype" : 361,
-         "value" : 0.000      },
-      {
-        "valuetype" : 362,
-         "value" : 0.000      },
-      {
-        "valuetype" : 363,
-         "value" : 0.000      },
-      {
-        "valuetype" : 364,
-         "value" : 0.000      },
-      {
-        "valuetype" : 365,
-         "value" : 0.000      },
-      {
-        "valuetype" : 366,
-         "value" : 0.000      },
-      {
-        "valuetype" : 367,
-         "value" : 0.000      },
-      {
-        "valuetype" : 368,
-         "value" : 0.000      },
-      {
-        "valuetype" : 369,
-         "value" : 0.000      },
-      {
-        "valuetype" : 370,
-         "value" : 0.000      },
-      {
-        "valuetype" : 371,
-         "value" : 0.000      },
-      {
-        "valuetype" : 372,
-         "value" : 0.000      },
-      {
-        "valuetype" : 373,
-         "value" : 0.000      },
-      {
-        "valuetype" : 374,
-         "value" : 0.000      },
-      {
-        "valuetype" : 375,
-         "value" : 0.000      },
-      {
-        "valuetype" : 376,
-         "value" : 0.000      },
-      {
-        "valuetype" : 377,
-         "value" : 0.000      },
-      {
-        "valuetype" : 378,
-         "value" : 0.000      },
-      {
-        "valuetype" : 379,
-         "value" : 0.000      },
-      {
-        "valuetype" : 380,
-         "value" : 0.000      },
-      {
-        "valuetype" : 381,
-         "value" : 0.000      },
-      {
-        "valuetype" : 382,
-         "value" : 0.000      },
-      {
-        "valuetype" : 383,
-         "value" : 0.000      },
-      {
-        "valuetype" : 384,
-         "value" : 0.000      },
-      {
-        "valuetype" : 385,
-         "value" : 0.000      },
-      {
-        "valuetype" : 386,
-         "value" : 0.000      },
-      {
-        "valuetype" : 387,
-         "value" : 0.000      },
-      {
-        "valuetype" : 388,
-         "value" : 0.000      },
-      {
-        "valuetype" : 389,
-         "value" : 0.000      },
-      {
-        "valuetype" : 390,
-         "value" : 0.000      },
-      {
-        "valuetype" : 391,
-         "value" : 0.000      },
-      {
-        "valuetype" : 392,
-         "value" : 0.000      },
-      {
-        "valuetype" : 393,
-         "value" : 0.000      },
-      {
-        "valuetype" : 394,
-         "value" : 0.000      },
-      {
-        "valuetype" : 395,
-         "value" : 0.000      },
-      {
-        "valuetype" : 396,
-         "value" : 0.000      },
-      {
-        "valuetype" : 397,
-         "value" : 0.000      },
-      {
-        "valuetype" : 398,
-         "value" : 0.000      },
-      {
-        "valuetype" : 399,
-         "value" : 0.000      },
-      {
-        "valuetype" : 400,
-         "value" : 0.000      },
-      {
-        "valuetype" : 401,
-         "value" : 0.000      },
-      {
-        "valuetype" : 402,
-         "value" : 0.000      },
-      {
-        "valuetype" : 403,
-         "value" : 0.000      },
-      {
-        "valuetype" : 404,
-         "value" : 0.000      },
-      {
-        "valuetype" : 405,
-         "value" : 0.000      },
-      {
-        "valuetype" : 406,
-         "value" : 0.000      },
-      {
-        "valuetype" : 407,
-         "value" : 0.000      },
-      {
-        "valuetype" : 408,
-         "value" : 0.000      },
-      {
-        "valuetype" : 409,
-         "value" : 0.000      },
-      {
-        "valuetype" : 410,
-         "value" : 0.000      },
-      {
-        "valuetype" : 411,
-         "value" : 0.000      },
-      {
-        "valuetype" : 412,
-         "value" : 0.000      },
-      {
-        "valuetype" : 413,
-         "value" : 0.000      },
-      {
-        "valuetype" : 414,
-         "value" : 0.000      },
-      {
-        "valuetype" : 415,
-         "value" : 0.000      },
-      {
-        "valuetype" : 416,
-         "value" : 0.000      },
-      {
-        "valuetype" : 417,
-         "value" : 0.000      },
-      {
-        "valuetype" : 418,
-         "value" : 0.000      },
-      {
-        "valuetype" : 419,
-         "value" : 0.000      },
-      {
-        "valuetype" : 420,
-         "value" : 0.000      },
-      {
-        "valuetype" : 421,
-         "value" : 0.000      },
-      {
-        "valuetype" : 422,
-         "value" : 0.000      },
-      {
-        "valuetype" : 423,
-         "value" : 0.000      },
-      {
-        "valuetype" : 424,
-         "value" : 0.000      },
-      {
-        "valuetype" : 425,
-         "value" : 0.000      },
-      {
-        "valuetype" : 426,
-         "value" : 0.000      },
-      {
-        "valuetype" : 427,
-         "value" : 0.000      },
-      {
-        "valuetype" : 428,
-         "value" : 0.000      },
-      {
-        "valuetype" : 429,
-         "value" : 0.000      },
-      {
-        "valuetype" : 430,
-         "value" : 0.000      },
-      {
-        "valuetype" : 431,
-         "value" : 0.000      },
-      {
-        "valuetype" : 432,
-         "value" : 0.000      },
-      {
-        "valuetype" : 433,
-         "value" : 0.000      },
-      {
-        "valuetype" : 434,
-         "value" : 0.000      },
-      {
-        "valuetype" : 435,
-         "value" : 0.000      },
-      {
-        "valuetype" : 436,
-         "value" : 0.000      },
-      {
-        "valuetype" : 437,
-         "value" : 0.000      },
-      {
-        "valuetype" : 438,
-         "value" : 0.000      },
-      {
-        "valuetype" : 439,
-         "value" : 0.000      },
-      {
-        "valuetype" : 440,
-         "value" : 0.000      },
-      {
-        "valuetype" : 441,
-         "value" : 0.000      },
-      {
-        "valuetype" : 442,
-         "value" : 0.000      },
-      {
-        "valuetype" : 443,
-         "value" : 0.000      },
-      {
-        "valuetype" : 444,
-         "value" : 0.000      },
-      {
-        "valuetype" : 445,
-         "value" : 0.000      },
-      {
-        "valuetype" : 446,
-         "value" : 0.000      },
-      {
-        "valuetype" : 447,
-         "value" : 0.000      },
-      {
-        "valuetype" : 448,
-         "value" : 0.000      },
-      {
-        "valuetype" : 449,
-         "value" : 0.000      },
-      {
-        "valuetype" : 450,
-         "value" : 0.000      },
-      {
-        "valuetype" : 451,
-         "value" : 0.000      },
-      {
-        "valuetype" : 452,
-         "value" : 0.000      },
-      {
-        "valuetype" : 453,
-         "value" : 0.000      },
-      {
-        "valuetype" : 454,
-         "value" : 0.000      },
-      {
-        "valuetype" : 455,
-         "value" : 0.000      },
-      {
-        "valuetype" : 456,
-         "value" : 0.000      },
-      {
-        "valuetype" : 457,
-         "value" : 0.000      },
-      {
-        "valuetype" : 458,
-         "value" : 0.000      },
-      {
-        "valuetype" : 459,
-         "value" : 0.000      },
-      {
-        "valuetype" : 460,
-         "value" : 0.000      },
-      {
-        "valuetype" : 461,
-         "value" : 0.000      },
-      {
-        "valuetype" : 462,
-         "value" : 0.000      },
-      {
-        "valuetype" : 463,
-         "value" : 0.000      },
-      {
-        "valuetype" : 464,
-         "value" : 0.000      },
-      {
-        "valuetype" : 465,
-         "value" : 0.000      },
-      {
-        "valuetype" : 466,
-         "value" : 0.000      },
-      {
-        "valuetype" : 467,
-         "value" : 0.000      },
-      {
-        "valuetype" : 468,
-         "value" : 0.000      },
-      {
-        "valuetype" : 469,
-         "value" : 0.000      },
-      {
-        "valuetype" : 470,
-         "value" : 0.000      },
-      {
-        "valuetype" : 471,
-         "value" : 0.000      },
-      {
-        "valuetype" : 472,
-         "value" : 0.000      },
-      {
-        "valuetype" : 473,
-         "value" : 0.000      },
-      {
-        "valuetype" : 474,
-         "value" : 0.000      },
-      {
-        "valuetype" : 475,
-         "value" : 0.000      },
-      {
-        "valuetype" : 476,
-         "value" : 0.000      },
-      {
-        "valuetype" : 477,
-         "value" : 0.000      },
-      {
-        "valuetype" : 478,
-         "value" : 0.000      },
-      {
-        "valuetype" : 479,
-         "value" : 0.000      },
-      {
-        "valuetype" : 480,
-         "value" : 0.000      },
-      {
-        "valuetype" : 481,
-         "value" : 0.000      },
-      {
-        "valuetype" : 482,
-         "value" : 0.000      },
-      {
-        "valuetype" : 483,
-         "value" : 0.000      },
-      {
-        "valuetype" : 484,
-         "value" : 0.000      },
-      {
-        "valuetype" : 485,
-         "value" : 0.000      },
-      {
-        "valuetype" : 486,
-         "value" : 0.000      },
-      {
-        "valuetype" : 487,
-         "value" : 0.000      },
-      {
-        "valuetype" : 488,
-         "value" : 0.000      },
-      {
-        "valuetype" : 489,
-         "value" : 0.000      },
-      {
-        "valuetype" : 490,
-         "value" : 0.000      },
-      {
-        "valuetype" : 491,
-         "value" : 0.000      },
-      {
-        "valuetype" : 492,
-         "value" : 0.000      },
-      {
-        "valuetype" : 493,
-         "value" : 0.000      },
-      {
-        "valuetype" : 494,
-         "value" : 0.000      },
-      {
-        "valuetype" : 495,
-         "value" : 0.000      },
-      {
-        "valuetype" : 496,
-         "value" : 0.000      },
-      {
-        "valuetype" : 497,
-         "value" : 0.000      },
-      {
-        "valuetype" : 498,
-         "value" : 0.000      },
-      {
-        "valuetype" : 499,
-         "value" : 0.000      },
-      {
-        "valuetype" : 500,
-         "value" : 0.000      },
-      {
-        "valuetype" : 501,
-         "value" : 0.000      },
-      {
-        "valuetype" : 502,
-         "value" : 0.000      },
-      {
-        "valuetype" : 503,
-         "value" : 0.000      },
-      {
-        "valuetype" : 504,
-         "value" : 0.000      },
-      {
-        "valuetype" : 505,
-         "value" : 0.000      },
-      {
-        "valuetype" : 506,
-         "value" : 0.000      }
-    ]
-  },
-  {
-    "panelindex" : 4,
-    "bayindex" : 1,
-    "registers" :
-    [
-      {
-        "valuetype" : 5,
-         "value" : 0.000      },
-      {
-        "valuetype" : 64,
-         "value" : "42000000"      },
-      {
-        "valuetype" : 65,
-         "value" : 0.000      },
-      {
-        "valuetype" : 66,
-         "value" : 0.000      },
-      {
-        "valuetype" : 81,
-         "value" : 0.000      },
-      {
-        "valuetype" : 84,
-         "value" : 0      },
-      {
-        "valuetype" : 85,
-         "value" : 0      },
-      {
-        "valuetype" : 86,
-         "value" : 0.000      },
-      {
-        "valuetype" : 90,
-         "value" : "S130"      },
-      {
-        "valuetype" : 91,
-         "value" : "HUDM"      },
-      {
-        "valuetype" : 92,
-         "value" : "10A2"      },
-      {
-        "valuetype" : 93,
-         "value" : "F   "      },
-      {
-        "valuetype" : 162,
-         "value" : 0.000      },
-      {
-        "valuetype" : 170,
-         "value" : 0.000      },
-      {
-        "valuetype" : 256,
-         "value" : 0.000      },
-      {
-        "valuetype" : 257,
-         "value" : 0.000      },
-      {
-        "valuetype" : 258,
-         "value" : 0.000      },
-      {
-        "valuetype" : 259,
-         "value" : 0.000      },
-      {
-        "valuetype" : 260,
-         "value" : 0.000      },
-      {
-        "valuetype" : 261,
-         "value" : 0.000      },
-      {
-        "valuetype" : 262,
-         "value" : 0.000      },
-      {
-        "valuetype" : 263,
-         "value" : 0.000      },
-      {
-        "valuetype" : 264,
-         "value" : 0.000      },
-      {
-        "valuetype" : 265,
-         "value" : 0.000      },
-      {
-        "valuetype" : 266,
-         "value" : 0.000      },
-      {
-        "valuetype" : 267,
-         "value" : 0.000      },
-      {
-        "valuetype" : 268,
-         "value" : 0.000      },
-      {
-        "valuetype" : 269,
-         "value" : 0.000      },
-      {
-        "valuetype" : 270,
-         "value" : 0.000      },
-      {
-        "valuetype" : 271,
-         "value" : 0.000      },
-      {
-        "valuetype" : 272,
-         "value" : 0.000      },
-      {
-        "valuetype" : 273,
-         "value" : 0.000      },
-      {
-        "valuetype" : 274,
-         "value" : 0.000      },
-      {
-        "valuetype" : 275,
-         "value" : 0.000      },
-      {
-        "valuetype" : 276,
-         "value" : 0.000      },
-      {
-        "valuetype" : 277,
-         "value" : 0.000      },
-      {
-        "valuetype" : 278,
-         "value" : 0.000      },
-      {
-        "valuetype" : 279,
-         "value" : 0.000      },
-      {
-        "valuetype" : 280,
-         "value" : 0.000      },
-      {
-        "valuetype" : 281,
-         "value" : 0.000      },
-      {
-        "valuetype" : 306,
-         "value" : "00000000"      },
-      {
-        "valuetype" : 307,
-         "value" : 0.000      },
-      {
-        "valuetype" : 308,
-         "value" : 0.000      },
-      {
-        "valuetype" : 309,
-         "value" : 0.000      },
-      {
-        "valuetype" : 310,
-         "value" : 0.000      },
-      {
-        "valuetype" : 311,
-         "value" : 0.000      },
-      {
-        "valuetype" : 312,
-         "value" : 0.000      },
-      {
-        "valuetype" : 313,
-         "value" : 0.000      },
-      {
-        "valuetype" : 314,
-         "value" : 0.000      },
-      {
-        "valuetype" : 315,
-         "value" : 0.000      },
-      {
-        "valuetype" : 316,
-         "value" : 0.000      },
-      {
-        "valuetype" : 317,
-         "value" : 0.000      },
-      {
-        "valuetype" : 318,
-         "value" : 0.000      },
-      {
-        "valuetype" : 319,
-         "value" : 0.000      },
-      {
-        "valuetype" : 320,
-         "value" : 0.000      },
-      {
-        "valuetype" : 321,
-         "value" : 0.000      },
-      {
-        "valuetype" : 322,
-         "value" : 0.000      },
-      {
-        "valuetype" : 323,
-         "value" : 0.000      },
-      {
-        "valuetype" : 324,
-         "value" : 0.000      },
-      {
-        "valuetype" : 325,
-         "value" : 0.000      },
-      {
-        "valuetype" : 326,
-         "value" : 0.000      },
-      {
-        "valuetype" : 327,
-         "value" : 0.000      },
-      {
-        "valuetype" : 328,
-         "value" : 0.000      },
-      {
-        "valuetype" : 329,
-         "value" : 0.000      },
-      {
-        "valuetype" : 330,
-         "value" : 0.000      },
-      {
-        "valuetype" : 331,
-         "value" : 0.000      },
-      {
-        "valuetype" : 332,
-         "value" : 0.000      },
-      {
-        "valuetype" : 333,
-         "value" : 0.000      },
-      {
-        "valuetype" : 334,
-         "value" : 0.000      },
-      {
-        "valuetype" : 335,
-         "value" : 0.000      },
-      {
-        "valuetype" : 336,
-         "value" : 0.000      },
-      {
-        "valuetype" : 337,
-         "value" : 0.000      },
-      {
-        "valuetype" : 338,
-         "value" : 0.000      },
-      {
-        "valuetype" : 339,
-         "value" : 0.000      },
-      {
-        "valuetype" : 340,
-         "value" : 0.000      },
-      {
-        "valuetype" : 341,
-         "value" : 0.000      },
-      {
-        "valuetype" : 342,
-         "value" : 0.000      },
-      {
-        "valuetype" : 343,
-         "value" : 0.000      },
-      {
-        "valuetype" : 344,
-         "value" : 0.000      },
-      {
-        "valuetype" : 345,
-         "value" : 0.000      },
-      {
-        "valuetype" : 346,
-         "value" : 0.000      },
-      {
-        "valuetype" : 347,
-         "value" : 0.000      },
-      {
-        "valuetype" : 348,
-         "value" : 0.000      },
-      {
-        "valuetype" : 349,
-         "value" : 0.000      },
-      {
-        "valuetype" : 350,
-         "value" : 0.000      },
-      {
-        "valuetype" : 351,
-         "value" : 0.000      },
-      {
-        "valuetype" : 352,
-         "value" : 0.000      },
-      {
-        "valuetype" : 353,
-         "value" : 0.000      },
-      {
-        "valuetype" : 354,
-         "value" : 0.000      },
-      {
-        "valuetype" : 355,
-         "value" : 0.000      },
-      {
-        "valuetype" : 356,
-         "value" : 0.000      },
-      {
-        "valuetype" : 357,
-         "value" : 0.000      },
-      {
-        "valuetype" : 358,
-         "value" : 0.000      },
-      {
-        "valuetype" : 359,
-         "value" : 0.000      },
-      {
-        "valuetype" : 360,
-         "value" : 0.000      },
-      {
-        "valuetype" : 361,
-         "value" : 0.000      },
-      {
-        "valuetype" : 362,
-         "value" : 0.000      },
-      {
-        "valuetype" : 363,
-         "value" : 0.000      },
-      {
-        "valuetype" : 364,
-         "value" : 0.000      },
-      {
-        "valuetype" : 365,
-         "value" : 0.000      },
-      {
-        "valuetype" : 366,
-         "value" : 0.000      },
-      {
-        "valuetype" : 367,
-         "value" : 0.000      },
-      {
-        "valuetype" : 368,
-         "value" : 0.000      },
-      {
-        "valuetype" : 369,
-         "value" : 0.000      },
-      {
-        "valuetype" : 370,
-         "value" : 0.000      },
-      {
-        "valuetype" : 371,
-         "value" : 0.000      },
-      {
-        "valuetype" : 372,
-         "value" : 0.000      },
-      {
-        "valuetype" : 373,
-         "value" : 0.000      },
-      {
-        "valuetype" : 374,
-         "value" : 0.000      },
-      {
-        "valuetype" : 375,
-         "value" : 0.000      },
-      {
-        "valuetype" : 376,
-         "value" : 0.000      },
-      {
-        "valuetype" : 377,
-         "value" : 0.000      },
-      {
-        "valuetype" : 378,
-         "value" : 0.000      },
-      {
-        "valuetype" : 379,
-         "value" : 0.000      },
-      {
-        "valuetype" : 380,
-         "value" : 0.000      },
-      {
-        "valuetype" : 381,
-         "value" : 0.000      },
-      {
-        "valuetype" : 382,
-         "value" : 0.000      },
-      {
-        "valuetype" : 383,
-         "value" : 0.000      },
-      {
-        "valuetype" : 384,
-         "value" : 0.000      },
-      {
-        "valuetype" : 385,
-         "value" : 0.000      },
-      {
-        "valuetype" : 386,
-         "value" : 0.000      },
-      {
-        "valuetype" : 387,
-         "value" : 0.000      },
-      {
-        "valuetype" : 388,
-         "value" : 0.000      },
-      {
-        "valuetype" : 389,
-         "value" : 0.000      },
-      {
-        "valuetype" : 390,
-         "value" : 0.000      },
-      {
-        "valuetype" : 391,
-         "value" : 0.000      },
-      {
-        "valuetype" : 392,
-         "value" : 0.000      },
-      {
-        "valuetype" : 393,
-         "value" : 0.000      },
-      {
-        "valuetype" : 394,
-         "value" : 0.000      },
-      {
-        "valuetype" : 395,
-         "value" : 0.000      },
-      {
-        "valuetype" : 396,
-         "value" : 0.000      },
-      {
-        "valuetype" : 397,
-         "value" : 0.000      },
-      {
-        "valuetype" : 398,
-         "value" : 0.000      },
-      {
-        "valuetype" : 399,
-         "value" : 0.000      },
-      {
-        "valuetype" : 400,
-         "value" : 0.000      },
-      {
-        "valuetype" : 401,
-         "value" : 0.000      },
-      {
-        "valuetype" : 402,
-         "value" : 0.000      },
-      {
-        "valuetype" : 403,
-         "value" : 0.000      },
-      {
-        "valuetype" : 404,
-         "value" : 0.000      },
-      {
-        "valuetype" : 405,
-         "value" : 0.000      },
-      {
-        "valuetype" : 406,
-         "value" : 0.000      },
-      {
-        "valuetype" : 407,
-         "value" : 0.000      },
-      {
-        "valuetype" : 408,
-         "value" : 0.000      },
-      {
-        "valuetype" : 409,
-         "value" : 0.000      },
-      {
-        "valuetype" : 410,
-         "value" : 0.000      },
-      {
-        "valuetype" : 411,
-         "value" : 0.000      },
-      {
-        "valuetype" : 412,
-         "value" : 0.000      },
-      {
-        "valuetype" : 413,
-         "value" : 0.000      },
-      {
-        "valuetype" : 414,
-         "value" : 0.000      },
-      {
-        "valuetype" : 415,
-         "value" : 0.000      },
-      {
-        "valuetype" : 416,
-         "value" : 0.000      },
-      {
-        "valuetype" : 417,
-         "value" : 0.000      },
-      {
-        "valuetype" : 418,
-         "value" : 0.000      },
-      {
-        "valuetype" : 419,
-         "value" : 0.000      },
-      {
-        "valuetype" : 420,
-         "value" : 0.000      },
-      {
-        "valuetype" : 421,
-         "value" : 0.000      },
-      {
-        "valuetype" : 422,
-         "value" : 0.000      },
-      {
-        "valuetype" : 423,
-         "value" : 0.000      },
-      {
-        "valuetype" : 424,
-         "value" : 0.000      },
-      {
-        "valuetype" : 425,
-         "value" : 0.000      },
-      {
-        "valuetype" : 426,
-         "value" : 0.000      },
-      {
-        "valuetype" : 427,
-         "value" : 0.000      },
-      {
-        "valuetype" : 428,
-         "value" : 0.000      },
-      {
-        "valuetype" : 429,
-         "value" : 0.000      },
-      {
-        "valuetype" : 430,
-         "value" : 0.000      },
-      {
-        "valuetype" : 431,
-         "value" : 0.000      },
-      {
-        "valuetype" : 432,
-         "value" : 0.000      },
-      {
-        "valuetype" : 433,
-         "value" : 0.000      },
-      {
-        "valuetype" : 434,
-         "value" : 0.000      },
-      {
-        "valuetype" : 435,
-         "value" : 0.000      },
-      {
-        "valuetype" : 436,
-         "value" : 0.000      },
-      {
-        "valuetype" : 437,
-         "value" : 0.000      },
-      {
-        "valuetype" : 438,
-         "value" : 0.000      },
-      {
-        "valuetype" : 439,
-         "value" : 0.000      },
-      {
-        "valuetype" : 440,
-         "value" : 0.000      },
-      {
-        "valuetype" : 441,
-         "value" : 0.000      },
-      {
-        "valuetype" : 442,
-         "value" : 0.000      },
-      {
-        "valuetype" : 443,
-         "value" : 0.000      },
-      {
-        "valuetype" : 444,
-         "value" : 0.000      },
-      {
-        "valuetype" : 445,
-         "value" : 0.000      },
-      {
-        "valuetype" : 446,
-         "value" : 0.000      },
-      {
-        "valuetype" : 447,
-         "value" : 0.000      },
-      {
-        "valuetype" : 448,
-         "value" : 0.000      },
-      {
-        "valuetype" : 449,
-         "value" : 0.000      },
-      {
-        "valuetype" : 450,
-         "value" : 0.000      },
-      {
-        "valuetype" : 451,
-         "value" : 0.000      },
-      {
-        "valuetype" : 452,
-         "value" : 0.000      },
-      {
-        "valuetype" : 453,
-         "value" : 0.000      },
-      {
-        "valuetype" : 454,
-         "value" : 0.000      },
-      {
-        "valuetype" : 455,
-         "value" : 0.000      },
-      {
-        "valuetype" : 456,
-         "value" : 0.000      },
-      {
-        "valuetype" : 457,
-         "value" : 0.000      },
-      {
-        "valuetype" : 458,
-         "value" : 0.000      },
-      {
-        "valuetype" : 459,
-         "value" : 0.000      },
-      {
-        "valuetype" : 460,
-         "value" : 0.000      },
-      {
-        "valuetype" : 461,
-         "value" : 0.000      },
-      {
-        "valuetype" : 462,
-         "value" : 0.000      },
-      {
-        "valuetype" : 463,
-         "value" : 0.000      },
-      {
-        "valuetype" : 464,
-         "value" : 0.000      },
-      {
-        "valuetype" : 465,
-         "value" : 0.000      },
-      {
-        "valuetype" : 466,
-         "value" : 0.000      },
-      {
-        "valuetype" : 467,
-         "value" : 0.000      },
-      {
-        "valuetype" : 468,
-         "value" : 0.000      },
-      {
-        "valuetype" : 469,
-         "value" : 0.000      },
-      {
-        "valuetype" : 470,
-         "value" : 0.000      },
-      {
-        "valuetype" : 471,
-         "value" : 0.000      },
-      {
-        "valuetype" : 472,
-         "value" : 0.000      },
-      {
-        "valuetype" : 473,
-         "value" : 0.000      },
-      {
-        "valuetype" : 474,
-         "value" : 0.000      },
-      {
-        "valuetype" : 475,
-         "value" : 0.000      },
-      {
-        "valuetype" : 476,
-         "value" : 0.000      },
-      {
-        "valuetype" : 477,
-         "value" : 0.000      },
-      {
-        "valuetype" : 478,
-         "value" : 0.000      },
-      {
-        "valuetype" : 479,
-         "value" : 0.000      },
-      {
-        "valuetype" : 480,
-         "value" : 0.000      },
-      {
-        "valuetype" : 481,
-         "value" : 0.000      },
-      {
-        "valuetype" : 482,
-         "value" : 0.000      },
-      {
-        "valuetype" : 483,
-         "value" : 0.000      },
-      {
-        "valuetype" : 484,
-         "value" : 0.000      },
-      {
-        "valuetype" : 485,
-         "value" : 0.000      },
-      {
-        "valuetype" : 486,
-         "value" : 0.000      },
-      {
-        "valuetype" : 487,
-         "value" : 0.000      },
-      {
-        "valuetype" : 488,
-         "value" : 0.000      },
-      {
-        "valuetype" : 489,
-         "value" : 0.000      },
-      {
-        "valuetype" : 490,
-         "value" : 0.000      },
-      {
-        "valuetype" : 491,
-         "value" : 0.000      },
-      {
-        "valuetype" : 492,
-         "value" : 0.000      },
-      {
-        "valuetype" : 493,
-         "value" : 0.000      },
-      {
-        "valuetype" : 494,
-         "value" : 0.000      },
-      {
-        "valuetype" : 495,
-         "value" : 0.000      },
-      {
-        "valuetype" : 496,
-         "value" : 0.000      },
-      {
-        "valuetype" : 497,
-         "value" : 0.000      },
-      {
-        "valuetype" : 498,
-         "value" : 0.000      },
-      {
-        "valuetype" : 499,
-         "value" : 0.000      },
-      {
-        "valuetype" : 500,
-         "value" : 0.000      },
-      {
-        "valuetype" : 501,
-         "value" : 0.000      },
-      {
-        "valuetype" : 502,
-         "value" : 0.000      },
-      {
-        "valuetype" : 503,
-         "value" : 0.000      },
-      {
-        "valuetype" : 504,
-         "value" : 0.000      },
-      {
-        "valuetype" : 505,
-         "value" : 0.000      },
-      {
-        "valuetype" : 506,
-         "value" : 0.000      }
+         "value" : 3211.500      }
     ]
   },
   {
@@ -3311,7 +1851,7 @@
          "value" : 100.000      },
       {
         "valuetype" : 256,
-         "value" : 77.000      },
+         "value" : 75.000      },
       {
         "valuetype" : 257,
          "value" : 76.000      },
