@@ -5,15 +5,13 @@ CC_FLAGS		= -g -c -Wall -Ilib/include  -DDEVELOPMENT
 
 LINK_FLAGS		= -g -Llib -ldl -lncurses
 
-TARGET			= cansimws
+TARGET1			= cansimws
 
-TARGET2			= CANDefsToJSON
+TARGET2			= cansimwsclient
 
-TARGET3			= cansimwsclient
+ALLTARGETS		= $(TARGET1) $(TARGET2)
 
-ALLTARGETS		= $(TARGET) $(TARGET2) $(TARGET3)
-
-OBJS			= $(sort 				\
+OBJS1			= $(sort 				\
 			    AllCanDefinitions.o			\
 			    Bay.o				\
 			    BayType.o				\
@@ -53,15 +51,6 @@ OBJS			= $(sort 				\
 			   )
 
 OBJS2			= $(sort				\
-			    CANDefsToJSON.o			\
-			    String.o				\
-			    MemoryManager.o			\
-			    FileUtils.o				\
-			    ThreadSafePrint.o			\
-			    AllCanDefinitions.o			\
-			   )
-
-OBJS3			= $(sort				\
 			    cansimwsclient.o			\
 			    String.o				\
 			    MemoryManager.o			\
@@ -71,25 +60,21 @@ OBJS3			= $(sort				\
 			    linenoise.o				\
 			   )
 
-LIBS			= -ljson -lmongoose -lm -lpthread -lrt
-LIBS3			= -lpthread -lmongoose
+LIBS1			= -ljson -lmongoose -lm -lpthread -lrt
+LIBS2			= -lpthread -lmongoose
 
 .PHONY			: all clean veryclean
 
 all			: $(ALLTARGETS)
 
-$(TARGET)		: $(OBJS)
+$(TARGET1)		: $(OBJS1)
 			  cd lib && make
-			  @echo [LD] $(TARGET)
-			  @$(LINK) $(LINK_FLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+			  @echo [LD] $(TARGET1)
+			  @$(LINK) $(LINK_FLAGS) -o $(TARGET1) $(OBJS1) $(LIBS1)
 
 $(TARGET2)		: $(OBJS2)
 			  @echo [LD] $(TARGET2)
-			  @$(LINK) $(LINK_FLAGS) -o $(TARGET2) $(OBJS2) $(LIBS)
-
-$(TARGET3)		: $(OBJS3)
-			  @echo [LD] $(TARGET3)
-			  @$(LINK) $(LINK_FLAGS) -o $(TARGET3) $(OBJS3) $(LIBS3)
+			  @$(LINK) $(LINK_FLAGS) -o $(TARGET2) $(OBJS2) $(LIBS2)
 
 %.o			: %.c
 			  @echo [CC] $@
