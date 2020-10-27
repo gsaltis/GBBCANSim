@@ -2,7 +2,7 @@
  FILE NAME      : UserInputHandling.c
  DATE           : October 01 2018
  PROJECT        : 
- COPYRIGHT      : Copyright (C) 2018 by Gregory R Saltis
+ COPYRIGHT      : Copyright (C) 2018 by Vertiv Company
 ******************************************************************************/
 
 /*****************************************************************************!
