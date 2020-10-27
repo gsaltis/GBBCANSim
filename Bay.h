@@ -223,14 +223,6 @@ BayRegValuesToJSONString
 (Bay* InBay, bool InSavePanelRegs);
 
 void
-BaysSaveValuesSQL
-();
-
-void
-BaySaveValuesSQL
-(Bay* InBay);
-
-void
 BayAddRectifier
 (Bay* InBay, Rectifier* InRectifier);
 

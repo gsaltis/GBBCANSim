@@ -15,7 +15,6 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <string.h>
-#include <sqlite3.h>
 
 /*****************************************************************************!
  * Local Headers
@@ -114,17 +113,5 @@ PanelRegValuesToJSONString
 CanReg*
 PanelFindCANRegister
 (Panel* InPanel, int InValueType);
-
-void
-PanelSaveCANRegister
-(Panel* InPanel, int InValueType, ufloatbit32_t* InValue, sqlite3* InDatabase);
-
-void
-PanelSaveValuesSQL
-(Panel* InPanel);
-
-void
-PanelSaveRegisterValueSQL
-(Panel* InPanel, CanReg* InReg);
 
 #endif /* _panel_h_*/

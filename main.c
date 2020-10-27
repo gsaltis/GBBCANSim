@@ -14,7 +14,6 @@
 #include <stdbool.h>
 #include <mongoose.h>
 #include <pthread.h>
-#include <sqlite3.h>
 
 /*******************************************************************************!
  * Local Headers
@@ -26,7 +25,6 @@
 #include "UserInputHandling.h"
 #include "DirManagement.h"
 #include "DeviceDef.h"
-#include "sqlite3.h"
 #include "HTTPServerThread.h"
 #include "WebSocketIF.h"
 #include "Bay.h"
@@ -57,14 +55,9 @@ char mainDeviceDefsFileName[FILENAME_MAX+1];
 DeviceDefList* 
 mainDeviceDefs;
 
-sqlite3* mainDeviceDB;
-
 char mainDeviceDataFileName[FILENAME_MAX+1];
 
 bool MainVerbose = true;
-
-sqlite3*
-MainDataBase;
 
 struct mg_serve_http_opts
 s_http_server_opts;

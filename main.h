@@ -11,7 +11,6 @@
  *******************************************************************************/
 #include <stdbool.h>
 #include <mongoose.h>
-#include <sqlite3.h>
 
 /*******************************************************************************
  * Local Headers
@@ -45,9 +44,6 @@ mainWebConnections;
 
 extern bool
 MainMonitorWebRequest;
-
-extern sqlite3*
-MainDataBase;
 
 extern bool
 MainSupportRectifiers;
