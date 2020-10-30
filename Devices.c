@@ -900,6 +900,7 @@ void* HandleCanTraffic()
       sleep(1);
     }
   }
+  PortOpened = true;
   while (true)
   {
     uint32_t				id;

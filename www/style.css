@@ -5,7 +5,7 @@
   --BayTop				: 20px;
   --HeaderHeight			: 24px;
   --RegisterLineHeight			: 19px;
-  --CANMessageLogWidth			: 350px;
+  --CANMessageLogWidth          : -5px;
   --PanelHeaderHeight			: 17px;
 }
   

@@ -22,8 +22,15 @@
 #include "WebConnection.h"
 #include "String.h"
 
+/*****************************************************************************!
+ * Exported Macros
+ *****************************************************************************/
+#define PROGRAM_NAME				"cansimws"
+#define VERSION_MAJOR				1
+#define VERSION_MINOR				0
+
 /*******************************************************************************
- * Local Data
+ * Exported Data
  *******************************************************************************/
 extern DeviceDefList* mainDeviceDefs;
 extern bool MainVerbose;
