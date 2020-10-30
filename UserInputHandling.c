@@ -992,11 +992,69 @@ bool HandleShow(char* Command, char InParams[NUMPARAMS][COMMANDSIZE])
     if ( bay ) {
       BayDisplay(bay, 0, true);
     } else {
-      printf_safe("Could not a bay with the index %d\n", atoi(InParams[1]));
+      printf_safe("Could not find a bay with the index %d\n", atoi(InParams[1]));
       return true;
     }
     return true;
   }
+
+  if ( StringEqualNoCase(InParams[0], "panel") ) {
+	int									bayIndex;
+    Bay*								bay;
+	Panel*								panel;
+    
+	bayIndex = atoi(InParams[1]);
+	bay = FindBayByIndex(bayIndex);
+	if ( NULL == bay ) {
+	  printf_safe("Could not find a bay with the index %s\n", InParams[1]);
+	  return true;
+	}
+    panel = BayFindPanelByIndex(bay, atoi(InParams[2]));
+	if ( NULL == panel ) {
+	  printf_safe("Could not find a panel in bay %s with the index %s\n", InParams[1], InParams[2]);
+	  return true;
+	}
+	PanelDisplay(panel, 2, true);
+	return true;
+  }
+
+  if ( StringEqualNoCase(InParams[0], "register") ) {
+	int									bayIndex, panelIndex, registerValue;
+    Bay*								bay;
+	Panel*								panel;
+    char								s[16];
+    CanReg*								canreg;
+
+	bayIndex = atoi(InParams[1]);
+	panelIndex = atoi(InParams[2]);
+	registerValue = atoi(InParams[3]);
+
+	bay = FindBayByIndex(bayIndex);
+	if ( NULL == bay ) {
+	  printf_safe("Could not find a bay with the index %s\n", InParams[1]);
+	  return true;
+	}
+    panel = BayFindPanelByIndex(bay, panelIndex);
+	if ( NULL == panel ) {
+	  printf_safe("Could not find a panel in bay %s with the index %s\n", InParams[1], InParams[2]);
+	  return true;
+	}
+    if ( panel->smduh2 == NULL ) {
+	  printf_safe("Panel %d in Bay %d has no registers\n", panelIndex, bayIndex);
+	  return true;
+	}
+	canreg = DeviceFindRegisterByValueType(panel->smduh2, registerValue);
+
+    if ( NULL == canreg ) {
+  	  printf_safe("Panel %d in Bay %d has no register with value type %d\n", panelIndex, bayIndex, registerValue);
+	  return true;
+	}
+
+    printf_safe("Bay %d Panel %d Register : %s %s\n", bayIndex, panelIndex, canreg->registerDef->name, CanRegGetFromString(s, canreg));		
+	return true;
+  }
+
+  //!
   if (strcasecmp(InParams[0], "DEVICE") == 0) {
     if (strlen(InParams[1]) == 0)  return false; // device name
     if (strlen(InParams[2]) == 0)  return false; // device number
@@ -1453,82 +1511,53 @@ bool HandleSetInteractive()
 bool HandleHelp()
 {
   printf_safe("\n\nCommands: \n\n");
-  printf_safe("%sADD DEVICE <device-name> <quantity>                             %sAdd a device to the simulator\n", ColorRed, ColorReset);
-  printf_safe("%sADD BAY <bayindex>                                              %sAdd a bay to a system\n", ColorRed, ColorReset);
-  printf_safe("%sADD PANEL <bayindex> [all | <panelindex>]                       %sAdd a panel to a bay\n", ColorRed, ColorReset);
+  printf_safe("%sADD DEVICE <device-name> <quantity>                             %sAdd a device to the simulator\n", ColorGreen, ColorReset);
+  printf_safe("%sADD BAY <bayindex>                                              %sAdd a bay to a system\n", ColorGreen, ColorReset);
+  printf_safe("%sADD PANEL <bayindex> [all | <panelindex>]                       %sAdd a panel to a bay\n", ColorGreen, ColorReset);
   if ( MainSupportRectifiers ) {
-    printf_safe("%sADD REC                                                         %sAdd a rectifier\n", ColorRed, ColorReset);
+    printf_safe("%sADD REC                                                         %sAdd a rectifier\n", ColorGreen, ColorReset);
   }
   printf_safe("\n");
-  printf_safe("%sREMOVE BAY <bayindex>                                           %sRemove a bay from a system\n", ColorRed, ColorReset);
-  printf_safe("%sREMOVE PANEL <bayindex> <panelindex>                            %sRemove a panel from a bay\n", ColorRed, ColorReset);
+  printf_safe("%sREMOVE BAY <bayindex>                                           %sRemove a bay from a system\n", ColorGreen, ColorReset);
+  printf_safe("%sREMOVE PANEL <bayindex> <panelindex>                            %sRemove a panel from a bay\n", ColorGreen, ColorReset);
   printf_safe("\n");
-  printf_safe("%sLIST DEVICES                        %s to list devices\n", ColorRed, ColorReset);
-  printf_safe("%sLIST DEVICETYPES <device-name>      %s to list all available devices types ('type' display all information for a specific type\n", ColorRed, ColorReset);
-  printf_safe("%sLIST REGISTERS <device-name>        %s to list all registers ('type' for registers for specific type\n", ColorRed, ColorReset);
+  printf_safe("%sLIST DEVICES                                                    %sto list devices\n", ColorGreen, ColorReset);
+  printf_safe("%sLIST DEVICETYPES <device-name>                                  %sto list all available devices types ('type' display all information for a specific type\n", ColorGreen, ColorReset);
+  printf_safe("%sLIST REGISTERS <device-name>                                    %sto list all registers ('type' for registers for specific type\n", ColorGreen, ColorReset);
   printf_safe("\n");
-  printf_safe("%sCLEAR DEVICES                              %s to clear all regsiters in all devices\n", ColorRed, ColorReset);
-  printf_safe("%sCLEAR DEVICE <device-name> <device-number> %s to clear all registers in a specific device\n", ColorRed, ColorReset);
+  printf_safe("%sCLEAR DEVICES                                                   %sto clear all regsiters in all devices\n", ColorGreen, ColorReset);
+  printf_safe("%sCLEAR DEVICE <device-name> <device-number>                      %sto clear all registers in a specific device\n", ColorGreen, ColorReset);
   printf_safe("\n");
-  printf_safe("%sSET  %s                                                                          to get prompted for the input to set a register value in a device \n", ColorRed, ColorReset);
-  printf_safe("%sSET <device-name> <device-number> <group-name> <abbreviation> <new-value> %s     to set a register value in a device \n", ColorRed, ColorReset);
-  printf_safe("%sSETN bayindex panelindex registernumber{:registernumber} value  %s             to set a register value in a device using register number \n", ColorRed, ColorReset);
-  printf_safe("%sINCREMENT <device-name> <device-number> <group-name> <new-value> <increment>  %s to set a series of registers, increment can be 0 \n", ColorRed, ColorReset);
+  printf_safe("%sSET                                                             %sto get prompted for the input to set a register value in a device \n", ColorGreen, ColorReset);
+  printf_safe("%sSET <device-name> <device-number> <group-name> <abbreviation> <new-value> %s    to set a register value in a device \n", ColorGreen, ColorReset);
+  printf_safe("%sSETN bayindex panelindex registernumber{:registernumber} value  %s            to set a register value in a device using register number \n", ColorGreen, ColorReset);
+  printf_safe("%sINCREMENT <device-name> <device-number> <group-name> <new-value> <increment>  %sto set a series of registers, increment can be 0 \n", ColorGreen, ColorReset);
   printf_safe("\n");
-  printf_safe("%sSHOW DEVICE <device-name> <device-number>  %s            to show the information for a device\n", ColorRed, ColorReset);
-  printf_safe("%sSHOW GROUP <device-name> <device-number> <group-name> %s to show the information for a group\n", ColorRed, ColorReset);
-  printf_safe("%sSHOW ALL  %s                                             to show all registers for all devices\n", ColorRed, ColorReset);
-  printf_safe("%sSHOW MESSAGES  %s                                        to show all messages for all devices\n", ColorRed, ColorReset);
-  printf_safe("%sSHOW BAY <bay-index>	%s				  to show the information for a Bay\n", ColorRed, ColorReset);
-  printf_safe("%sSHOW CAN%s                                               to show the CAN Interface status\n", ColorRed, ColorReset);
+  printf_safe("%sSHOW DEVICE <device-name> <device-number>                       %sto show the information for a device\n", ColorGreen, ColorReset);
+  printf_safe("%sSHOW GROUP <device-name> <device-number> <group-name>           %sto show the information for a group\n", ColorGreen, ColorReset);
+  printf_safe("%sSHOW ALL                                                        %sto show all registers for all devices\n", ColorGreen, ColorReset);
+  printf_safe("%sSHOW MESSAGES                                                   %sto show all messages for all devices\n", ColorGreen, ColorReset);
+  printf_safe("%sSHOW BAY <bay-index>                                            %sto show the information for a Bay\n", ColorGreen, ColorReset);
+  printf_safe("%sSHOW CAN                                                        %sto show the CAN Interface status\n", ColorGreen, ColorReset);
   printf_safe("\n");
-  printf_safe("%sOUT <filespec>  %s to monitor CAN traffic to an output file \n", ColorRed, ColorReset);
-  printf_safe("%sWATCH  %s          to watch for REGISTER ADDRESS PROTOCOL or OFF in incoming/outgoing CAN messages\n", ColorRed, ColorReset);
-  printf_safe("%sPING  %s           to send message to SMDUEwa\n", ColorRed, ColorReset);
+  printf_safe("%sOUT <filespec>                                                  %sto monitor CAN traffic to an output file \n", ColorGreen, ColorReset);
+  printf_safe("%sWATCH                                                           %sto watch for REGISTER ADDRESS PROTOCOL or OFF in incoming/outgoing CAN messages\n", ColorGreen, ColorReset);
+  printf_safe("%sPING                                                            %sto send message to SMDUEwa\n", ColorGreen, ColorReset);
   printf_safe("\n");
-  printf_safe("%s@<filename>  %s    to execute a script file\n", ColorRed, ColorReset);
-  printf_safe("%sDELAY <seconds> %s to delay for a number of seconds \n", ColorRed, ColorReset);
-  printf_safe("%sPAUSE <string>  %s to wait for user input \n", ColorRed, ColorReset);
+  printf_safe("%s@<filename>                                                     %sto execute a script file\n", ColorGreen, ColorReset);
+  printf_safe("%sDELAY <seconds>                                                 %sto delay for a number of seconds \n", ColorGreen, ColorReset);
+  printf_safe("%sPAUSE <string>                                                  %sto wait for user input \n", ColorGreen, ColorReset);
   printf_safe("\n");
-  printf_safe("%sBAYS            						%s List Bays\n", ColorRed, ColorReset);
-  printf_safe("%sPANELS          						%s List Panels\n", ColorRed, ColorReset);
+  printf_safe("%sBAYS                                                            %sList Bays\n", ColorGreen, ColorReset);
+  printf_safe("%sPANELS                                                          %sList Panels\n", ColorGreen, ColorReset);
   printf_safe("\n");
-  printf_safe("%sCLOSE <index>   %s Close a WWW connection\n", ColorRed, ColorReset);
-  printf_safe("%sCONNECTIONS     %s List WWW Connections\n", ColorRed, ColorReset);
+  printf_safe("%sCLOSE <index>                                                   %sClose a WWW connection\n", ColorGreen, ColorReset);
+  printf_safe("%sCONNECTIONS                                                     %sList WWW Connections\n", ColorGreen, ColorReset);
   printf_safe("\n");
-  printf_safe("%sOPTION SET {MONITORWEB} {ON|OFF} %s Monitor WEB Input requests\n", ColorRed, ColorReset);
-  printf_safe("%s           {MONITORCAN} {ON|OFF} %s Monitor CAN Input requests\n", ColorRed, ColorReset);
-  printf_safe("%sSTATUS%s\n", ColorRed, ColorReset);
-  printf_safe("%sQUIT%s             to exit\n\n\n", ColorRed, ColorReset);
-        return true;
-}
-
-bool HandleHelp2()
-{
-        printf_safe("\n\nCommands: \n\n");
-        printf_safe("%sADD DEVICE <device-name> <quantity> %s to add a device to the simulator\n", ColorRed, ColorWhite);
-        printf_safe("%sLIST DEVICES                        %s to list devices\n", ColorRed, ColorWhite);
-        printf_safe("\n");
-        printf_safe("%sSET  %s                                                                          to get prompted for the input to set a register value in a device \n", ColorRed, ColorWhite);
-        printf_safe("%sSET <device-name> <device-number> <group-name> <abbreviation> <new-value> %s     to set a register value in a device \n", ColorRed, ColorWhite);
-        printf_safe("%sSETN <device-name> <device-number> <register-number> <new-value>  %s             to set a register value in a device using register number \n", ColorRed, ColorWhite);
-        printf_safe("%sINCREMENT <device-name> <device-number> <group-name> <new-value> <increment>  %s to set a series of registers, increment can be 0 \n", ColorRed, ColorWhite);
-        printf_safe("\n");
-        printf_safe("%sSHOW DEVICE <device-name> <device-number>  %s            to show the information for a device\n", ColorRed, ColorWhite);
-        printf_safe("%sSHOW GROUP <device-name> <device-number> <group-name> %s to show the information for a group\n", ColorRed, ColorWhite);
-        printf_safe("%sSHOW ALL  %s                                             to show all registers for all devices\n", ColorRed, ColorWhite);
-        printf_safe("%sSHOW MESSAGES  %s                                        to show all messages for all devices\n", ColorRed, ColorWhite);
-        printf_safe("\n");
-        printf_safe("%sOUT <filespec>  %s to monitor CAN traffic to an output file \n", ColorRed, ColorWhite);
-        printf_safe("%sMONITOR  %s        to turn on CAN monitoring \n", ColorRed, ColorWhite);
-        printf_safe("%sWATCH  %s          to watch for REGISTER ADDRESS PROTOCOL or OFF in incoming/outgoing CAN messages\n", ColorRed, ColorWhite);
-        printf_safe("%sPING  %s           to send message to SMDUEwa\n", ColorRed, ColorWhite);
-        printf_safe("\n");
-        printf_safe("%s@<filename>  %s    to execute a script file\n", ColorRed, ColorWhite);
-        printf_safe("%sDELAY <seconds> %s to delay for a number of seconds \n", ColorRed, ColorWhite);
-        printf_safe("%sPAUSE <string>  %s to wait for user input \n", ColorRed, ColorWhite);
-        printf_safe("\n");
-        printf_safe("%sQUIT%s             to exit\n\n\n", ColorRed, ColorWhite);
+  printf_safe("%sOPTION SET {MONITORWEB} {ON|OFF}                                %sMonitor WEB Input requests\n", ColorGreen, ColorReset);
+  printf_safe("%s          {MONITORCAN} {ON|OFF}                                 %sMonitor CAN Input requests\n", ColorGreen, ColorReset);
+  printf_safe("%sSTATUS%s\n", ColorGreen, ColorReset);
+  printf_safe("%sQUIT                                                            %sto exit\n\n\n", ColorGreen, ColorReset);
         return true;
 }
 
@@ -2193,7 +2222,14 @@ HandleOptionCommand
 {
   string				subcommand;
   subcommand = Params[0];
- 
+
+  if ( subcommand == NULL || subcommand[0] == 0x00 ) {
+    printf("%sOptions%s\n", ColorYellow, ColorReset);
+    printf("%smonitorweb%s : %s%s%s\n", ColorYellow, ColorReset, ColorGreen, MainMonitorWebRequest ? "on" : "off",  ColorReset);
+    printf("%smonitorcan%s : %s%s%s\n", ColorYellow, ColorReset, ColorGreen, CANMonitorInput ? "on" : "off",  ColorReset);
+	return true;
+  }
+
   if ( StringEqualNoCase(subcommand, "SET") ) {
     return HandleOptionSetCommand(InCommand, Params);
   }  
@@ -2231,9 +2267,11 @@ HandleOptionSetMonitorWebCommand
   subcommand = Params[2];
   if ( StringEqualNoCase(subcommand, "ON") ) {
     MainMonitorWebRequest = true;
+	printf("Option %smonitorweb%s is %son%s\n", ColorYellow, ColorReset, ColorGreen, ColorReset);
     return true;
   } else if ( StringEqualNoCase(subcommand, "OFF") ) {
     MainMonitorWebRequest = false;
+	printf("Option %smonitorweb%s is %soff%s\n", ColorYellow, ColorReset, ColorGreen, ColorReset);
     return true;
   }
   return false;
@@ -2251,9 +2289,11 @@ HandleOptionSetMonitorCANCommand
   subcommand = Params[2];
   if ( StringEqualNoCase(subcommand, "ON") ) {
     CANMonitorInput = true;
+	printf("Option %smonitorcan%s is %son%s\n", ColorYellow, ColorReset, ColorGreen, ColorReset);
     return true;
   } else if ( StringEqualNoCase(subcommand, "OFF") ) {
     CANMonitorInput = false;
+	printf("Option %smonitorcan%s is %soff%s\n", ColorYellow, ColorReset, ColorGreen, ColorReset);
     return true;
   }
   return false;

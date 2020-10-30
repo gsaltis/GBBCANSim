@@ -9,6 +9,7 @@ BaysPopulateWindow
   var					panel, panelType, emptyPanelName, emptyPanel;
   var					parentElement;
 
+  BaysClearDisplayArea();
   for ( i = 0 ; i < MainBays.length; i++) {
     baytype = BayTypeFindByName(MainBays[i].type);
     if ( null == baytype ) {
@@ -34,6 +35,7 @@ BaysPopulateWindow
       parentElement.removeChild(emptyPanel);
     } 
   }
+  BayTypeListClear();
   if ( MainBays.length > 0 ) {
     BayTypesListPopulate(MainBays[0].type);
   }

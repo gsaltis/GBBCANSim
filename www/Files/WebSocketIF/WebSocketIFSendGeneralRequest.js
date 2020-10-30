@@ -3,8 +3,8 @@
  *****************************************************************************/
 function 
 WebSocketIFSendGeneralRequest(InRequest) {
-  console.log(InRequest);
   if ( WebSocketIFConnection ) {
+	console.log(InRequest);
     WebSocketIFConnection.send(JSON.stringify(InRequest));
   }
 }

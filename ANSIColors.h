@@ -29,18 +29,18 @@
 #define ColorBoldGreen                  "\e[1;32m"
 #define ColorGreen                      "\e[32m"
 #define ColorBrightGreen                "\e[32;1m"
-
+#define ColorBrightCyan					"\e[36;1m"
 #define ColorYellow                     "\e[33m"
 #define ColorBoldYellow                 "\e[1;33m"
 
 #define ColorWhite                      "\e[0;37m"
 
-#define ColorBlue			"\e[0;34m"
-#define ColorBoldBlue			"\e[1;34m"
+#define ColorBlue						"\e[0;34m"
+#define ColorBoldBlue					"\e[1;34m"
 
 #define ColorReset                      "\e[0;0m"
 
-#define HeadingStyle                  "\e[1;7;37m"
+#define HeadingStyle                  	"\e[1;7;37m"
 
 /*****************************************************************************!
  * Exported Data

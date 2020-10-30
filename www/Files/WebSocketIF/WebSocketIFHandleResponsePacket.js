@@ -28,6 +28,8 @@ WebSocketIFHandleResponsePacket(InPacket)
     WebSocketIFHandlePanelRegValues(InPacket.body.panelregvalues);
   } else if ( InPacket.type == "resremovepanel" ) {
     WebSocketIFHandleRemovePanelResponse(InPacket.responseid, InPacket.responsemessage, InPacket.body.bayindex, InPacket.body.panelindex);
+  } else if ( InPacket.type == "resaddbay") {
+	WebSocketIFSendSimpleRequest("getbays");
   }
 }
 

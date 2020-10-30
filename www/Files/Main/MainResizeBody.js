@@ -13,8 +13,6 @@ MainResizeBody
   clientWidth = mainArea.clientWidth;
   clientHeight = mainArea.clientHeight;
 
-  console.log(clientWidth, clientHeight);
-
   for (i = 0; i < mainArea.children.length; i++) {
     bay = mainArea.children[i];
     BayResize(bay);

@@ -1256,8 +1256,9 @@ HandleAddPanelRequest
   }
   BayAddPanel(bay, panel);
   sprintf(message, "Bay %d Panel %d created", bayindex, panelindex);
-  WebSocketFrameResponseSend(InConnection, "resaddbay", bodyString, packetid, 0, message);
+  WebSocketFrameResponseSend(InConnection, "resaddpanel", bodyString, packetid, 0, message);
   BaysSave(NULL);
+  BaysSaveValues(NULL);
 }
 
 /*****************************************************************************!

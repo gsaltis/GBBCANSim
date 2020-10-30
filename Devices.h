@@ -116,6 +116,10 @@ CanReg*
 DeviceFindRegister
 (CanDevice* device, char* AbbrevName, char* Group);
 
+CanReg*
+DeviceFindRegisterByValueType
+(CanDevice* device, int InValueType);
+
 /*******************************************************************************
  * Devices API
  *******************************************************************************/

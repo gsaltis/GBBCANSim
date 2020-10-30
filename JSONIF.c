@@ -165,6 +165,34 @@ JSONIFGetInt
 }
 
 /*****************************************************************************!
+ * Function : JSONIFGetValue
+ *****************************************************************************/
+json_value*
+JSONIFGetValue
+(json_value* InValue, string InName)
+{
+  int                                   i;
+  if ( NULL == InValue || NULL == InName ) {
+    return NULL;
+  }
+  if ( InValue->type != json_object ) {
+    return NULL;
+  }
+
+  for ( i = 0 ; i < InValue->u.object.length ; i++ ) {
+    json_object_entry*                  entry;
+
+    entry = &(InValue->u.object.values[i]);
+    if ( ! StringEqual(entry->name, InName) ) {
+      continue;
+    }
+    return entry->value;
+  }
+  return NULL;
+}
+
+
+/*****************************************************************************!
  * Function : JSONIFGetObject
  *****************************************************************************/
 json_value*

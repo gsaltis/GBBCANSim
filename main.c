@@ -43,7 +43,8 @@
  *****************************************************************************/
 #define PROGRAM_NAME				"cansimws"
 #define MAIN_DATABASE_NAME			"GBBCANSim.db"
-
+#define VERSION_MAJOR				1
+#define VERSION_MINOR				0
 /*******************************************************************************!
  * Local Data
  *******************************************************************************/
@@ -217,7 +218,7 @@ SystemInitialize
     FuseBreakerTypesRead();
     PanelTypesRead();
     BayTypesRead();
-    printf_safe("CanSim V0.6 \n");
+    printf_safe("%s V%d.%d \n", PROGRAM_NAME, VERSION_MAJOR, VERSION_MINOR);
     GetDeviceDefsFileName(mainDeviceDefsFileName, FILENAME_MAX);
 
     mainDeviceDefs = NULL;
@@ -531,14 +532,13 @@ MainDisplayHelp
 
   n = printf("%s options\n", PROGRAM_NAME);
   printf("options\n");
-  printf("%*s -b  --baysfile      : Specify the bays information file (default %s)\n", n, " ", MainBaysFilenameDefault);
-  printf("%*s -d  --devicedef     : Specify the device definition file (default %s)\n", n, " ", MainDeviceDefsFilenameDefault);
-  printf("%*s -h  --help          : Display this information\n", n, " ");
-  printf("%*s -H  --httpport      : Define HTTP listening port\n", n, " ");
-  printf("%*s -mc --monitorcan    : Monitor CAN requests\n", n, " ");
-  printf("%*s -mw --monitorweb    : Monitor web page requests\n", n, " ");
-  printf("%*s -r  --rectifiers    : Support the processing of rectifiers\n", n, " ");
-  printf("%*s -w  --webdir        : Specifiy the base www directory\n", n, " ");
-  printf("%*s -W  --websocketport : Define Web Socket listening port\n", n, " ");
+  printf("%*s%s -b  --baysfile      %s: Specify the bays information file %s(default %s)%s\n", n, " ", ColorGreen, ColorBrightCyan, ColorYellow, MainBaysFilenameDefault, ColorReset);
+  printf("%*s%s -d  --devicedef     %s: Specify the device definition file %s(default %s)%s\n", n, " ", ColorGreen, ColorBrightCyan, ColorYellow, MainDeviceDefsFilenameDefault, ColorReset);
+  printf("%*s%s -h  --help          %s: Display this information%s\n", n, " ", ColorGreen, ColorBrightCyan, ColorReset);
+  printf("%*s%s -H  --httpport      %s: Specify HTTP listening port %s(default %s)%s\n", n, " ", ColorGreen, ColorBrightCyan, ColorYellow, MainDefaultHTTPPort, ColorReset);
+  printf("%*s%s -mc --monitorcan    %s: Monitor CAN requests%s\n", n, " ", ColorGreen, ColorBrightCyan, ColorReset);
+  printf("%*s%s -mw --monitorweb    %s: Monitor web page requests%s\n", n, " ", ColorGreen, ColorBrightCyan, ColorReset);
+  printf("%*s%s -w  --webdir        %s: Specify the base www directory %s(default %s)%s\n", n, " ", ColorGreen, ColorBrightCyan, ColorYellow, MainDefaultWebDirectory, ColorReset);
+  printf("%*s%s -W  --websocketport %s: Specify Web Socket listening port %s(default %s)%s\n", n, " ", ColorGreen, ColorBrightCyan, ColorYellow, MainDefaultWebSocketPort, ColorReset);
 }
 

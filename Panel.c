@@ -198,7 +198,6 @@ PanelValuesFromJSONString
 {
   int					i;
   int					valuetype;
-  string				valuestring;
   CanReg*				canreg;
   json_value*				regs;
 
@@ -208,13 +207,10 @@ PanelValuesFromJSONString
   }
   for ( i = 0 ; i < regs->u.array.length; i++ ) {
     valuetype = JSONIFGetInt(regs->u.array.values[i], "valuetype");
-    valuestring = JSONIFGetString(regs->u.array.values[i], "value");
-   
     canreg = PanelFindCANRegister(InPanel, valuetype);
     if ( canreg ) {
-      CanRegSetFromString(canreg, valuestring);
+      CanRegSetFromJSONString(canreg, regs->u.array.values[i], "value");
     } 
-    FreeMemory(valuestring);
   }
 }
 
@@ -365,8 +361,6 @@ PanelRegValuesToJSONString
     returnString = StringConcatTo(returnString, "         \"value\" : ");
 
     CanRegGetFromString(s, reg);
-   
-    // PanelSaveCANRegister(InPanel, reg->registerDef->valueType, &reg->Value, NULL); 
     returnString = StringConcatTo(returnString, s);
  
     returnString = StringConcatTo(returnString, "      }");

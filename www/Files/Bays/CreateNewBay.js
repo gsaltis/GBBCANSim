@@ -23,10 +23,12 @@ CreateNewBay(InBayType, InIndex)
 
   bay.dataBay = {};
   bay.dataBay.type = InBayType;
+  bay.dataBay.bayindex = InIndex;
   bay.dataBay.index = InIndex;
   bay.dataBay.device = DeviceDefFindByDescription("Bay");
   bay.dataEdittingMode = "None";
 
+  bay.bayindex = InIndex;
   bay.ondragenter  = function(event) { CBBayDragEnter(event); }
   bay.ondragleave  = function(event) { CBBayDragLeave(event); }
 

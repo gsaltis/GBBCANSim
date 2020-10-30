@@ -6,11 +6,9 @@ WebSocketIFHandleInputPacket(InData)
 {
   var					requestpacket;
 
-  console.log(InData);
   requestpacket = JSON.parse(InData);
-
+  console.log(requestpacket);
   if ( requestpacket.packettype == "response" ) {
-    console.log(requestpacket);
     WebSocketIFHandleResponsePacket(requestpacket);
   }
 }

@@ -18,7 +18,6 @@ CBPanelEdit(InEvent)
   }
   panelelement = InEvent.srcElement;
   editMode = panelelement.parentElement.dataEdittingMode;
-  console.log(editMode);
   if ( editMode == "None" ) {
     PanelEdit(panelelement);
   } else if ( editMode == "Panel" ) {

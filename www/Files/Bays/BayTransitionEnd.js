@@ -10,8 +10,12 @@ BayTransitionEnd
 
   if ( bay.style.width == bay.dataBayWidth ) {
     // Only remove the children when the bay is closed
-    bay.removeChild(bay.editregisterarea);
-    bay.removeChild(bay.editinfoarea);
+	if ( bay.editregisterarea ) {
+      bay.removeChild(bay.editregisterarea);
+	}
+	if ( bay.editinfoarea ) {
+      bay.removeChild(bay.editinfoarea);
+	}
     bay.editregisterarea = null;
     bay.editinfoarea = null;
   }

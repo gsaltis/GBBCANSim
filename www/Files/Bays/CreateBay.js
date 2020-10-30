@@ -10,7 +10,6 @@ CreateBay(InBay)
   var					dimensions;
   var					header;
 
-  console.log(InBay);
   baytype = InBay;
   displayarea = document.getElementById("BayDisplayArea");
 

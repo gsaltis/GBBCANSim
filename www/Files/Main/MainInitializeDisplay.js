@@ -10,7 +10,8 @@ MainInitializeDisplay()
   if ( MainBays.length > 0 ) {
     name = MainBays[0].type;
   }
-  
+ 
+  BayTypeListClear();
   BayTypesListPopulate(name);
 }
 

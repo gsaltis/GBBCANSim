@@ -49,9 +49,12 @@ OBJS1			= $(sort 				\
 
 LIBS1			= -ljson -lmongoose -lm -lpthread -lrt
 
-.PHONY			: all clean veryclean
+.PHONY			: all clean veryclean libs
 
-all			: $(ALLTARGETS)
+all			: libs $(ALLTARGETS)
+
+libs			: 
+			  cd lib && make
 
 $(TARGET1)		: $(OBJS1)
 			  cd lib && make

@@ -189,4 +189,8 @@ string
 CanRegGetFromString
 (string InValueString, CanReg* InCanReg);
 
+void
+CanRegSetFromJSONString
+(CanReg* InCanReg, json_value* InValue, string InTagName);;
+
 #endif

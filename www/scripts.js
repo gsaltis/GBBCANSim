@@ -21,7 +21,8 @@ MainInitializeDisplay()
   if ( MainBays.length > 0 ) {
     name = MainBays[0].type;
   }
-  
+ 
+  BayTypeListClear();
   BayTypesListPopulate(name);
 }
 
@@ -118,8 +119,6 @@ MainResizeBody
 
   clientWidth = mainArea.clientWidth;
   clientHeight = mainArea.clientHeight;
-
-  console.log(clientWidth, clientHeight);
 
   for (i = 0; i < mainArea.children.length; i++) {
     bay = mainArea.children[i];
@@ -367,7 +366,6 @@ CreateBay(InBay)
   var					dimensions;
   var					header;
 
-  console.log(InBay);
   baytype = InBay;
   displayarea = document.getElementById("BayDisplayArea");
 
@@ -604,8 +602,12 @@ BayTransitionEnd
 
   if ( bay.style.width == bay.dataBayWidth ) {
     // Only remove the children when the bay is closed
-    bay.removeChild(bay.editregisterarea);
-    bay.removeChild(bay.editinfoarea);
+	if ( bay.editregisterarea ) {
+      bay.removeChild(bay.editregisterarea);
+	}
+	if ( bay.editinfoarea ) {
+      bay.removeChild(bay.editinfoarea);
+	}
     bay.editregisterarea = null;
     bay.editinfoarea = null;
   }
@@ -637,10 +639,12 @@ CreateNewBay(InBayType, InIndex)
 
   bay.dataBay = {};
   bay.dataBay.type = InBayType;
+  bay.dataBay.bayindex = InIndex;
   bay.dataBay.index = InIndex;
   bay.dataBay.device = DeviceDefFindByDescription("Bay");
   bay.dataEdittingMode = "None";
 
+  bay.bayindex = InIndex;
   bay.ondragenter  = function(event) { CBBayDragEnter(event); }
   bay.ondragleave  = function(event) { CBBayDragLeave(event); }
 
@@ -834,6 +838,7 @@ BaysPopulateWindow
   var					panel, panelType, emptyPanelName, emptyPanel;
   var					parentElement;
 
+  BaysClearDisplayArea();
   for ( i = 0 ; i < MainBays.length; i++) {
     baytype = BayTypeFindByName(MainBays[i].type);
     if ( null == baytype ) {
@@ -859,6 +864,7 @@ BaysPopulateWindow
       parentElement.removeChild(emptyPanel);
     } 
   }
+  BayTypeListClear();
   if ( MainBays.length > 0 ) {
     BayTypesListPopulate(MainBays[0].type);
   }
@@ -896,6 +902,21 @@ GetPanelPositionsSizes
     returnInfo.panelYs.push(h);
   }
   return returnInfo;
+}
+
+// FILE: ./Files/Bays/BaysClearDisplayArea.js
+/*****************************************************************************!
+ * Function : BaysClearDisplayArea
+ *****************************************************************************/
+function
+BaysClearDisplayArea
+()
+{
+  var                                   d;
+  d = document.getElementById("BayDisplayArea");
+  while (d.children.length > 0) {
+	d.removeChild(d.children[0]);
+  }
 }
 
 // FILE: ./Files/Bays/BayFindByIndex.js
@@ -1094,11 +1115,9 @@ WebSocketIFHandleInputPacket(InData)
 {
   var					requestpacket;
 
-  console.log(InData);
   requestpacket = JSON.parse(InData);
-
+  console.log(requestpacket);
   if ( requestpacket.packettype == "response" ) {
-    console.log(requestpacket);
     WebSocketIFHandleResponsePacket(requestpacket);
   }
 }
@@ -1146,8 +1165,8 @@ WebSocketIFSendDeviceDefRegRequestNext
  *****************************************************************************/
 function 
 WebSocketIFSendGeneralRequest(InRequest) {
-  console.log(InRequest);
   if ( WebSocketIFConnection ) {
+	console.log(InRequest);
     WebSocketIFConnection.send(JSON.stringify(InRequest));
   }
 }
@@ -1194,6 +1213,8 @@ WebSocketIFHandleResponsePacket(InPacket)
     WebSocketIFHandlePanelRegValues(InPacket.body.panelregvalues);
   } else if ( InPacket.type == "resremovepanel" ) {
     WebSocketIFHandleRemovePanelResponse(InPacket.responseid, InPacket.responsemessage, InPacket.body.bayindex, InPacket.body.panelindex);
+  } else if ( InPacket.type == "resaddbay") {
+	WebSocketIFSendSimpleRequest("getbays");
   }
 }
 
@@ -1790,7 +1811,6 @@ CBPanelEdit(InEvent)
   }
   panelelement = InEvent.srcElement;
   editMode = panelelement.parentElement.dataEdittingMode;
-  console.log(editMode);
   if ( editMode == "None" ) {
     PanelEdit(panelelement);
   } else if ( editMode == "Panel" ) {
@@ -1820,7 +1840,6 @@ CBGarbageCanDrop
 (InEvent)
 {
   if ( PanelBeingDragged ) {
-    console.log(PanelBeingDragged);
     WebSocketIFSendRemovePanelRequest(PanelBeingDragged.dataPanel.bay.index, PanelBeingDragged.dataPanel.index); 
   }
   PanelBeingDragged = null;
@@ -1939,7 +1958,6 @@ CBBayDrop(InEvent)
 
   if ( DragElementType == "Bay" ) {
     bay = CreateNewBay(BayTypeDragElement, MainBays.length+1);
-	console.log(bay.dataBay);
 	WebSocketIFSendAddBayRequest(bay);
     MainBays.push(bay.dataBay);
   }

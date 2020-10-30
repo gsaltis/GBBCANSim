@@ -20,6 +20,8 @@
  *****************************************************************************/
 #include "CanMsg.h"
 #include "ThreadSafePrint.h"
+#include "String.h"
+#include "MemoryManager.h"
 
 /*****************************************************************************!
  * Exported Type : CanMessage
@@ -375,6 +377,45 @@ CanRegSetFromString
     memcpy(&(InCanReg->Value.data32), InValueString, 4);
   } else if ( InCanReg->registerDef->formatType == 4 ) {
     InCanReg->Value.data32 = GetHex32ValueFromString(NULL, InValueString);
+  }
+}
+
+/*****************************************************************************!
+ * Function : CanRegSetFromJSONString
+ *****************************************************************************/
+void
+CanRegSetFromJSONString
+(CanReg* InCanReg, json_value* InValue, string InTagName)
+{
+  string                                s;
+  json_value*							jsonValue;
+  if ( InCanReg->registerDef->formatType == 0 ) {
+	jsonValue = JSONIFGetValue(InValue, InTagName);
+	if ( jsonValue->type == json_string ) {
+	  CanRegSetFromString(InCanReg, jsonValue->u.string.ptr);
+	} else {
+      InCanReg->Value.fd = JSONIFGetFloat(InValue, InTagName);
+	}
+  } else if ( InCanReg->registerDef->formatType == 1 ) {
+	s = JSONIFGetString(InValue, InTagName);
+    memcpy(&(InCanReg->Value.data32), s, 3);
+	FreeMemory(s);
+  } else if ( InCanReg->registerDef->formatType == 2 ) {
+	if ( InValue->type == json_string ) {
+	  s = JSONIFGetString(InValue, InTagName);
+	  CanRegSetFromString(InCanReg, s);
+	  FreeMemory(s);
+	} else {
+      InCanReg->Value.data32 = JSONIFGetInt(InValue, InTagName);
+	}
+  } else if ( InCanReg->registerDef->formatType == 3 ) {
+	s = JSONIFGetString(InValue, InTagName);
+    memcpy(&(InCanReg->Value.data32), s, 4);
+	FreeMemory(s);
+  } else if ( InCanReg->registerDef->formatType == 4 ) {
+	s = JSONIFGetString(InValue, InTagName);
+    InCanReg->Value.data32 = GetHex32ValueFromString(NULL, s);
+	FreeMemory(s);
   }
 }
 

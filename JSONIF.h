@@ -54,6 +54,10 @@ JSONIFGetObject
 (json_value* InValue, string InName);
 
 json_value*
+JSONIFGetValue
+(json_value* InValue, string InName);
+
+json_value*
 JSONIFGetArray
 (json_value* InValue, string InName);
 

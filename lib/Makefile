@@ -21,11 +21,12 @@ libjson.a		: json.o
 			  @$(ARCHIVE) $(ARCHIVE_FLAGS) $@ $^
 
 
-.PHONY			: clean
-clean			: 
+.PHONY			: junkclean
+junkclean		: 
 			  rm -rf $(wildcard *~)
 
-.PHONY			: veryclean
-veryclean		: clean
+.PHONY			: clean
+clean			: junkclean
 			  rm -rf $(wildcard *.o *.a)
+
 

@@ -1076,3 +1076,25 @@ FindRegisterByIndexGroup
   reg = DeviceFindRegister(InDevice, s, InGroup);
   return reg;
 }
+
+/*****************************************************************************!
+ * Function : DeviceFindRegisterByValueType
+ *****************************************************************************/
+CanReg*
+DeviceFindRegisterByValueType
+(CanDevice* InDevice, int InValueType)
+{
+  int                                   i;
+
+  if ( InDevice == NULL ) {
+	return NULL;
+  }
+
+  for ( i = 0 ; i < InDevice->registersCount ; i++ ) {
+    if ( InDevice->Registers[i].registerDef->valueType == InValueType ) {
+	  return &(InDevice->Registers[i]);
+	}
+  }
+  return NULL;
+}
+
