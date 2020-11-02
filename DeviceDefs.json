@@ -2,7 +2,6 @@
   {
     "name"               : "SMDUE",
     "protocol"           : 166,
-    "name"               : "Bay",
     "description"        : "Bay",
     "startingcanaddress" : 219,
     "regs"               : 
@@ -15,7 +14,7 @@
         "group"          : "General",
         "name"           : "Get the bus voltdata",
         "initvalue"      : "0x42400000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Get the bus voltdata"
       },
       {
@@ -26,7 +25,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 01.",
         "initvalue"      : "0x42406666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 01."
       },
       {
@@ -37,7 +36,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 02.",
         "initvalue"      : "0x4244CCCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 02."
       },
       {
@@ -48,7 +47,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 03.",
         "initvalue"      : "0x42413333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 03."
       },
       {
@@ -59,7 +58,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 04.",
         "initvalue"      : "0x4245999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 04."
       },
       {
@@ -70,7 +69,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 05.",
         "initvalue"      : "0x42420000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 05."
       },
       {
@@ -81,7 +80,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 06.",
         "initvalue"      : "0x42466666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 06."
       },
       {
@@ -92,7 +91,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 07.",
         "initvalue"      : "0x4242CCCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 07."
       },
       {
@@ -103,7 +102,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 08.",
         "initvalue"      : "0x42433333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 08."
       },
       {
@@ -114,7 +113,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 09.",
         "initvalue"      : "0x4243999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 09."
       },
       {
@@ -125,7 +124,7 @@
         "group"          : "Voltage",
         "name"           : "Get the volt data of cabinet 10.",
         "initvalue"      : "0x42446666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Cabinet 10."
       },
       {
@@ -136,7 +135,7 @@
         "group"          : "General",
         "name"           : "Read active alarm / status",
         "initvalue"      : "0x00000000",
-	"format"	 : 4,
+        "format"         : 4,
         "displaylabel"   : "Alarm"
       },
       {
@@ -147,7 +146,7 @@
         "group"          : "General",
         "name"           : "Serial Number",
         "initvalue"      : "0xD00700DD",
-	"format"	 : 2,
+        "format"         : 2,
         "displaylabel"   : "Serial Number"
       },
       {
@@ -158,7 +157,7 @@
         "group"          : "General",
         "name"           : "BarCode 00 - 03",
         "initvalue"      : "0x31323334",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "BarCode 00 - 03"
       },
       {
@@ -169,7 +168,7 @@
         "groupsort"      : "0General",
         "name"           : "Hardware/Software Version",
         "initvalue"      : "0x3F780067",
-	"format"	 : 4,
+        "format"         : 4,
         "displaylabel"   : "Hardware/Software Version"
       },
       {
@@ -180,7 +179,7 @@
         "groupsort"      : "0General",
         "name"           : "BarCode 08 - 11",
         "initvalue"      : "0x31323336",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "BarCode 08 - 11"
       },
       {
@@ -191,7 +190,7 @@
         "groupsort"      : "0General",
         "name"           : "BarCode 12 - 15",
         "initvalue"      : "0x31323337",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "BarCode 12 - 15"
       },
       {
@@ -202,7 +201,7 @@
         "groupsort"      : "0General",
         "name"           : "BarCode 16 - 19",
         "initvalue"      : "0x31323338",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "BarCode 16 - 19"
       },
       {
@@ -213,7 +212,7 @@
         "groupsort"      : "0General",
         "name"           : "BarCode 20 - 23",
         "initvalue"      : "0x30333153",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "BarCode 20 - 23"
       },
       {
@@ -224,7 +223,7 @@
         "groupsort"      : "0General",
         "name"           : "BarCode 24 - 27",
         "initvalue"      : "0x4D445545",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "BarCode 24 - 27"
       },
       {
@@ -235,7 +234,7 @@
         "groupsort"      : "0General",
         "name"           : "Hardware Version",
         "initvalue"      : "0x41303200",
-	"format"	 : 1,
+        "format"         : 1,
         "displaylabel"   : "Hardware Version"
       },
       {
@@ -246,7 +245,7 @@
         "groupsort"      : "0General",
         "name"           : "Unknown",
         "initvalue"      : "0x00000000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Unknown"
       },
       {
@@ -257,7 +256,7 @@
         "groupsort"      : "0General",
         "name"           : "Set / read chan 1 def",
         "initvalue"      : "0x00000000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read chan 1 def"
       },
       {
@@ -268,7 +267,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 01",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 01"
       },
       {
@@ -279,7 +278,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 02",
         "initvalue"      : "0x42DC0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 02"
       },
       {
@@ -290,7 +289,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 03",
         "initvalue"      : "0x42F00000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 03"
       },
       {
@@ -301,7 +300,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 04",
         "initvalue"      : "0x43020000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 04"
       },
       {
@@ -312,7 +311,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 05",
         "initvalue"      : "0x430C0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 05"
       },
       {
@@ -323,7 +322,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 06",
         "initvalue"      : "0x43160000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 06"
       },
       {
@@ -334,7 +333,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 07",
         "initvalue"      : "0x43200000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 07"
       },
       {
@@ -345,7 +344,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 08",
         "initvalue"      : "0x432A0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 08"
       },
       {
@@ -356,7 +355,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 09",
         "initvalue"      : "0x43340000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 09"
       },
       {
@@ -367,7 +366,7 @@
         "groupsort"      : "Current",
         "name"           : "Get the current signal of shunt 10",
         "initvalue"      : "0x433E0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current shunt 10"
       },
       {
@@ -378,7 +377,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 01",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 01"
       },
       {
@@ -389,7 +388,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 02",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 02"
       },
       {
@@ -400,7 +399,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 03",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 03"
       },
       {
@@ -411,7 +410,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 04",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 04"
       },
       {
@@ -422,7 +421,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 05",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 05"
       },
       {
@@ -433,7 +432,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 06",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 06"
       },
       {
@@ -444,7 +443,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 07",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 07"
       },
       {
@@ -455,7 +454,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 08",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 08"
       },
       {
@@ -466,7 +465,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 09",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 09"
       },
       {
@@ -477,7 +476,7 @@
         "groupsort"      : "HallSig",
         "name"           : "Get the current signal of hall sensor 10",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Signal Hall 10"
       },
       {
@@ -488,7 +487,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 01",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 01"
       },
       {
@@ -499,7 +498,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 02",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 02"
       },
       {
@@ -510,7 +509,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 03",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 03"
       },
       {
@@ -521,7 +520,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 04",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 04"
       },
       {
@@ -532,7 +531,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 05",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 05"
       },
       {
@@ -543,7 +542,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 06",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 06"
       },
       {
@@ -554,7 +553,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 07",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 07"
       },
       {
@@ -565,7 +564,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 08",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 08"
       },
       {
@@ -576,7 +575,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 09",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 09"
       },
       {
@@ -587,7 +586,7 @@
         "groupsort"      : "VoltageSig",
         "name"           : "Get the voltage signal 10",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Signal 10"
       },
       {
@@ -598,7 +597,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 01",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 01"
       },
       {
@@ -609,7 +608,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 02",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 02"
       },
       {
@@ -620,7 +619,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 03",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 03"
       },
       {
@@ -631,7 +630,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 04",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 04"
       },
       {
@@ -642,7 +641,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 05",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 05"
       },
       {
@@ -653,7 +652,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 06",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 06"
       },
       {
@@ -664,7 +663,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 07",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 07"
       },
       {
@@ -675,7 +674,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 08",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 08"
       },
       {
@@ -686,7 +685,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 09",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 09"
       },
       {
@@ -697,7 +696,7 @@
         "groupsort"      : "TempSig",
         "name"           : "Get the temperature signal 10",
         "initvalue"      : "0x3F800000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Temp Signal 10"
       },
       {
@@ -708,7 +707,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "Set / read the voltage Coeff of shunt 01 (mV)",
         "initvalue"      : "0x43968000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 01"
       },
       {
@@ -719,7 +718,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Set / read the current Coeff of shunt 01 (A)",
         "initvalue"      : "0x42CA0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 01"
       },
       {
@@ -730,7 +729,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "voltage Coeff 02(mV)",
         "initvalue"      : "0x43970000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 02"
       },
       {
@@ -741,7 +740,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Current Coeff 02 (A)",
         "initvalue"      : "0x42CC0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 02"
       },
       {
@@ -752,7 +751,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "voltage Coeff 03 (mV)",
         "initvalue"      : "0x43978000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 03"
       },
       {
@@ -763,7 +762,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Current Coeff 03 (A)",
         "initvalue"      : "0x42CE0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 03"
       },
       {
@@ -774,7 +773,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "voltage Coeff 04(mV)",
         "initvalue"      : "0x43980000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 04"
       },
       {
@@ -785,7 +784,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Current Coeff 04 (A)",
         "initvalue"      : "0x42D00000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 04"
       },
       {
@@ -796,7 +795,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "voltage Coeff 05 (mV)",
         "initvalue"      : "0x43988000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 05"
       },
       {
@@ -807,7 +806,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Current Coeff 05 (A)",
         "initvalue"      : "0x42D20000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 05"
       },
       {
@@ -818,7 +817,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "voltage Coeff 06(mV)",
         "initvalue"      : "0x43990000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 06"
       },
       {
@@ -829,7 +828,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Current Coeff 06 (A)",
         "initvalue"      : "0x42D40000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 06"
       },
       {
@@ -840,7 +839,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "voltage Coeff 07(mV)",
         "initvalue"      : "0x43998000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 07"
       },
       {
@@ -851,7 +850,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Current Coeff 07(A)",
         "initvalue"      : "0x42D60000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 07"
       },
       {
@@ -862,7 +861,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "voltage Coeff 08(mV)",
         "initvalue"      : "0x439A0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 08"
       },
       {
@@ -873,7 +872,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Current Coeff 08 (A)",
         "initvalue"      : "0x42D80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 08"
       },
       {
@@ -884,7 +883,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "voltage Coeff 09(mV)",
         "initvalue"      : "0x439A8000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 09"
       },
       {
@@ -895,7 +894,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Current Coeff 09(A)",
         "initvalue"      : "0x42DA0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 09"
       },
       {
@@ -906,7 +905,7 @@
         "groupsort"      : "VCoeff",
         "name"           : "voltage Coeff 10(mV)",
         "initvalue"      : "0x439B0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Voltage Coeff 10"
       },
       {
@@ -917,7 +916,7 @@
         "groupsort"      : "CCoeff",
         "name"           : "Current Coeff 10 (A)",
         "initvalue"      : "0x42DC0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current Coeff 10"
       },
       {
@@ -928,7 +927,7 @@
         "groupsort"      : "0General",
         "name"           : "Unknown2",
         "initvalue"      : "0x00249249",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Unknown2"
       }
     ],
@@ -972,7 +971,7 @@
         "groupsort"      : "0General",
         "name"           : "bus volt",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "bus volt"
       },
       {
@@ -983,7 +982,7 @@
         "groupsort"      : "0General",
         "name"           : "Read active alarm / status",
         "initvalue"      : "0x42000000",
-	"format"	 : 4,
+        "format"         : 4,
         "displaylabel"   : "Read active alarm / status"
       },
       {
@@ -994,7 +993,7 @@
         "groupsort"      : "0General",
         "name"           : "Read current status",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Read current status"
       },
       {
@@ -1005,7 +1004,7 @@
         "groupsort"      : "0General",
         "name"           : "Read current status",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Read current status"
       },
       {
@@ -1016,7 +1015,7 @@
         "groupsort"      : "0General",
         "name"           : "Set the characteristic data of this type",
         "initvalue"      : "0x00000000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set the characteristic data of this type"
       },
       {
@@ -1027,7 +1026,7 @@
         "groupsort"      : "0General",
         "name"           : "Read Serial Number Bits (Low)",
         "initvalue"      : "0x4F500701",
-	"format"	 : 2,
+        "format"         : 2,
         "displaylabel"   : "Read Serial Number Bits (Low)"
       },
       {
@@ -1038,7 +1037,7 @@
         "groupsort"      : "0General",
         "name"           : "Read Serial Number Bits (High)",
         "initvalue"      : "0x42C80000",
-	"format"	 : 2,
+        "format"         : 2,
         "displaylabel"   : "Read Serial Number Bits (High)"
       },
       {
@@ -1049,7 +1048,7 @@
         "groupsort"      : "0General",
         "name"           : "Read version number",
         "initvalue"      : "0x05020064",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Read version number"
       },
       {
@@ -1060,7 +1059,7 @@
         "groupsort"      : "0General",
         "name"           : "Read barcode content 01",
         "initvalue"      : "0x30333153",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "Read barcode content 01"
       },
       {
@@ -1071,7 +1070,7 @@
         "groupsort"      : "0General",
         "name"           : "Read barcode content 02",
         "initvalue"      : "0x4D445548",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "Read barcode content 02"
       },
       {
@@ -1082,7 +1081,7 @@
         "groupsort"      : "0General",
         "name"           : "Read barcode content 03",
         "initvalue"      : "0x32413031",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "Read barcode content 03"
       },
       {
@@ -1093,7 +1092,7 @@
         "groupsort"      : "0General",
         "name"           : "Read barcode content 04",
         "initvalue"      : "0x20202046",
-	"format"	 : 3,
+        "format"         : 3,
         "displaylabel"   : "Read barcode content 04"
       },
       {
@@ -1104,7 +1103,7 @@
         "groupsort"      : "0General",
         "name"           : "Set version number",
         "initvalue"      : "0x05020064",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set version number"
       },
       {
@@ -1115,7 +1114,7 @@
         "groupsort"      : "0General",
         "name"           : "Set the characteristic data of this type",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set the characteristic data of this type"
       },
       {
@@ -1126,7 +1125,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 01",
         "initvalue"      : "0x42960000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 01"
       },
       {
@@ -1137,7 +1136,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 02",
         "initvalue"      : "0x42980000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 02"
       },
       {
@@ -1148,7 +1147,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 03",
         "initvalue"      : "0x429A0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 03"
       },
       {
@@ -1159,7 +1158,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 04",
         "initvalue"      : "0x429C0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 04"
       },
       {
@@ -1170,7 +1169,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 05",
         "initvalue"      : "0x429E0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 05"
       },
       {
@@ -1181,7 +1180,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 06",
         "initvalue"      : "0x42A00000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 06"
       },
       {
@@ -1192,7 +1191,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 07",
         "initvalue"      : "0x42A20000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 07"
       },
       {
@@ -1203,7 +1202,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 08",
         "initvalue"      : "0x42A40000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 08"
       },
       {
@@ -1214,7 +1213,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 09",
         "initvalue"      : "0x42A20000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 09"
       },
       {
@@ -1225,7 +1224,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 10",
         "initvalue"      : "0x42A00000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 10"
       },
       {
@@ -1236,7 +1235,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 11",
         "initvalue"      : "0x429E0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 11"
       },
       {
@@ -1247,7 +1246,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 12",
         "initvalue"      : "0x429C0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 12"
       },
       {
@@ -1258,7 +1257,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 13",
         "initvalue"      : "0x42980000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 13"
       },
       {
@@ -1269,7 +1268,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 14",
         "initvalue"      : "0x42960000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 14"
       },
       {
@@ -1280,7 +1279,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 15",
         "initvalue"      : "0x42940000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 15"
       },
       {
@@ -1291,7 +1290,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 16",
         "initvalue"      : "0x42920000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 16"
       },
       {
@@ -1302,7 +1301,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 17",
         "initvalue"      : "0x42900000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 17"
       },
       {
@@ -1313,7 +1312,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 18",
         "initvalue"      : "0x428E0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 18"
       },
       {
@@ -1324,7 +1323,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 19",
         "initvalue"      : "0x42900000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 19"
       },
       {
@@ -1335,7 +1334,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 20",
         "initvalue"      : "0x42920000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 20"
       },
       {
@@ -1346,7 +1345,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 21",
         "initvalue"      : "0x42940000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 21"
       },
       {
@@ -1357,7 +1356,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 22",
         "initvalue"      : "0x42960000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 22"
       },
       {
@@ -1368,7 +1367,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 23",
         "initvalue"      : "0x42960000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 23"
       },
       {
@@ -1379,7 +1378,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 24",
         "initvalue"      : "0x42960000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 24"
       },
       {
@@ -1390,7 +1389,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 25",
         "initvalue"      : "0x42960000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 25"
       },
       {
@@ -1401,7 +1400,7 @@
         "groupsort"      : "0General",
         "name"           : "voltage 01",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "voltage 01"
       },
       {
@@ -1412,7 +1411,7 @@
         "groupsort"      : "0General",
         "name"           : "Fuse status and status of bits 1 and 3 of DIP switch",
         "initvalue"      : "0x00000000",
-	"format"	 : 4,
+        "format"         : 4,
         "displaylabel"   : "Fuse status and status of bits 3 of DIP switch"
       },
       {
@@ -1423,7 +1422,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 01",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 01"
       },
       {
@@ -1434,7 +1433,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 02",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 02"
       },
       {
@@ -1445,7 +1444,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 03",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 03"
       },
       {
@@ -1456,7 +1455,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 04",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 04"
       },
       {
@@ -1467,7 +1466,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 05",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 05"
       },
       {
@@ -1478,7 +1477,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 06",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 06"
       },
       {
@@ -1489,7 +1488,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 07",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 07"
       },
       {
@@ -1500,7 +1499,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 08",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 08"
       },
       {
@@ -1511,7 +1510,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 09",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 09"
       },
       {
@@ -1522,7 +1521,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 10",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 10"
       },
       {
@@ -1533,7 +1532,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 11",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 11"
       },
       {
@@ -1544,7 +1543,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 12",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 12"
       },
       {
@@ -1555,7 +1554,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 13",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 13"
       },
       {
@@ -1566,7 +1565,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 14",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 14"
       },
       {
@@ -1577,7 +1576,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 15",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 15"
       },
       {
@@ -1588,7 +1587,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 16",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 16"
       },
       {
@@ -1599,7 +1598,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 17",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 17"
       },
       {
@@ -1610,7 +1609,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 18",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 18"
       },
       {
@@ -1621,7 +1620,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 19",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 19"
       },
       {
@@ -1632,7 +1631,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 20",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 20"
       },
       {
@@ -1643,7 +1642,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 21",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 21"
       },
       {
@@ -1654,7 +1653,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 22",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 22"
       },
       {
@@ -1665,7 +1664,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 23",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 23"
       },
       {
@@ -1676,7 +1675,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 24",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 24"
       },
       {
@@ -1687,7 +1686,7 @@
         "groupsort"      : "Parameter",
         "name"           : "Set / read parameters of shunt 25",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Set / read parameters of shunt 25"
       },
       {
@@ -1698,7 +1697,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 01",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 01"
       },
       {
@@ -1709,7 +1708,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 02",
         "initvalue"      : "0x42C80000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 02"
       },
       {
@@ -1720,7 +1719,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 03",
         "initvalue"      : "0x43962666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 03"
       },
       {
@@ -1731,7 +1730,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 04",
         "initvalue"      : "0x43963333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 04"
       },
       {
@@ -1742,7 +1741,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 05",
         "initvalue"      : "0x43964000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 05"
       },
       {
@@ -1753,7 +1752,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 06",
         "initvalue"      : "0x43964CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 06"
       },
       {
@@ -1764,7 +1763,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 07",
         "initvalue"      : "0x4396599A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 07"
       },
       {
@@ -1775,7 +1774,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 08",
         "initvalue"      : "0x43966666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 08"
       },
       {
@@ -1786,7 +1785,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 09",
         "initvalue"      : "0x43967333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 09"
       },
       {
@@ -1797,7 +1796,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 10",
         "initvalue"      : "0x43968000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 10"
       },
       {
@@ -1808,7 +1807,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 11",
         "initvalue"      : "0x43968CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 11"
       },
       {
@@ -1819,7 +1818,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 12",
         "initvalue"      : "0x4396999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 12"
       },
       {
@@ -1830,7 +1829,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 13",
         "initvalue"      : "0x4396A666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 13"
       },
       {
@@ -1841,7 +1840,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 14",
         "initvalue"      : "0x4396B333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 14"
       },
       {
@@ -1852,7 +1851,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 15",
         "initvalue"      : "0x4396C000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 15"
       },
       {
@@ -1863,7 +1862,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 16",
         "initvalue"      : "0x4396CCCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 16"
       },
       {
@@ -1874,7 +1873,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 17",
         "initvalue"      : "0x4396D99A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 17"
       },
       {
@@ -1885,7 +1884,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 18",
         "initvalue"      : "0x4396E666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 18"
       },
       {
@@ -1896,7 +1895,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 19",
         "initvalue"      : "0x4396F333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 19"
       },
       {
@@ -1907,7 +1906,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 20",
         "initvalue"      : "0x43970000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 20"
       },
       {
@@ -1918,7 +1917,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 21",
         "initvalue"      : "0x43970CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 21"
       },
       {
@@ -1929,7 +1928,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 22",
         "initvalue"      : "0x4397199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 22"
       },
       {
@@ -1940,7 +1939,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 23",
         "initvalue"      : "0x43972666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 23"
       },
       {
@@ -1951,7 +1950,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 24",
         "initvalue"      : "0x43973333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 24"
       },
       {
@@ -1962,7 +1961,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 25",
         "initvalue"      : "0x43974000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 25"
       },
       {
@@ -1973,7 +1972,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 01",
         "initvalue"      : "0x43FA0CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 01"
       },
       {
@@ -1984,7 +1983,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 02",
         "initvalue"      : "0x43FA199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 02"
       },
       {
@@ -1995,7 +1994,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 03",
         "initvalue"      : "0x43FA2666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 03"
       },
       {
@@ -2006,7 +2005,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 04",
         "initvalue"      : "0x43FA3333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 04"
       },
       {
@@ -2017,7 +2016,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 05",
         "initvalue"      : "0x43FA4000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 05"
       },
       {
@@ -2028,7 +2027,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 06",
         "initvalue"      : "0x43FA4CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 06"
       },
       {
@@ -2039,7 +2038,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 07",
         "initvalue"      : "0x43FA599A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 07"
       },
       {
@@ -2050,7 +2049,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 08",
         "initvalue"      : "0x43FA6666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 08"
       },
       {
@@ -2061,7 +2060,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 09",
         "initvalue"      : "0x43FA7333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 09"
       },
       {
@@ -2072,7 +2071,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 10",
         "initvalue"      : "0x43FA8000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 10"
       },
       {
@@ -2083,7 +2082,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 11",
         "initvalue"      : "0x43FA8CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 11"
       },
       {
@@ -2094,7 +2093,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 12",
         "initvalue"      : "0x43FA999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 12"
       },
       {
@@ -2105,7 +2104,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 13",
         "initvalue"      : "0x43FAA666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 13"
       },
       {
@@ -2116,7 +2115,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 14",
         "initvalue"      : "0x43FAB333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 14"
       },
       {
@@ -2127,7 +2126,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 15",
         "initvalue"      : "0x43FAC000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 15"
       },
       {
@@ -2138,7 +2137,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 16",
         "initvalue"      : "0x43FACCCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 16"
       },
       {
@@ -2149,7 +2148,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 17",
         "initvalue"      : "0x43FAD99A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 17"
       },
       {
@@ -2160,7 +2159,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 18",
         "initvalue"      : "0x43FAE666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 18"
       },
       {
@@ -2171,7 +2170,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 19",
         "initvalue"      : "0x43FAF333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 19"
       },
       {
@@ -2182,7 +2181,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 20",
         "initvalue"      : "0x43FB0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 20"
       },
       {
@@ -2193,7 +2192,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 21",
         "initvalue"      : "0x43FB0CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 21"
       },
       {
@@ -2204,7 +2203,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 22",
         "initvalue"      : "0x43FB199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 22"
       },
       {
@@ -2215,7 +2214,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 23",
         "initvalue"      : "0x43FB2666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 23"
       },
       {
@@ -2226,7 +2225,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 24",
         "initvalue"      : "0x43FB3333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 24"
       },
       {
@@ -2237,7 +2236,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 25",
         "initvalue"      : "0x43FB4000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 25"
       },
       {
@@ -2248,7 +2247,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 01",
         "initvalue"      : "0x44160000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 01"
       },
       {
@@ -2259,7 +2258,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 02",
         "initvalue"      : "0x44160666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 02"
       },
       {
@@ -2270,7 +2269,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 03",
         "initvalue"      : "0x44160CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 03"
       },
       {
@@ -2281,7 +2280,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 04",
         "initvalue"      : "0x44161333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 04"
       },
       {
@@ -2292,7 +2291,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 05",
         "initvalue"      : "0x4416199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 05"
       },
       {
@@ -2303,7 +2302,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 06",
         "initvalue"      : "0x44162000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 06"
       },
       {
@@ -2314,7 +2313,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 07",
         "initvalue"      : "0x44162666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 07"
       },
       {
@@ -2325,7 +2324,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 08",
         "initvalue"      : "0x44162CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 08"
       },
       {
@@ -2336,7 +2335,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 09",
         "initvalue"      : "0x44163333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 09"
       },
       {
@@ -2347,7 +2346,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 10",
         "initvalue"      : "0x4416399A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 10"
       },
       {
@@ -2358,7 +2357,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 11",
         "initvalue"      : "0x44164000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 11"
       },
       {
@@ -2369,7 +2368,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 12",
         "initvalue"      : "0x44164666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 12"
       },
       {
@@ -2380,7 +2379,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 13",
         "initvalue"      : "0x44164CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 13"
       },
       {
@@ -2391,7 +2390,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 14",
         "initvalue"      : "0x44165333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 14"
       },
       {
@@ -2402,7 +2401,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 15",
         "initvalue"      : "0x4416599A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 15"
       },
       {
@@ -2413,7 +2412,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 16",
         "initvalue"      : "0x44166000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 16"
       },
       {
@@ -2424,7 +2423,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 17",
         "initvalue"      : "0x44166666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 17"
       },
       {
@@ -2435,7 +2434,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 18",
         "initvalue"      : "0x44166CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 18"
       },
       {
@@ -2446,7 +2445,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 19",
         "initvalue"      : "0x44167333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 19"
       },
       {
@@ -2457,7 +2456,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 20",
         "initvalue"      : "0x4416799A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 20"
       },
       {
@@ -2468,7 +2467,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 21",
         "initvalue"      : "0x44168000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 21"
       },
       {
@@ -2479,7 +2478,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 22",
         "initvalue"      : "0x44168666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 22"
       },
       {
@@ -2490,7 +2489,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 23",
         "initvalue"      : "0x44168CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 23"
       },
       {
@@ -2501,7 +2500,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 24",
         "initvalue"      : "0x44169333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 24"
       },
       {
@@ -2512,7 +2511,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 25",
         "initvalue"      : "0x4416999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 25"
       },
       {
@@ -2523,7 +2522,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 01",
         "initvalue"      : "0x4548019A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 01"
       },
       {
@@ -2534,7 +2533,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 02",
         "initvalue"      : "0x45480333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 02"
       },
       {
@@ -2545,7 +2544,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 03",
         "initvalue"      : "0x454804CD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 03"
       },
       {
@@ -2556,7 +2555,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 04",
         "initvalue"      : "0x45480666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 04"
       },
       {
@@ -2567,7 +2566,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 05",
         "initvalue"      : "0x45480800",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 05"
       },
       {
@@ -2578,7 +2577,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 06",
         "initvalue"      : "0x4548099A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 06"
       },
       {
@@ -2589,7 +2588,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 07",
         "initvalue"      : "0x45480B33",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 07"
       },
       {
@@ -2600,7 +2599,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 08",
         "initvalue"      : "0x45480CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 08"
       },
       {
@@ -2611,7 +2610,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 09",
         "initvalue"      : "0x45480E66",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 09"
       },
       {
@@ -2622,7 +2621,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 10",
         "initvalue"      : "0x45481000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 10"
       },
       {
@@ -2633,7 +2632,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 11",
         "initvalue"      : "0x4548119A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 11"
       },
       {
@@ -2644,7 +2643,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 12",
         "initvalue"      : "0x45481333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 12"
       },
       {
@@ -2655,7 +2654,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 13",
         "initvalue"      : "0x454814CD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 13"
       },
       {
@@ -2666,7 +2665,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 14",
         "initvalue"      : "0x45481666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 14"
       },
       {
@@ -2677,7 +2676,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 15",
         "initvalue"      : "0x45481800",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 15"
       },
       {
@@ -2688,7 +2687,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 16",
         "initvalue"      : "0x4548199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 16"
       },
       {
@@ -2699,7 +2698,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 17",
         "initvalue"      : "0x45481B33",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 17"
       },
       {
@@ -2710,7 +2709,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 18",
         "initvalue"      : "0x45481CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 18"
       },
       {
@@ -2721,7 +2720,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 19",
         "initvalue"      : "0x45481E66",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 19"
       },
       {
@@ -2732,7 +2731,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 20",
         "initvalue"      : "0x45482000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 20"
       },
       {
@@ -2743,7 +2742,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 21",
         "initvalue"      : "0x4548219A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 21"
       },
       {
@@ -2754,7 +2753,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 22",
         "initvalue"      : "0x45482333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 22"
       },
       {
@@ -2765,7 +2764,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 23",
         "initvalue"      : "0x454824CD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 23"
       },
       {
@@ -2776,7 +2775,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 24",
         "initvalue"      : "0x45482666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 24"
       },
       {
@@ -2787,7 +2786,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 25",
         "initvalue"      : "0x45482800",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 25"
       },
       {
@@ -2798,7 +2797,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 26",
         "initvalue"      : "0x42DC3333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 26"
       },
       {
@@ -2809,7 +2808,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 27",
         "initvalue"      : "0x42DC6666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 27"
       },
       {
@@ -2820,7 +2819,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 28",
         "initvalue"      : "0x42DC999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 28"
       },
       {
@@ -2831,7 +2830,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 29",
         "initvalue"      : "0x42DCCCCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 29"
       },
       {
@@ -2842,7 +2841,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 30",
         "initvalue"      : "0x42DD0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 30"
       },
       {
@@ -2853,7 +2852,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 31",
         "initvalue"      : "0x42DD3333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 31"
       },
       {
@@ -2864,7 +2863,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 32",
         "initvalue"      : "0x42DD6666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 32"
       },
       {
@@ -2875,7 +2874,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 33",
         "initvalue"      : "0x42DD999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 33"
       },
       {
@@ -2886,7 +2885,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 34",
         "initvalue"      : "0x42DDCCCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 34"
       },
       {
@@ -2897,7 +2896,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 35",
         "initvalue"      : "0x42DE0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 35"
       },
       {
@@ -2908,7 +2907,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 36",
         "initvalue"      : "0x42DE3333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 36"
       },
       {
@@ -2919,7 +2918,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 37",
         "initvalue"      : "0x42DE6666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 37"
       },
       {
@@ -2930,7 +2929,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 38",
         "initvalue"      : "0x42DE999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 38"
       },
       {
@@ -2941,7 +2940,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 39",
         "initvalue"      : "0x42DECCCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 39"
       },
       {
@@ -2952,7 +2951,7 @@
         "groupsort"      : "Current",
         "name"           : "Current signal of channel 40",
         "initvalue"      : "0x42DF0000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Current signal of channel 40"
       },
       {
@@ -2963,7 +2962,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 26",
         "initvalue"      : "0x43480000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 26"
       },
       {
@@ -2974,7 +2973,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 27",
         "initvalue"      : "0x4348199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 27"
       },
       {
@@ -2985,7 +2984,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 28",
         "initvalue"      : "0x43483333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 28"
       },
       {
@@ -2996,7 +2995,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 29",
         "initvalue"      : "0x43484CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 29"
       },
       {
@@ -3007,7 +3006,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 30",
         "initvalue"      : "0x43486666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 30"
       },
       {
@@ -3018,7 +3017,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 31",
         "initvalue"      : "0x43488000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 31"
       },
       {
@@ -3029,7 +3028,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 32",
         "initvalue"      : "0x4348999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 32"
       },
       {
@@ -3040,7 +3039,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 33",
         "initvalue"      : "0x4348B333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 33"
       },
       {
@@ -3051,7 +3050,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 34",
         "initvalue"      : "0x4348CCCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 34"
       },
       {
@@ -3062,7 +3061,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 35",
         "initvalue"      : "0x4348E666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 35"
       },
       {
@@ -3073,7 +3072,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 36",
         "initvalue"      : "0x43490000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 36"
       },
       {
@@ -3084,7 +3083,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 37",
         "initvalue"      : "0x4349199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 37"
       },
       {
@@ -3095,7 +3094,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 38",
         "initvalue"      : "0x43493333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 38"
       },
       {
@@ -3106,7 +3105,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 39",
         "initvalue"      : "0x43494CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 39"
       },
       {
@@ -3117,7 +3116,7 @@
         "groupsort"      : "Power",
         "name"           : "Power of channel 40",
         "initvalue"      : "0x43496666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Power of channel 40"
       },
       {
@@ -3128,7 +3127,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 26",
         "initvalue"      : "0x4352199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 26"
       },
       {
@@ -3139,7 +3138,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 27",
         "initvalue"      : "0x43523333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 27"
       },
       {
@@ -3150,7 +3149,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 28",
         "initvalue"      : "0x43524CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 28"
       },
       {
@@ -3161,7 +3160,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 29",
         "initvalue"      : "0x43526666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 29"
       },
       {
@@ -3172,7 +3171,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 30",
         "initvalue"      : "0x43528000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 30"
       },
       {
@@ -3183,7 +3182,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 31",
         "initvalue"      : "0x4352999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 31"
       },
       {
@@ -3194,7 +3193,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 32",
         "initvalue"      : "0x4352B333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 32"
       },
       {
@@ -3205,7 +3204,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 33",
         "initvalue"      : "0x4352CCCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 33"
       },
       {
@@ -3216,7 +3215,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 34",
         "initvalue"      : "0x4352E666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 34"
       },
       {
@@ -3227,7 +3226,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 35",
         "initvalue"      : "0x43530000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 35"
       },
       {
@@ -3238,7 +3237,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 36",
         "initvalue"      : "0x4353199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 36"
       },
       {
@@ -3249,7 +3248,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 37",
         "initvalue"      : "0x43533333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 37"
       },
       {
@@ -3260,7 +3259,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 38",
         "initvalue"      : "0x43534CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 38"
       },
       {
@@ -3271,7 +3270,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 39",
         "initvalue"      : "0x43536666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 39"
       },
       {
@@ -3282,7 +3281,7 @@
         "groupsort"      : "DayPower",
         "name"           : "Total power consumption of Day X of channel 40",
         "initvalue"      : "0x43538000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of Day X of channel 40"
       },
       {
@@ -3303,7 +3302,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 27",
         "initvalue"      : "0x4396199A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 27"
       },
       {
@@ -3314,7 +3313,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 28",
         "initvalue"      : "0x43962666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 28"
       },
       {
@@ -3325,7 +3324,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 29",
         "initvalue"      : "0x43963333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 29"
       },
       {
@@ -3336,7 +3335,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 30",
         "initvalue"      : "0x43964000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 30"
       },
       {
@@ -3347,7 +3346,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 31",
         "initvalue"      : "0x43964CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 31"
       },
       {
@@ -3358,7 +3357,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 32",
         "initvalue"      : "0x4396599A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 32"
       },
       {
@@ -3369,7 +3368,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 33",
         "initvalue"      : "0x43966666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 33"
       },
       {
@@ -3380,7 +3379,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 34",
         "initvalue"      : "0x43967333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 34"
       },
       {
@@ -3391,7 +3390,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 35",
         "initvalue"      : "0x43968000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 35"
       },
       {
@@ -3402,7 +3401,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 36",
         "initvalue"      : "0x43968CCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 36"
       },
       {
@@ -3413,7 +3412,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 37",
         "initvalue"      : "0x4396999A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 37"
       },
       {
@@ -3424,7 +3423,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 38",
         "initvalue"      : "0x4396A666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 38"
       },
       {
@@ -3435,7 +3434,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 39",
         "initvalue"      : "0x4396B333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 39"
       },
       {
@@ -3446,7 +3445,7 @@
         "groupsort"      : "TotalPower",
         "name"           : "Total power consumption of channel 40",
         "initvalue"      : "0x4396C000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Total power consumption of channel 40"
       },
       {
@@ -3457,7 +3456,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 26",
         "initvalue"      : "0x4548A19A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 26"
       },
       {
@@ -3468,7 +3467,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 27",
         "initvalue"      : "0x4548A333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 27"
       },
       {
@@ -3479,7 +3478,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 28",
         "initvalue"      : "0x4548A4CD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 28"
       },
       {
@@ -3490,7 +3489,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 29",
         "initvalue"      : "0x4548A666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 29"
       },
       {
@@ -3501,7 +3500,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 30",
         "initvalue"      : "0x4548A800",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 30"
       },
       {
@@ -3512,7 +3511,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 31",
         "initvalue"      : "0x4548A99A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 31"
       },
       {
@@ -3523,7 +3522,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 32",
         "initvalue"      : "0x4548AB33",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 32"
       },
       {
@@ -3534,7 +3533,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 33",
         "initvalue"      : "0x4548ACCD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 33"
       },
       {
@@ -3545,7 +3544,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 34",
         "initvalue"      : "0x4548AE66",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 34"
       },
       {
@@ -3556,7 +3555,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 35",
         "initvalue"      : "0x4548B000",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 35"
       },
       {
@@ -3567,7 +3566,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 36",
         "initvalue"      : "0x4548B19A",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 36"
       },
       {
@@ -3578,7 +3577,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 37",
         "initvalue"      : "0x4548B333",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 37"
       },
       {
@@ -3589,7 +3588,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 38",
         "initvalue"      : "0x4548B4CD",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 38"
       },
       {
@@ -3600,7 +3599,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 39",
         "initvalue"      : "0x4548B666",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 39"
       },
       {
@@ -3611,7 +3610,7 @@
         "groupsort"      : "HallParam",
         "name"           : "Hall parameter (mA/V) of channel 40",
         "initvalue"      : "0x4548B800",
-	"format"	 : 0,
+        "format"         : 0,
         "displaylabel"   : "Hall parameter (mA/V) of channel 40"
       }
     ],

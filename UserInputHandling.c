@@ -1553,7 +1553,7 @@ bool HandleHelp()
   printf_safe("\n");
   printf_safe("  %sSET                                                                           %sGet prompted for the input to set a register value in a device %s\n", ColorYellow, ColorBrightCyan, ColorReset);
   printf_safe("  %sSET%s <device-name> <device-number> <group-name> <abbreviation> <new-value>     %sSet a register value in a device %s\n", ColorYellow, ColorGreen, ColorBrightCyan, ColorReset);
-  printf_safe("  %sSETN%s bayindex panelindex registernumber{:registernumber} value                %sSet a register value in a device using register number %s\n", ColorYellow, ColorGreen, ColorBrightCyan, ColorReset);
+  printf_safe("  %sSETN%s <bayindex> <panelindex> <registernumber{:registernumber}> <new-value>    %sSet a register value in a device using register number %s\n", ColorYellow, ColorGreen, ColorBrightCyan, ColorReset);
   printf_safe("  %sINCREMENT%s <device-name> <device-number> <group-name> <new-value> <increment>  %sSet a series of registers, increment can be 0 %s\n", ColorYellow, ColorGreen, ColorBrightCyan, ColorReset);
   printf_safe("\n");
   printf_safe("  %sSHOW DEVICE%s <device-name> <device-number>                                     %sShow information for a device%s\n", ColorYellow, ColorGreen, ColorBrightCyan, ColorReset);
